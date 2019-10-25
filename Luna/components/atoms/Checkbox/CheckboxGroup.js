@@ -11,13 +11,23 @@ import {
 import { CheckboxWithLabel } from './CheckboxWithLabel'
 
 const ThisCheckboxGroup = props => {
-  const { label, options, name, handleChange, checkedOptions, isOpen, toggleVisibility } = props
+  const {
+    label,
+    options,
+    name,
+    handleChange,
+    checkedOptions,
+    isOpen,
+    toggleVisibility,
+  } = props
 
   return (
     <CheckboxGroup isOpen={isOpen}>
       <CheckboxGroupHeader>
         <CheckboxGroupLabel>{label}</CheckboxGroupLabel>
-        <CheckboxGroupClose type="button" onClick={toggleVisibility}>Close</CheckboxGroupClose>
+        <CheckboxGroupClose type="button" onClick={toggleVisibility}>
+          Close
+        </CheckboxGroupClose>
       </CheckboxGroupHeader>
 
       <CheckboxGroupMain>

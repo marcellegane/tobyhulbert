@@ -4,7 +4,9 @@ import { Checkbox } from './Checkbox'
 import { CheckboxWithLabel, CheckboxLabel } from './CheckboxWithLabel.style'
 
 const ThisCheckboxWithLabel = props => {
-  const { id, value, name, handleChange, checked } = props
+  const { id, value, name, handleChange, checked, label } = props
+
+  const checkboxLabel = label || value
 
   return (
     <CheckboxWithLabel>
@@ -16,7 +18,7 @@ const ThisCheckboxWithLabel = props => {
         onChange={handleChange}
       />
       <CheckboxLabel htmlFor={id} checked={checked}>
-        {value}
+        {checkboxLabel}
       </CheckboxLabel>
     </CheckboxWithLabel>
   )
@@ -28,6 +30,7 @@ ThisCheckboxWithLabel.propTypes = {
   name: PropTypes.string.isRequired,
   handleChange: PropTypes.func.isRequired,
   checked: PropTypes.bool.isRequired,
+  label: PropTypes.string,
 }
 
 export { ThisCheckboxWithLabel as CheckboxWithLabel }

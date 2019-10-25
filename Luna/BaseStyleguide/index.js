@@ -29,6 +29,7 @@ import {
   ValidationMessage,
   SuccessMessage,
   TextAreaWithLabel,
+  CheckboxWithLabel,
 } from '../components'
 
 import { Spacer } from '../tools'
@@ -83,6 +84,7 @@ const ThisStyleGuide = ({ children }) => (
   <FullWidth>
     <StyleGuide>
       <Stack>
+        <StyleguideTitle>Luna Styleguide</StyleguideTitle>
         <StyleguideTitle>Color Palette</StyleguideTitle>
         <Separator />
         <Large>Primary Colors</Large>
@@ -118,11 +120,9 @@ const ThisStyleGuide = ({ children }) => (
         <ColorSwatchRow></ColorSwatchRow>
 
         <Spacer spaceMultiplier={4} />
+      </Stack>
 
-        <Separator />
-
-        <Spacer spaceMultiplier={4} />
-
+      <Stack>
         <StyleguideTitle>Buttons</StyleguideTitle>
         <Separator />
         <ButtonRow>
@@ -138,7 +138,8 @@ const ThisStyleGuide = ({ children }) => (
         </ButtonRow>
 
         <Spacer spaceMultiplier={4} />
-
+      </Stack>
+      <Stack>
         <StyleguideTitle>Font Styles</StyleguideTitle>
         <Separator />
 
@@ -160,7 +161,8 @@ const ThisStyleGuide = ({ children }) => (
         </BodyCopy>
 
         <Spacer spaceMultiplier={4} />
-
+      </Stack>
+      <Stack>
         <StyleguideTitle>Form Elements</StyleguideTitle>
         <Separator />
 
@@ -170,7 +172,8 @@ const ThisStyleGuide = ({ children }) => (
         <Separator />
 
         <Spacer spaceMultiplier={4} />
-
+      </Stack>
+      <Stack>
         <StyleguideTitle>Form Fields</StyleguideTitle>
         <Separator />
 
@@ -242,7 +245,31 @@ const ThisStyleGuide = ({ children }) => (
         />
 
         <Spacer spaceMultiplier={4} />
+      </Stack>
+      <Stack>
+        <StyleguideTitle>Checkboxes</StyleguideTitle>
+        <Separator />
 
+        <CheckboxWithLabel
+          label="I am a checked checkbox"
+          type="checkbox"
+          id="checkbox"
+          name="check box"
+          value="1"
+          checked
+          onChange={() => {}}
+        />
+
+        <CheckboxWithLabel
+          label="I am an unchecked checkbox"
+          type="checkbox"
+          id="checkbox"
+          name="check box"
+          value="1"
+          onChange={() => {}}
+        />
+      </Stack>
+      <Stack>
         <StyleguideTitle>Button Groups</StyleguideTitle>
         <Separator />
 
