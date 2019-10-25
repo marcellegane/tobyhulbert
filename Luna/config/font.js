@@ -2,7 +2,7 @@ import { css } from 'styled-components'
 import { Color } from './color'
 
 const family = {
-  brand: 'Poppins, Helvetica, Arial, sans-serif',
+  brand: 'Helvetica Neue, Arial, sans-serif',
 }
 
 const weight = {

@@ -1,28 +1,25 @@
 const Color = {
   primary: {
-    brand: '#e22364',
-    contrast: '#ffdc4d',
-    contrastLight: '#FFF6D2',
-    accent: '#ac174a',
+    brand: '#55efc4',
+    contrast: '#a29bfe',
+    accent: '#fd79a8',
   },
   secondary: {
-    brandTint1: '#fde9f0',
-    brandTint2: '#fdf4f7',
-    brandTint3: '#ffefe6',
-    foreground: '#1a1a1a',
-    background: '#ffffff',
+    brand: '#00cec9',
+    contrast: '#74b9ff',
+    accent: '#e84393',
   },
-  neutral: '#d8d8d8',
-  background: '#FBFBFC',
-  foreground: '#717171',
-  border: '#d8d8d8',
+  neutral: '#dfe6e9',
+  background: '#ffffff',
+  foreground: '#2d3436',
+  border: '#b2bec3',
   error: {
-    foreground: '#e22364',
-    background: '#fde9f0',
+    foreground: '#fab1a0',
+    background: '#d63031',
   },
   success: {
-    foreground: '#5bb978',
-    background: '#eef8f1',
+    foreground: '#ffeaa7',
+    background: '#55efc4',
   },
 }
 
