@@ -1,6 +1,8 @@
 import styled from 'styled-components'
 import { Form } from '../../../config/form'
 import Util from '../../../tools/util'
+import { Luna } from '../../../config'
+import { pxToRem } from '../../../tools'
 
 const SelectStyle = styled.select`
   display: flex;
@@ -8,15 +10,15 @@ const SelectStyle = styled.select`
   width: 100%;
   cursor: pointer;
   appearance: none;
-  padding-top: ${Form.base.paddingVertical};
-  padding-bottom: ${Form.base.paddingVertical};
-  padding-left: ${Form.base.paddingHorizontal};
-  padding-right: ${Form.base.paddingHorizontal};
-  margin-left: ${Form.base.marginHorizontal};
-  margin-right: ${Form.base.marginHorizontal};
+  padding-top: ${pxToRem(Form.base.paddingVertical)};
+  padding-bottom: ${pxToRem(Form.base.paddingVertical)};
+  padding-left: ${pxToRem(Form.base.paddingHorizontal)};
+  padding-right: ${pxToRem(Luna.layout.grid.unit, 2.5)};
+  margin-left: ${pxToRem(Form.base.marginHorizontal)};
+  margin-right: ${pxToRem(Form.base.marginHorizontal)};
   pointer-events: ${props => (!props.disabled ? 'auto' : 'none')};
 
-  font-size: ${Form.base.fontSize};
+  font-size: ${pxToRem(Form.base.fontSize)};
   font-family: ${Form.base.fontFamily};
   color: ${props => Util.calculateColor(props.disabled, props.valid)};
 
@@ -25,10 +27,9 @@ const SelectStyle = styled.select`
   background-color: ${props =>
     Util.calculateBackgroundColor(props.disabled, props.valid)};
   background-repeat: no-repeat;
-  background-position-x: 94%;
-  background-position-y: 50%;
-  background-size: 18px;
-  border-radius: ${Form.base.borderRadius};
+  background-position: right ${pxToRem(16)} center;
+  background-size: ${pxToRem(18)};
+  border-radius: ${pxToRem(Form.base.borderRadius)};
   border-color: ${props =>
     Util.calculateBorderColor(props.disabled, props.valid)};
   border-width: ${props =>

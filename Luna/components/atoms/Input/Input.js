@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import { Input } from './Input.style'
 
 const ThisInput = React.forwardRef(({ ...props }, ref) => {
-  const { type, name, value, dataTest, valid, disabled } = props
+  const { type, name, value, dataTest, valid, disabled, label } = props
 
   return (
     <Input
@@ -14,6 +14,7 @@ const ThisInput = React.forwardRef(({ ...props }, ref) => {
       data-test={dataTest}
       valid={valid}
       disabled={disabled}
+      label={label}
       {...props}
     />
   )
@@ -32,14 +33,14 @@ ThisInput.propTypes = {
   dataTest: PropTypes.string,
   centerText: PropTypes.bool,
   valid: PropTypes.bool,
-  showPin: PropTypes.bool,
+  iconSuffix: PropTypes.string,
+  label: PropTypes.string,
 }
 
 ThisInput.defaultProps = {
   disabled: false,
   readonly: false,
   centerText: false,
-  showPin: false,
   valid: true,
 }
 

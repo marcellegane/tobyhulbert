@@ -1,7 +1,20 @@
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
 import { Color } from '../../../config/color'
-import { Layout } from '../../../config/layout'
 import { Font } from '../../../config/font'
+import { pxToRem } from '../../../tools/calculate'
+
+function applyHiddenStyles() {
+  return css`
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+  `
+}
 
 const LabelStyle = styled.label`
   flex-direction: column;
@@ -10,9 +23,10 @@ const LabelStyle = styled.label`
   width: 100%;
   text-align: ${props => (props.center ? 'center' : 'left')};
   font-family: ${Font.family.brand};
-  font-size: ${Font.size.small};
-  color: ${props => (props.valid ? Color.foreground : Color.error.foreground)};
-  font-weight: ${Font.weight.medium};
-  margin-bottom: ${Layout.margin.default};
+  font-size: ${pxToRem(Font.size.bodyCopy)};
+  color: ${props => (props.valid ? Color.foreground : Color.error.background)};
+  font-weight: normal;
+
+  ${props => (props.hideThis ? applyHiddenStyles() : '')}
 `
 export { LabelStyle }

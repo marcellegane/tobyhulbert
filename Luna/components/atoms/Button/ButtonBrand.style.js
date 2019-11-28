@@ -6,6 +6,7 @@ const BrandStyle = css`
   background: ${Button.brand.background};
   border-color: ${Button.brand.borderColor};
   color: ${Button.brand.color};
+
   :hover,
   :active,
   :focus {
@@ -14,6 +15,7 @@ const BrandStyle = css`
     border-color: ${Button.brand.psuedo.borderColor};
     opacity: ${Button.brand.psuedo.opacity};
   }
+
   :disabled {
     color: ${Button.brand.disabled.color};
     border-color: ${Button.brand.disabled.borderColor};

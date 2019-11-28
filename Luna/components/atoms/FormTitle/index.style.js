@@ -1,13 +1,12 @@
 import styled from 'styled-components'
 import { Luna } from '../../../config'
-import { pixelMultiplier } from '../../../tools/calculate'
+import { pxToRem } from '../../../tools/calculate'
 
 const FormTitle = styled.h3`
-  ${Luna.font.style.large}
-  font-size: 30px;
-  color: ${Luna.color.primary.brand};
   display: block;
   width: 100%;
-  margin-bottom: ${pixelMultiplier(Luna.layout.margin.default, 1)};
+  font-family: ${Luna.font.family.brand};
+  font-size: ${pxToRem(Luna.font.size.large)};
+  color: ${Luna.color.foreground};
 `
 export { FormTitle }

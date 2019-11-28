@@ -26,6 +26,7 @@ const ThisSelect = React.forwardRef(({ ...props }, ref) => {
     defaultText,
     dataTest,
     valid,
+    id,
   } = props
 
   const renderOptions = renderSelectOptions(options)
@@ -42,6 +43,7 @@ const ThisSelect = React.forwardRef(({ ...props }, ref) => {
       data-test={dataTest}
       valid={valid}
       ref={ref}
+      id={id}
     >
       {showPleaseSelect}
       {renderOptions}
@@ -56,10 +58,11 @@ ThisSelect.propTypes = {
   onChange: PropTypes.func,
   onBlur: PropTypes.func,
   defaultText: PropTypes.string,
-  value: PropTypes.string,
+  value: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   options: PropTypes.array,
   dataTest: PropTypes.string,
   valid: PropTypes.bool,
+  id: PropTypes.string,
 }
 
 ThisSelect.defaultProps = {

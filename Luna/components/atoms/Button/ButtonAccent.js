@@ -1,4 +1,4 @@
-import React, { memo } from 'react'
+import React from 'react'
 import PropTypes from 'prop-types'
 import { ButtonAccent } from './ButtonAccent.style'
 
@@ -34,6 +34,4 @@ ThisButton.defaultProps = {
   selected: false,
 }
 
-const exportButton = memo(ThisButton)
-
-export { exportButton as ButtonAccent }
+export { ThisButton as ButtonAccent }

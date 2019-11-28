@@ -8,7 +8,9 @@ const ThisSelectWithLabel = ({ ...props }) => {
 
   return (
     <React.Fragment>
-      <LabelStyle valid={valid}>{label}</LabelStyle>
+      <LabelStyle valid={valid} htmlFor={label}>
+        {label}
+      </LabelStyle>
       <Select valid={valid} {...props} />
     </React.Fragment>
   )

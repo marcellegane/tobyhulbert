@@ -1,34 +1,40 @@
 import { css } from 'styled-components'
 import { Button } from '../../../config/button'
+import { pxToRem } from '../../../tools/calculate'
+import { Layout } from '../../../config/layout'
 
 const ButtonBase = css`
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  text-decoration: none;
-  cursor: pointer;
   display: inline-flex;
   flex-direction: row;
-  box-sizing: border-box;
-  border-width: ${Button.base.borderWidth};
-  border-style: ${Button.base.borderStyle};
-  border-radius: ${Button.base.borderRadius};
+  align-items: center;
+  justify-content: center;
+  padding: ${pxToRem(Button.base.paddingVertical)}
+    ${pxToRem(Button.base.paddingHorizontal)};
+  cursor: pointer;
+
   font-family: ${Button.base.fontFamily};
   font-weight: ${Button.base.fontWeight};
   text-transform: ${Button.base.textTransform};
-  font-size: ${Button.base.fontSize};
+  font-size: ${pxToRem(Button.base.fontSize)};
   letter-spacing: ${Button.base.letterSpacing};
   line-height: ${Button.base.lineHeight};
-  padding-left: ${Button.base.paddingHorizontal};
-  padding-right: ${Button.base.paddingHorizontal};
-  padding-top: ${Button.base.paddingVertical};
-  padding-bottom: ${Button.base.paddingVertical};
+  text-align: center;
+  text-decoration: none;
+
+  border-width: ${pxToRem(Button.base.borderWidth)};
+  border-style: ${Button.base.borderStyle};
+  border-radius: ${pxToRem(Button.base.borderRadius)};
+
   transition: ${Button.base.transition};
 
   :hover,
   :focus,
   :active {
     outline: 0;
+  }
+
+  > * + * {
+    margin-left: ${pxToRem(Layout.grid.unit, 0.5)};
   }
 `
 

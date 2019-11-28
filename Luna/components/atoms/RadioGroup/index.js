@@ -8,23 +8,26 @@ import {
 } from './index.style'
 
 const ThisRadioGroup = props => {
-  const { options, name, handleRadioGroupChange, checkedOption } = props
+  const { options, name, handleChange, checkedValue } = props
 
   return (
     <RadioGroup>
-      {options.map(option => (
-        <RadioGroupOption key={option.name}>
-          <RadioGroupInput
-            type="radio"
-            checked={checkedOption === option.name}
-            id={option.name}
-            name={name}
-            value={option.name}
-            onChange={handleRadioGroupChange}
-          />
-          <RadioGroupLabel htmlFor={option.name}>{option.name}</RadioGroupLabel>
-        </RadioGroupOption>
-      ))}
+      {options.map((option, i) => {
+        const id = name + option.value
+        return (
+          <RadioGroupOption key={i}>
+            <RadioGroupInput
+              type="radio"
+              checked={checkedValue === option.value}
+              id={id}
+              name={name}
+              value={option.value}
+              onChange={handleChange}
+            />
+            <RadioGroupLabel htmlFor={id}>{option.label}</RadioGroupLabel>
+          </RadioGroupOption>
+        )
+      })}
     </RadioGroup>
   )
 }
@@ -32,8 +35,8 @@ const ThisRadioGroup = props => {
 ThisRadioGroup.propTypes = {
   options: PropTypes.array.isRequired,
   name: PropTypes.string.isRequired,
-  handleRadioGroupChange: PropTypes.func.isRequired,
-  checkedOption: PropTypes.string,
+  handleChange: PropTypes.func.isRequired,
+  checkedValue: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 }
 
 export { ThisRadioGroup as RadioGroup }

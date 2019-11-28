@@ -1,34 +1,20 @@
 import styled from 'styled-components'
-import { LunaMedia } from '../../../tools/media'
 import { Border } from '../../../config/border'
 import { Color } from '../../../config/color'
 import { Font } from '../../../config/font'
 import { Layout } from '../../../config/layout'
-
-import { pixelMultiplier } from '../../../tools/calculate'
+import { pxToRem } from '../../../tools/calculate'
 
 const Modal = styled.div`
+  display: ${props => (props.show ? 'block' : 'none')};
   position: fixed;
   top: 0;
   left: 0;
-  display: ${props => (props.show ? 'flex' : 'none')};
-  align-items: flex-start;
-  justify-content: center;
-  box-sizing: border-box;
   width: 100%;
   height: 100%;
-  overflow: scroll;
-  padding: ${Layout.margin.default};
+  padding: ${pxToRem(Layout.grid.unit)};
   font-family: ${Font.family.brand};
   z-index: 999;
-
-  ${LunaMedia.above('medium')`
-    padding: ${pixelMultiplier(Layout.margin.default, 2)};
-  `}
-
-  ${LunaMedia.above('xxxlarge')`
-    align-items: center;
-  `}
 `
 
 const ModalBg = styled.div`
@@ -43,31 +29,34 @@ const ModalBg = styled.div`
 `
 
 const ModalInner = styled.div`
-  box-sizing: border-box;
+  width: 100%;
+  max-width: ${pxToRem(600)};
+  ${props => (props.fullHeight ? 'height: 100%;' : '')}
+  margin: ${props => (props.fullHeight ? 'inherit' : 'auto')};
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #fff;
+  border-radius: ${pxToRem(Border.radius)};
   display: flex;
   flex-direction: column;
-  width: 100%;
-  max-width: 380px;
-  ${props => (props.fullHeight ? 'height: 100%;' : '')}
-  padding: ${pixelMultiplier(Layout.margin.default, 1.5)} ${pixelMultiplier(
-  Layout.margin.default,
-  2
-)} ${pixelMultiplier(Layout.margin.default, 2)};
-  overflow: hidden;
-  font-family: ${Font.family.brand};
-  background-color: #fff;
-  border-radius: 10px;
   background-color: ${Color.background};
-  box-shadow: 0px 0px 13px 8px rgba(0, 0, 0, 0.36);
+  box-shadow: 0 0 ${pxToRem(13)} ${pxToRem(8)} rgba(0,0,0,0.36);
+  font-family: ${Font.family.brand};
 `
 
 const ModalHeader = styled.div`
-  border-top-left-radius: ${Border.radius};
-  border-top-right-radius: ${Border.radius};
+  padding: ${pxToRem(Layout.grid.unit)};
+  border-top-left-radius: ${pxToRem(Border.radius)};
+  border-top-right-radius: ${pxToRem(Border.radius)};
 
   p {
-    ${Font.style.BodyCopy}
+    color: ${Color.foreground};
     margin-top: 0;
+    margin-bottom: ${pxToRem(Layout.grid.unit, 2)} !important;
+    font-size: ${pxToRem(14)};
+  }
+
+  > :last-child {
     margin-bottom: 0;
   }
 `
@@ -85,17 +74,33 @@ function getModalHeaderAlign(align) {
 const ModalHeading = styled.div``
 
 const ModalTitle = styled.h2`
-  ${Font.style.Mega}
-  font-size: 24px;
-  margin-top: ${pixelMultiplier(Layout.margin.default, 0.5)};
-  margin-bottom: 0;
+  font-family: ${Font.headings};
+  color: ${Color.foreground};
+  margin-bottom: ${pxToRem(Layout.grid.unit)};
+  font-size: ${pxToRem(22)};
   display: flex;
   justify-content: ${props => getModalHeaderAlign(props.align)};
 `
 
+const ModalBody = styled.div`
+  flex: 1;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  padding: ${pxToRem(Layout.grid.unit)};
+  font-family: ${Font.family.brand};
+`
+
+const ModalBodyFullWidth = styled.div`
+  flex: 1;
+  overflow-x: hidden;
+  overflow-y: scroll;
+`
+
 const ModalFooter = styled.div`
   background: ${Color.background};
-  margin-top: 0;
+  padding: ${pxToRem(Layout.grid.unit)};
+  border-bottom-left-radius: ${pxToRem(Border.radius)};
+  border-bottom-right-radius: ${pxToRem(Border.radius)};
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -104,7 +109,7 @@ const ModalFooter = styled.div`
 `
 
 const ModalClose = styled.span`
-  font-size: 16px;
+  font-size: ${pxToRem(16)};
   color: ${props => props.closeColor};
   font-family: ${Font.family.brand};
   display: flex;
@@ -116,19 +121,24 @@ const ModalClose = styled.span`
 `
 
 const ModalCloseText = styled.span`
-  margin-right: ${pixelMultiplier(Layout.margin.default, 0.5)};
+  margin-right: ${pxToRem(Layout.grid.unit, 0.5)};
 `
 
 const ModalBodyText = styled.p`
-  ${Font.style.Small}
+  font-size: ${pxToRem(14)};
+  font-family: ${Font.family.brand};
+  font-weight: 300;
   color: ${Color.foreground};
-  text-align: ${props => (props.center ? 'center' : 'left')};
+  display: flex;
+  flex-direction: column;
+  padding-left: ${pxToRem(Layout.grid.unit)};
+  padding-right: ${pxToRem(Layout.grid.unit)};
+  justify-content: ${props => (props.center ? 'center' : 'flex-start')};
+  align-content: center;
+  line-height: ${pxToRem(24)};
+  text-align: ${props => (props.center ? 'center' : 'flex-start')};
   margin-top: 0;
-  margin-bottom: 0;
-`
-
-const ModalButton = styled.div`
-  margin-top: ${pixelMultiplier(Layout.margin.default, 1.5)};
+  margin-bottom: ${pxToRem(Layout.grid.unit, 1)};
 `
 
 export {
@@ -138,9 +148,10 @@ export {
   ModalHeader,
   ModalTitle,
   ModalHeading,
+  ModalBody,
+  ModalBodyFullWidth,
   ModalFooter,
   ModalClose,
   ModalCloseText,
   ModalBodyText,
-  ModalButton,
 }

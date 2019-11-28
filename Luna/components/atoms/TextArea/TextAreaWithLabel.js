@@ -7,19 +7,19 @@ const ThisTextAreaWithLabel = ({ ...props }) => {
   const { label, name, type, value, valid, disabled } = props
 
   return (
-    <React.Fragment>
-      <LabelStyle valid={valid} disabled={disabled}>
-        {label}
-      </LabelStyle>
-      <TextAreaStyle
-        type={type}
-        name={name}
-        value={value}
-        valid={valid}
-        disabled={disabled}
-        {...props}
-      />
-    </React.Fragment>
+	<React.Fragment>
+		<LabelStyle valid={valid} disabled={disabled}>
+			{label}
+		</LabelStyle>
+		<TextAreaStyle
+			type={type}
+			name={name}
+			value={value}
+			valid={valid}
+			disabled={disabled}
+			{...props}
+		/>
+	</React.Fragment>
   )
 }
 

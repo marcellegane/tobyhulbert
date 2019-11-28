@@ -1,5 +1,6 @@
 import { css } from 'styled-components'
 import { Layout } from '../config/layout'
+import { pxToEm } from './calculate'
 
 /* Example usage:
  ${LunaMedia.above('medium')`
@@ -25,30 +26,35 @@ const getSizeFromBreakpoint = (breakpointValue, breakpoints = {}) => {
  */
 const generateMedia = breakpoints => {
   const below = breakpoint => (...args) => css`
-    @media (max-width: ${getSizeFromBreakpoint(breakpoint, breakpoints)}px) {
+    @media (max-width: ${pxToEm(
+        getSizeFromBreakpoint(breakpoint, breakpoints)
+      )}) {
       ${css(...args)}
     }
   `
 
   const above = breakpoint => (...args) => css`
-    @media (min-width: ${getSizeFromBreakpoint(breakpoint, breakpoints) +
-        1}px) {
+    @media (min-width: ${pxToEm(
+        getSizeFromBreakpoint(breakpoint, breakpoints) + 1
+      )}) {
       ${css(...args)}
     }
   `
 
   const currentAndAbove = breakpoint => (...args) => css`
-  @media (min-width: ${getSizeFromBreakpoint(breakpoint, breakpoints)}px) {
-    ${css(...args)}
-  }
-`
+    @media (min-width: ${pxToEm(
+        getSizeFromBreakpoint(breakpoint, breakpoints)
+      )}) {
+      ${css(...args)}
+    }
+  `
 
   const between = (firstBreakpoint, secondBreakpoint) => (...args) => css`
-    @media (min-width: ${getSizeFromBreakpoint(firstBreakpoint, breakpoints) +
-        1}px) and (max-width: ${getSizeFromBreakpoint(
-        secondBreakpoint,
-        breakpoints
-      )}px) {
+    @media (min-width: ${pxToEm(
+        getSizeFromBreakpoint(firstBreakpoint, breakpoints) + 1
+      )}) and (max-width: ${pxToEm(
+        getSizeFromBreakpoint(secondBreakpoint, breakpoints)
+      )}) {
       ${css(...args)}
     }
   `

@@ -1,4 +1,4 @@
-import React, { memo } from 'react'
+import React from 'react'
 import PropTypes from 'prop-types'
 import { ButtonBrand } from './ButtonBrand.style'
 
@@ -15,9 +15,9 @@ const ThisButton = ({ children, href, ...props }) => {
   const conditionalProps = getConditionalProps(href)
 
   return (
-    <ButtonBrand type="button" {...conditionalProps} {...props}>
-      {children}
-    </ButtonBrand>
+	<ButtonBrand type="button" {...conditionalProps} {...props}>
+		{children}
+	</ButtonBrand>
   )
 }
 

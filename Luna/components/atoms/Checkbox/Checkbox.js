@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import { Checkbox } from './Checkbox.style'
 
 const ThisCheckbox = props => {
-  const { id, name, value, checked, onChange } = props
+  const { id, name, value, checked, onChange, dataLabel } = props
 
   return (
     <Checkbox
@@ -13,16 +13,18 @@ const ThisCheckbox = props => {
       value={value}
       checked={checked}
       onChange={onChange}
+      data-label={dataLabel}
     />
   )
 }
 
 ThisCheckbox.propTypes = {
+  id: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   name: PropTypes.string.isRequired,
-  value: PropTypes.string.isRequired,
-  id: PropTypes.number,
+  value: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   checked: PropTypes.bool,
   onChange: PropTypes.func,
+  dataLabel: PropTypes.string,
 }
 
 ThisCheckbox.defaultProps = {

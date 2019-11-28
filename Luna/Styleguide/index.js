@@ -2,9 +2,8 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import {
   StyleGuide,
-  Mega,
-  Jumbo,
-  ExtraLarge,
+  Title,
+  Display,
   Large,
   BodyCopy,
   Small,
@@ -14,13 +13,14 @@ import {
   ColorSwatchBlock,
   ButtonRow,
   StyleguideTitle,
+  ColorBlock,
 } from './index.style'
 import {
-  FullWidth,
-  ButtonGroup,
+  ContentWrapper,
   ButtonBrand,
   ButtonContrast,
   ButtonAccent,
+  ButtonAlternative,
   ButtonText,
   Separator,
   Stack,
@@ -29,12 +29,12 @@ import {
   ValidationMessage,
   SuccessMessage,
   TextAreaWithLabel,
-  CheckboxWithLabel,
 } from '../components'
 
 import { Spacer } from '../tools'
 
 import { Color } from '../config/color'
+import { Grid, GridItem } from '../components/layouts/Grid'
 
 const SELECT_OPTIONS = [
   { label: 'Ms', value: 'Ms' },
@@ -46,7 +46,7 @@ const SELECT_OPTIONS = [
 
 function renderPrimaryColorBlocks() {
   return Object.keys(Color.primary).map(name => (
-    <ColorSwatchBlock>
+    <ColorSwatchBlock key={name}>
       <ColorSwatch backgroundColor={Color.primary[name]} />
       <Small>{name}</Small>
     </ColorSwatchBlock>
@@ -55,7 +55,7 @@ function renderPrimaryColorBlocks() {
 
 function renderSecondaryColorBlocks() {
   return Object.keys(Color.secondary).map(name => (
-    <ColorSwatchBlock>
+    <ColorSwatchBlock key={name}>
       <ColorSwatch backgroundColor={Color.secondary[name]} />
       <Small>{name}</Small>
     </ColorSwatchBlock>
@@ -64,7 +64,7 @@ function renderSecondaryColorBlocks() {
 
 function renderErrorColorBlocks() {
   return Object.keys(Color.error).map(name => (
-    <ColorSwatchBlock>
+    <ColorSwatchBlock key={name}>
       <ColorSwatch backgroundColor={Color.error[name]} />
       <Small>{name}</Small>
     </ColorSwatchBlock>
@@ -73,7 +73,7 @@ function renderErrorColorBlocks() {
 
 function renderSuccessColorBlocks() {
   return Object.keys(Color.success).map(name => (
-    <ColorSwatchBlock>
+    <ColorSwatchBlock key={name}>
       <ColorSwatch backgroundColor={Color.success[name]} />
       <Small>{name}</Small>
     </ColorSwatchBlock>
@@ -81,10 +81,9 @@ function renderSuccessColorBlocks() {
 }
 
 const ThisStyleGuide = ({ children }) => (
-  <FullWidth>
+  <ContentWrapper>
     <StyleGuide>
       <Stack>
-        <StyleguideTitle>Luna Styleguide</StyleguideTitle>
         <StyleguideTitle>Color Palette</StyleguideTitle>
         <Separator />
         <Large>Primary Colors</Large>
@@ -120,32 +119,65 @@ const ThisStyleGuide = ({ children }) => (
         <ColorSwatchRow></ColorSwatchRow>
 
         <Spacer spaceMultiplier={4} />
-      </Stack>
 
-      <Stack>
+        <StyleguideTitle>Grid</StyleguideTitle>
+        <Separator />
+
+        <Grid>
+          <GridItem small={6} medium={4} large={3}>
+            <ColorBlock />
+          </GridItem>
+
+          <GridItem small={6} medium={4} large={3}>
+            <ColorBlock />
+          </GridItem>
+
+          <GridItem small={6} medium={4} large={3}>
+            <ColorBlock />
+          </GridItem>
+
+          <GridItem small={6} medium={4} large={3}>
+            <ColorBlock />
+          </GridItem>
+
+          <GridItem small={6} medium={4} large={3}>
+            <ColorBlock />
+          </GridItem>
+
+          <GridItem small={6} medium={4} large={6}>
+            <ColorBlock />
+          </GridItem>
+
+          <GridItem small={6} medium={4} large={3}>
+            <ColorBlock />
+          </GridItem>
+        </Grid>
+
+        <Spacer spaceMultiplier={4} />
+
         <StyleguideTitle>Buttons</StyleguideTitle>
         <Separator />
         <ButtonRow>
           <ButtonBrand>Button Brand</ButtonBrand>
           <ButtonContrast>Button Contrast</ButtonContrast>
           <ButtonAccent>Button Accent</ButtonAccent>
+          <ButtonAlternative>Button Alternative</ButtonAlternative>
         </ButtonRow>
 
         <ButtonRow>
           <ButtonBrand disabled>Brand Disabled</ButtonBrand>
           <ButtonContrast disabled>Contrast Disabled</ButtonContrast>
           <ButtonAccent disabled>Accent Disabled</ButtonAccent>
+          <ButtonAlternative disabled>Alternative Disabled</ButtonAlternative>
         </ButtonRow>
 
         <Spacer spaceMultiplier={4} />
-      </Stack>
-      <Stack>
+
         <StyleguideTitle>Font Styles</StyleguideTitle>
         <Separator />
 
-        <Mega>Mega</Mega>
-        <Jumbo>Jumbo</Jumbo>
-        <ExtraLarge>ExtraLarge</ExtraLarge>
+        <Title>Title</Title>
+        <Display>Display</Display>
         <Large>Large</Large>
         <BodyCopy>BodyCopy for bits of text and paragraphs etc.</BodyCopy>
         <Small>Small</Small>
@@ -161,8 +193,7 @@ const ThisStyleGuide = ({ children }) => (
         </BodyCopy>
 
         <Spacer spaceMultiplier={4} />
-      </Stack>
-      <Stack>
+
         <StyleguideTitle>Form Elements</StyleguideTitle>
         <Separator />
 
@@ -172,8 +203,7 @@ const ThisStyleGuide = ({ children }) => (
         <Separator />
 
         <Spacer spaceMultiplier={4} />
-      </Stack>
-      <Stack>
+
         <StyleguideTitle>Form Fields</StyleguideTitle>
         <Separator />
 
@@ -244,61 +274,14 @@ const ThisStyleGuide = ({ children }) => (
           disabled
         />
 
-        <Spacer spaceMultiplier={4} />
-      </Stack>
-      <Stack>
-        <StyleguideTitle>Checkboxes</StyleguideTitle>
-        <Separator />
-
-        <CheckboxWithLabel
-          label="I am a checked checkbox"
-          type="checkbox"
-          id="checkbox"
-          name="check box"
-          value="1"
-          checked
-          onChange={() => {}}
-        />
-
-        <CheckboxWithLabel
-          label="I am an unchecked checkbox"
-          type="checkbox"
-          id="checkbox"
-          name="check box"
-          value="1"
-          onChange={() => {}}
-        />
-      </Stack>
-      <Stack>
-        <StyleguideTitle>Button Groups</StyleguideTitle>
-        <Separator />
-
-        <ButtonGroup>
-          <ButtonBrand selected>Button 1</ButtonBrand>
-          <ButtonBrand>Button 2</ButtonBrand>
-          <ButtonBrand>Button 3</ButtonBrand>
-        </ButtonGroup>
-
-        <ButtonGroup>
-          <ButtonContrast>Button 1</ButtonContrast>
-          <ButtonContrast selected>Button 2</ButtonContrast>
-          <ButtonContrast>Button 3</ButtonContrast>
-          <ButtonContrast>Button 4</ButtonContrast>
-        </ButtonGroup>
-
-        <ButtonGroup>
-          <ButtonAccent>Button 1</ButtonAccent>
-          <ButtonAccent selected>Button 2</ButtonAccent>
-        </ButtonGroup>
-
         {children}
       </Stack>
     </StyleGuide>
-  </FullWidth>
+  </ContentWrapper>
 )
 
 ThisStyleGuide.propTypes = {
   children: PropTypes.node,
 }
 
-export { ThisStyleGuide as BaseStyleguide }
+export { ThisStyleGuide as Styleguide }

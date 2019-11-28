@@ -4,11 +4,11 @@ import { Input } from './Input'
 import { LabelStyle } from '../Label/index.style'
 
 const ThisInputWithLabel = ({ ...props }) => {
-  const { label, name, type, value, centerLabel, dataTest, valid } = props
+  const { label, name, type, value, centerLabel, dataTest, valid, id } = props
 
   return (
     <React.Fragment>
-      <LabelStyle center={centerLabel} valid={valid}>
+      <LabelStyle center={centerLabel} valid={valid} htmlFor={label}>
         {label}
       </LabelStyle>
       <Input
@@ -17,6 +17,7 @@ const ThisInputWithLabel = ({ ...props }) => {
         value={value}
         data-test={dataTest}
         valid={valid}
+        id={id}
         {...props}
       />
     </React.Fragment>
@@ -31,6 +32,7 @@ ThisInputWithLabel.propTypes = {
   centerLabel: PropTypes.bool,
   dataTest: PropTypes.string,
   valid: PropTypes.bool,
+  id: PropTypes.string,
 }
 
 ThisInputWithLabel.defaultProps = {

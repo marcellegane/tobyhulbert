@@ -1,44 +1,42 @@
-/* Button Form Config */
-/* Define configurations for default form design */
-
 import { Border } from './border'
 import { Color } from './color'
 import { Font } from './font'
 import { Layout } from './layout'
-import { pixelMultiplier } from '../tools/calculate'
 
 const Form = {
   base: {
     borderRadius: Border.radius,
-    paddingVertical: `${pixelMultiplier(Layout.padding.default, 0.75)}`,
-    paddingHorizontal: Layout.padding.default,
-    marginVertical: Layout.margin.default,
-    marginHorizontal: '0px',
-    borderColor: Color.border,
+    paddingVertical: Layout.grid.unit * 0.75,
+    paddingHorizontal: Layout.grid.unit,
+    marginVertical: Layout.grid.unit,
+    marginHorizontal: 0,
+    borderColor: Color.primary.brand,
     borderWidth: Border.width,
     borderStyle: Border.style,
-    fontSize: '16px',
+    fontSize: 16,
     fontFamily: Font.family.brand,
-    color: Color.foreground,
-    backgroundColor: Color.secondary.background,
-    placeholderColor: Color.neutral,
+    color: Color.primary.brand,
+    backgroundColor: Color.background,
+    placeholderColor: Color.primary.brand,
   },
   validation: {
     error: {
-      backgroundColor: '#ffffff',
-      borderColor: Color.error.foreground,
-      borderStyle: 'dashed',
+      backgroundColor: Color.error.foreground,
+      borderColor: Color.error.background,
+      borderStyle: 'solid',
       borderWidth: Border.width,
-      color: Color.error.foreground,
+      color: Color.error.background,
     },
+    fontSize: 12,
   },
   disabled: {
-    backgroundColor: '#ffffff',
-    borderColor: Color.neutral,
-    color: Color.neutral,
+    backgroundColor: Color.disabled.background,
+    borderColor: Color.disabled.border,
+    color: Color.disabled.color,
   },
   focus: {
-    borderColor: Color.foreground,
+    borderColor: Color.primary.contrast,
+    backgroundColor: Color.background,
   },
 }
 

@@ -1,6 +1,11 @@
 import React from 'react'
-import { BaseStyleguide } from '../Luna'
+import DefaultLayout from '../layouts/default'
+import { Styleguide } from '../Luna/Styleguide'
 
-const Index = () => <BaseStyleguide />
+const Index = () => (
+  <DefaultLayout>
+    <Styleguide />
+  </DefaultLayout>
+)
 
 export default Index

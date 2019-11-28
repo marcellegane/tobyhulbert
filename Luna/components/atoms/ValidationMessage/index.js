@@ -3,9 +3,9 @@ import PropTypes from 'prop-types'
 import { ValidationMessage } from './index.style'
 
 const ThisValidationMessage = props => {
-  const { message } = props
+  const { message, dataTest } = props
   return (
-    <ValidationMessage data-test="ValidationMessage">
+    <ValidationMessage data-test={dataTest || 'ValidationMessage'}>
       {message}
     </ValidationMessage>
   )
@@ -13,6 +13,7 @@ const ThisValidationMessage = props => {
 
 ThisValidationMessage.propTypes = {
   message: PropTypes.string,
+  dataTest: PropTypes.string,
 }
 
 export { ThisValidationMessage as ValidationMessage }

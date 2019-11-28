@@ -1,15 +1,16 @@
 import styled from 'styled-components'
-import { Font } from '../../../config/font'
+import { TextStyle } from '../../../config/textStyle'
 
 const ButtonTextBase = styled.button`
+  ${TextStyle.TextLink}
   border: none;
   background: none;
   padding: 0;
   margin: 0;
-  ${Font.style.TextLink}
 
-
-  :hover, :focus, :active {
+  :hover,
+  :focus,
+  :active {
     outline: 0;
   }
 `

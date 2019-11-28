@@ -1,4 +1,4 @@
-import React, { memo } from 'react'
+import React from 'react'
 import PropTypes from 'prop-types'
 import { ButtonContrast } from './ButtonContrast.style'
 
@@ -34,6 +34,4 @@ ThisButton.defaultProps = {
   selected: false,
 }
 
-const exportButton = memo(ThisButton)
-
-export { exportButton as ButtonContrast }
+export { ThisButton as ButtonContrast }

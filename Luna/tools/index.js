@@ -1,4 +1,4 @@
 export * from './calculate'
-export * from './LightWeight'
+export * from './formatStrings'
 export * from './Spacer'
 export * from './media'

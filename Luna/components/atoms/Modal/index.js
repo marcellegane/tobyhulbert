@@ -6,12 +6,13 @@ import {
   ModalInner,
   ModalHeader,
   ModalHeading,
+  ModalBody,
+  ModalBodyFullWidth,
   ModalFooter,
   ModalTitle,
   ModalClose,
   ModalCloseText,
   ModalBodyText,
-  ModalButton,
 } from './index.style'
 import { IconCross } from '../../../svgs/icons/IconCross'
 import { Luna } from '../../../config'
@@ -87,7 +88,7 @@ const ThisModalHeading = props => {
         <ModalCloseText>{closeText}</ModalCloseText>
         <IconCross fillColor={closeColor} />
       </ModalClose>
-      {title && <ModalTitle align={align}>{title}</ModalTitle>}
+      <ModalTitle align={align}>{title}</ModalTitle>
     </ModalHeading>
   )
 }
@@ -104,12 +105,26 @@ ThisModalHeading.propTypes = {
   onClose: PropTypes.func,
 }
 
-const ThisModalBodyText = ({ children, center }) => (
-  <ModalBodyText center={center}>{children}</ModalBodyText>
+const ThisModalBody = ({ children }) => <ModalBody>{children}</ModalBody>
+
+ThisModalBody.propTypes = {
+  children: PropTypes.node.isRequired,
+}
+
+const ThisModalBodyFullWidth = ({ children }) => (
+  <ModalBodyFullWidth>{children}</ModalBodyFullWidth>
+)
+
+ThisModalBodyFullWidth.propTypes = {
+  children: PropTypes.node.isRequired,
+}
+
+const ThisModalBodyText = ({ text, center }) => (
+  <ModalBodyText center={center}>{text}</ModalBodyText>
 )
 
 ThisModalBodyText.propTypes = {
-  children: PropTypes.string,
+  text: PropTypes.string,
   center: PropTypes.bool,
 }
 
@@ -117,11 +132,18 @@ ThisModalBodyText.defaultProps = {
   center: false,
 }
 
+const ThisModalFooter = ({ children }) => <ModalFooter>{children}</ModalFooter>
+
+ThisModalFooter.propTypes = {
+  children: PropTypes.node.isRequired,
+}
+
 export {
   ThisModal as Modal,
   ThisModalHeader as ModalHeader,
   ThisModalHeading as ModalHeading,
+  ThisModalBody as ModalBody,
+  ThisModalBodyFullWidth as ModalBodyFullWidth,
+  ThisModalFooter as ModalFooter,
   ThisModalBodyText as ModalBodyText,
-  ModalTitle,
-  ModalButton,
 }

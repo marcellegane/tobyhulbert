@@ -1,72 +1,82 @@
-/* Button Base Config */
-/* Define configurations for default button design */
-
 import { Font } from './font'
 import { Border } from './border'
 import { Color } from './color'
-import { Transition } from './transition'
 import { Layout } from './layout'
-import { pixelMultiplier } from '../tools/calculate'
 
 const Button = {
   base: {
-    borderRadius: '28px',
-    borderWidth: '2px',
-    borderStyle: Border.style,
+    paddingHorizontal: Layout.grid.unit,
+    paddingVertical: Layout.grid.unit * 0.75,
+    marginVertical: Layout.grid.unit,
     fontFamily: Font.family.brand,
-    fontWeight: '600',
+    fontWeight: Font.weight.bold,
     textTransform: 'none',
-    fontSize: Font.size.bodyCopy,
+    fontSize: 16,
     letterSpacing: 'normal',
     lineHeight: 1,
-    paddingHorizontal: pixelMultiplier(Layout.padding.default, 2),
-    paddingVertical: pixelMultiplier(Layout.padding.default, 1),
-    marginVertical: Layout.margin.default,
-    transition: `all ${Transition.default}`,
+    borderRadius: 4,
+    borderWidth: 2,
+    borderStyle: Border.style,
+    transition: 'all 0.3s ease',
   },
   brand: {
-    background: Color.primary.brand,
-    borderColor: Color.primary.brand,
-    color: '#ffffff',
+    background: Color.primary.contrast,
+    borderColor: Color.primary.contrast,
+    color: Color.primary.brand,
     psuedo: {
-      background: Color.primary.accent,
-      borderColor: Color.primary.accent,
-      color: '#ffffff',
+      background: Color.primary.brand,
+      borderColor: Color.primary.contrast,
+      color: Color.primary.contrast,
     },
     disabled: {
-      color: '#ffffff',
-      backgroundColor: Color.neutral,
-      borderColor: Color.neutral,
+      color: Color.secondary.accent,
+      backgroundColor: Color.primary.accent,
+      borderColor: Color.primary.accent,
     },
   },
   contrast: {
-    background: '#ffffff',
-    borderColor: Color.primary.brand,
+    background: Color.primary.contrast,
+    borderColor: Color.primary.contrast,
     color: Color.primary.brand,
-    psuedo: {
-      background: Color.secondary.brandTint1,
-      borderColor: Color.primary.accent,
-      color: Color.primary.accent,
-    },
-    disabled: {
-      color: Color.neutral,
-      backgroundColor: '#ffffff',
-      borderColor: Color.neutral,
-    },
-  },
-  accent: {
-    background: Color.primary.brand,
-    borderColor: Color.primary.brand,
-    color: '#ffffff',
     psuedo: {
       background: Color.primary.accent,
       borderColor: Color.primary.accent,
-      color: '#ffffff',
+      color: Color.primary.contrast,
     },
     disabled: {
-      color: '#ffffff',
-      backgroundColor: Color.neutral,
-      borderColor: Color.neutral,
+      color: Color.grey.light,
+      backgroundColor: Color.border,
+      borderColor: Color.border,
+    },
+  },
+  accent: {
+    background: Color.background,
+    borderColor: Color.primary.brand,
+    color: Color.primary.brand,
+    psuedo: {
+      background: Color.primary.brand,
+      borderColor: Color.primary.brand,
+      color: Color.background,
+    },
+    disabled: {
+      color: Color.grey.light,
+      backgroundColor: Color.border,
+      borderColor: Color.border,
+    },
+  },
+  alternative: {
+    background: Color.primary.brand,
+    borderColor: Color.primary.brand,
+    color: Color.background,
+    psuedo: {
+      background: Color.primary.accent,
+      borderColor: Color.primary.accent,
+      color: Color.background,
+    },
+    disabled: {
+      color: Color.grey.light,
+      backgroundColor: Color.border,
+      borderColor: Color.border,
     },
   },
 }
