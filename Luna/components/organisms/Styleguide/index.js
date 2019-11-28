@@ -28,14 +28,18 @@ import {
   ValidationMessage,
   SuccessMessage,
   TextAreaWithLabel,
-} from '../components'
-import { IconCross, IconMagnifyingGlass, IconPinpoint } from '../svgs/icons'
+} from '../..'
+import {
+  IconCross,
+  IconMagnifyingGlass,
+  IconPinpoint,
+} from '../../../svgs/icons'
 
-import { Spacer } from '../tools'
+import { Spacer } from '../../../tools'
 
-import { Color } from '../config/color'
-import { Grid, GridItem } from '../components/layouts/Grid'
-import { IconWrapper } from '../components/atoms/Icon/IconWrapper'
+import { Color } from '../../../config/color'
+import { Grid, GridItem } from '../../layouts/Grid'
+import { IconWrapper } from '../../atoms/Icon/IconWrapper'
 
 const SELECT_OPTIONS = [
   { label: 'Ms', value: 'Ms' },
@@ -194,12 +198,14 @@ const ThisStyleGuide = ({ children }) => (
           name="defaultInput"
           label="Default input field"
           placeholder="Placeholder text"
+          onChange={() => {}}
         />
         <InputWithLabel
           name="defaultInput-error"
           label="Input field - error!"
           value="Fix this field"
           valid={false}
+          onChange={() => {}}
         />
         <InputWithLabel
           name="defaultInput-disabled"
@@ -255,7 +261,7 @@ const ThisStyleGuide = ({ children }) => (
         <IconWrapper>
           <IconMagnifyingGlass />
         </IconWrapper>{' '}
-        <IconWrapper width="24" height="34">
+        <IconWrapper width={24} height={34}>
           <IconPinpoint />
         </IconWrapper>
         {children}

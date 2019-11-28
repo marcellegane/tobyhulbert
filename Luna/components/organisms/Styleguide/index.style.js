@@ -1,11 +1,11 @@
 import styled from 'styled-components'
-import { TextStyle } from '../config/textStyle'
-import { Layout } from '../config/layout'
-import { Border } from '../config/border'
-import { pxToRem } from '../tools/calculate'
-import { LunaMedia } from '../tools/media'
-import { Color } from '../config/color'
-import { Font } from '../config/font'
+import { TextStyle } from '../../../config/textStyle'
+import { Layout } from '../../../config/layout'
+import { Border } from '../../../config/border'
+import { pxToRem } from '../../../tools/calculate'
+import { LunaMedia } from '../../../tools/media'
+import { Color } from '../../../config/color'
+import { Font } from '../../../config/font'
 
 const StyleguideTitle = styled.h2`
   ${TextStyle.Statement}
