@@ -1,6 +1,6 @@
 import React from 'react'
-import LunaStyleGuide from '../Luna/layouts/LunaStyleGuide'
-import { Styleguide } from '../Luna/Styleguide'
+import LunaStyleGuide from '../../Luna/layouts/LunaStyleGuide'
+import { Styleguide } from '../../Luna/Styleguide'
 
 const Index = () => (
   <LunaStyleGuide>

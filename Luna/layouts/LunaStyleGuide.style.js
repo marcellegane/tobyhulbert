@@ -1,5 +1,5 @@
 import styled, { createGlobalStyle } from 'styled-components'
-import { Luna, pxToEm, pxToRem } from '../Luna'
+import { Luna, pxToEm, pxToRem } from '..'
 
 const GlobalStyle = createGlobalStyle`
 	*,
