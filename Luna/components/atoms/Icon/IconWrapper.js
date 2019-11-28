@@ -11,4 +11,9 @@ ThisIconWrapper.propTypes = {
   height: PropTypes.number,
 }
 
+ThisIconWrapper.defaultProps = {
+  width: 24,
+  height: 24,
+}
+
 export { ThisIconWrapper as IconWrapper }

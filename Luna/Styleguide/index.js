@@ -30,11 +30,13 @@ import {
   SuccessMessage,
   TextAreaWithLabel,
 } from '../components'
+import { IconCross, IconMagnifyingGlass, IconPinpoint } from '../svgs/icons'
 
 import { Spacer } from '../tools'
 
 import { Color } from '../config/color'
 import { Grid, GridItem } from '../components/layouts/Grid'
+import { IconWrapper } from '../components/atoms/Icon/IconWrapper'
 
 const SELECT_OPTIONS = [
   { label: 'Ms', value: 'Ms' },
@@ -117,12 +119,9 @@ const ThisStyleGuide = ({ children }) => (
         <Large>Success Colors</Large>
         <ColorSwatchRow>{renderSuccessColorBlocks()}</ColorSwatchRow>
         <ColorSwatchRow></ColorSwatchRow>
-
         <Spacer spaceMultiplier={4} />
-
         <StyleguideTitle>Grid</StyleguideTitle>
         <Separator />
-
         <Grid>
           <GridItem small={6} medium={4} large={3}>
             <ColorBlock />
@@ -152,9 +151,7 @@ const ThisStyleGuide = ({ children }) => (
             <ColorBlock />
           </GridItem>
         </Grid>
-
         <Spacer spaceMultiplier={4} />
-
         <StyleguideTitle>Buttons</StyleguideTitle>
         <Separator />
         <ButtonRow>
@@ -163,56 +160,43 @@ const ThisStyleGuide = ({ children }) => (
           <ButtonAccent>Button Accent</ButtonAccent>
           <ButtonAlternative>Button Alternative</ButtonAlternative>
         </ButtonRow>
-
         <ButtonRow>
           <ButtonBrand disabled>Brand Disabled</ButtonBrand>
           <ButtonContrast disabled>Contrast Disabled</ButtonContrast>
           <ButtonAccent disabled>Accent Disabled</ButtonAccent>
           <ButtonAlternative disabled>Alternative Disabled</ButtonAlternative>
         </ButtonRow>
-
         <Spacer spaceMultiplier={4} />
-
         <StyleguideTitle>Font Styles</StyleguideTitle>
         <Separator />
-
         <Title>Title</Title>
         <Display>Display</Display>
         <Large>Large</Large>
         <BodyCopy>BodyCopy for bits of text and paragraphs etc.</BodyCopy>
         <Small>Small</Small>
-
         <BodyCopy>
           This is an example of a <TextLink>TextLink</TextLink> inside another
           style.
         </BodyCopy>
-
         <BodyCopy>
           <ButtonText>Button Text</ButtonText> - This is a button which takes
           the styles from TextLink
         </BodyCopy>
-
         <Spacer spaceMultiplier={4} />
-
         <StyleguideTitle>Form Elements</StyleguideTitle>
         <Separator />
-
         <Large>Validation Message</Large>
         <ValidationMessage message="Oh dear! Something went wrong!" />
         <SuccessMessage message="Yes! Something went right!" />
         <Separator />
-
         <Spacer spaceMultiplier={4} />
-
         <StyleguideTitle>Form Fields</StyleguideTitle>
         <Separator />
-
         <InputWithLabel
           name="defaultInput"
           label="Default input field"
           placeholder="Placeholder text"
         />
-
         <InputWithLabel
           name="defaultInput-error"
           label="Input field - error!"
@@ -220,7 +204,6 @@ const ThisStyleGuide = ({ children }) => (
           onChange={() => {}}
           valid={false}
         />
-
         <InputWithLabel
           name="defaultInput-disabled"
           label="Input field - disabled"
@@ -228,14 +211,12 @@ const ThisStyleGuide = ({ children }) => (
           onChange={() => {}}
           disabled
         />
-
         <SelectWithLabel
           label="Default select dropdown"
           defaultText="Choose option"
           options={SELECT_OPTIONS}
           name="defaultSelect"
         />
-
         <SelectWithLabel
           valid={false}
           label="Select dropdown - error!"
@@ -243,7 +224,6 @@ const ThisStyleGuide = ({ children }) => (
           options={SELECT_OPTIONS}
           name="defaultSelect-error"
         />
-
         <SelectWithLabel
           disabled
           label="Select dropdown - disabled"
@@ -251,13 +231,11 @@ const ThisStyleGuide = ({ children }) => (
           options={SELECT_OPTIONS}
           name="defaultSelect-error"
         />
-
         <TextAreaWithLabel
           label="Default text area"
           placeholder="Start typing..."
           name="defaultTextArea"
         />
-
         <TextAreaWithLabel
           label="Text area - error!"
           value="This is wrong!"
@@ -265,7 +243,6 @@ const ThisStyleGuide = ({ children }) => (
           valid={false}
           name="defaultTextArea-error"
         />
-
         <TextAreaWithLabel
           label="Text area - disabled"
           value="I am disabled!"
@@ -273,7 +250,18 @@ const ThisStyleGuide = ({ children }) => (
           name="defaultTextArea-disabled"
           disabled
         />
-
+        <Spacer spaceMultiplier={4} />
+        <StyleguideTitle>Icons</StyleguideTitle>
+        <Separator />
+        <IconWrapper>
+          <IconCross />
+        </IconWrapper>{' '}
+        <IconWrapper>
+          <IconMagnifyingGlass />
+        </IconWrapper>{' '}
+        <IconWrapper width="24" height="34">
+          <IconPinpoint />
+        </IconWrapper>
         {children}
       </Stack>
     </StyleGuide>
