@@ -1,5 +1,5 @@
 const family = {
-  brand: 'sans-serif',
+  brand: 'Helvetica Neue, Helvetica, Arial, sans-serif',
 }
 
 const weight = {

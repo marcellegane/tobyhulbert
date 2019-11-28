@@ -5,14 +5,16 @@ import { Border } from '../config/border'
 import { pxToRem } from '../tools/calculate'
 import { LunaMedia } from '../tools/media'
 import { Color } from '../config/color'
+import { Font } from '../config/font'
 
 const StyleguideTitle = styled.h2`
-  font-weight: normal;
-  font-size: ${pxToRem(40)};
-  line-height: ${56 / 40};
+  ${TextStyle.Statement}
+  font-weight: ${Font.weight.bold};
 `
 
 const StyleGuide = styled.div`
+  padding-top: ${pxToRem(Layout.grid.unit, 2)};
+  padding-bottom: ${pxToRem(Layout.grid.unit, 2)};
   margin-bottom: ${pxToRem(Layout.grid.unit, 3)};
 `
 
@@ -43,34 +45,40 @@ const TextLink = styled.span`
 const ColorSwatchRow = styled.div`
   display: flex;
   flex-wrap: wrap;
+  margin-left: ${pxToRem(-Layout.grid.unit)};
+  margin-right: ${pxToRem(-Layout.grid.unit)};
 `
 
 const ColorSwatchBlock = styled.div`
   display: flex;
   flex-direction: column;
-  margin-left: ${pxToRem(Layout.grid.unit, 0.5)};
-  margin-right: ${pxToRem(Layout.grid.unit, 0.5)};
-  margin-top: ${pxToRem(Layout.grid.unit, 0.5)};
-  margin-bottom: ${pxToRem(Layout.grid.unit, 0.5)};
   justify-content: center;
   align-items: center;
-  max-width: ${pxToRem(100)};
-  justify-content: center;
+  width: 100%;
+  max-width: ${pxToRem(120)};
+  margin: ${pxToRem(Layout.grid.unit)};
   text-align: center;
 `
 
 const ColorSwatch = styled.span`
   display: flex;
   flex-direction: column;
-  height: ${pxToRem(100)};
-  width: ${pxToRem(100)};
+  width: 100%;
+  margin-bottom: ${pxToRem(Layout.grid.unit)};
   border-radius: 100%;
   background-color: ${props => props.backgroundColor};
-  margin-bottom: ${pxToRem(Layout.grid.unit)};
   border-width: ${pxToRem(Border.width)};
   border-style: ${Border.style};
   border-color: ${props =>
     props.borderColor ? props.borderColor : props.backgroundColor};
+
+  &:before {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 0;
+    padding-bottom: 100%;
+  }
 `
 
 const ButtonRow = styled.div`
@@ -84,9 +92,10 @@ const ButtonRow = styled.div`
 `
 
 const ColorBlock = styled.div`
+  padding: ${pxToRem(Layout.grid.unit)};
   background-color: ${Color.grey.light};
 
-  ::before {
+  &:before {
     content: '';
     display: block;
     width: 100%;

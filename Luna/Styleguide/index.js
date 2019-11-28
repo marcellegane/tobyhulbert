@@ -22,7 +22,6 @@ import {
   ButtonAccent,
   ButtonAlternative,
   ButtonText,
-  Separator,
   Stack,
   InputWithLabel,
   SelectWithLabel,
@@ -83,16 +82,15 @@ function renderSuccessColorBlocks() {
 }
 
 const ThisStyleGuide = ({ children }) => (
-  <ContentWrapper>
-    <StyleGuide>
+  <StyleGuide>
+    <ContentWrapper>
       <Stack>
         <StyleguideTitle>Color Palette</StyleguideTitle>
-        <Separator />
-        <Large>Primary Colors</Large>
+        <Display>Primary Colors</Display>
         <ColorSwatchRow>{renderPrimaryColorBlocks()}</ColorSwatchRow>
-        <Large>Secondary Colors</Large>
+        <Display>Secondary Colors</Display>
         <ColorSwatchRow>{renderSecondaryColorBlocks()}</ColorSwatchRow>
-        <Large>Other Colors</Large>
+        <Display>Other Colors</Display>
         <ColorSwatchRow>
           <ColorSwatchBlock>
             <ColorSwatch backgroundColor={Color.foreground} />
@@ -114,14 +112,33 @@ const ThisStyleGuide = ({ children }) => (
             <Small>border</Small>
           </ColorSwatchBlock>
         </ColorSwatchRow>
-        <Large>Error Colors</Large>
+        <Display>Error Colors</Display>
         <ColorSwatchRow>{renderErrorColorBlocks()}</ColorSwatchRow>
-        <Large>Success Colors</Large>
+        <Display>Success Colors</Display>
         <ColorSwatchRow>{renderSuccessColorBlocks()}</ColorSwatchRow>
-        <ColorSwatchRow></ColorSwatchRow>
-        <Spacer spaceMultiplier={4} />
+        <Spacer spaceMultiplier={3} />
+        <StyleguideTitle>Font Styles</StyleguideTitle>
+        <Title>Title</Title>
+        <Display>Display</Display>
+        <Large>Large</Large>
+        <BodyCopy>
+          BodyCopy for bits of text and paragraphs etc. This is an example of a{' '}
+          <TextLink>TextLink</TextLink> inside another style. Lorem ipsum dolor
+          sit amet, consectetur adipisicing elit. Dignissimos molestias
+          necessitatibus, eaque ipsum odio possimus quia facere omnis cupiditate
+          dolor consectetur animi ipsa fugit, est obcaecati dolore. Ipsam,
+          facere repellendus! Lorem ipsum dolor sit amet consectetur adipisicing
+          elit. Earum tempore laboriosam dignissimos repellendus ratione,
+          voluptatem velit quae! Amet, quas ipsa. Sit quibusdam ipsam quas qui
+          iusto. Voluptate perferendis doloribus atque.
+        </BodyCopy>
+        <Small>Small</Small>
+        <BodyCopy>
+          <ButtonText>Button Text</ButtonText> - This is a button which takes
+          the styles from TextLink
+        </BodyCopy>
+        <Spacer spaceMultiplier={3} />
         <StyleguideTitle>Grid</StyleguideTitle>
-        <Separator />
         <Grid>
           <GridItem small={6} medium={4} large={3}>
             <ColorBlock />
@@ -151,9 +168,9 @@ const ThisStyleGuide = ({ children }) => (
             <ColorBlock />
           </GridItem>
         </Grid>
-        <Spacer spaceMultiplier={4} />
-        <StyleguideTitle>Buttons</StyleguideTitle>
-        <Separator />
+        <Spacer spaceMultiplier={3} />
+        <StyleguideTitle>Components</StyleguideTitle>
+        <Title>Buttons</Title>
         <ButtonRow>
           <ButtonBrand>Button Brand</ButtonBrand>
           <ButtonContrast>Button Contrast</ButtonContrast>
@@ -166,32 +183,13 @@ const ThisStyleGuide = ({ children }) => (
           <ButtonAccent disabled>Accent Disabled</ButtonAccent>
           <ButtonAlternative disabled>Alternative Disabled</ButtonAlternative>
         </ButtonRow>
-        <Spacer spaceMultiplier={4} />
-        <StyleguideTitle>Font Styles</StyleguideTitle>
-        <Separator />
-        <Title>Title</Title>
-        <Display>Display</Display>
-        <Large>Large</Large>
-        <BodyCopy>BodyCopy for bits of text and paragraphs etc.</BodyCopy>
-        <Small>Small</Small>
-        <BodyCopy>
-          This is an example of a <TextLink>TextLink</TextLink> inside another
-          style.
-        </BodyCopy>
-        <BodyCopy>
-          <ButtonText>Button Text</ButtonText> - This is a button which takes
-          the styles from TextLink
-        </BodyCopy>
-        <Spacer spaceMultiplier={4} />
+        <Spacer spaceMultiplier={3} />
         <StyleguideTitle>Form Elements</StyleguideTitle>
-        <Separator />
-        <Large>Validation Message</Large>
+        <Display>Validation Message</Display>
         <ValidationMessage message="Oh dear! Something went wrong!" />
         <SuccessMessage message="Yes! Something went right!" />
-        <Separator />
-        <Spacer spaceMultiplier={4} />
+        <Spacer spaceMultiplier={3} />
         <StyleguideTitle>Form Fields</StyleguideTitle>
-        <Separator />
         <InputWithLabel
           name="defaultInput"
           label="Default input field"
@@ -201,7 +199,6 @@ const ThisStyleGuide = ({ children }) => (
           name="defaultInput-error"
           label="Input field - error!"
           value="Fix this field"
-          onChange={() => {}}
           valid={false}
         />
         <InputWithLabel
@@ -250,9 +247,8 @@ const ThisStyleGuide = ({ children }) => (
           name="defaultTextArea-disabled"
           disabled
         />
-        <Spacer spaceMultiplier={4} />
+        <Spacer spaceMultiplier={3} />
         <StyleguideTitle>Icons</StyleguideTitle>
-        <Separator />
         <IconWrapper>
           <IconCross />
         </IconWrapper>{' '}
@@ -264,8 +260,8 @@ const ThisStyleGuide = ({ children }) => (
         </IconWrapper>
         {children}
       </Stack>
-    </StyleGuide>
-  </ContentWrapper>
+    </ContentWrapper>
+  </StyleGuide>
 )
 
 ThisStyleGuide.propTypes = {
