@@ -8,12 +8,16 @@ const ContentWrapper = styled.div`
   padding-left: ${pxToRem(Layout.grid.unit)};
   padding-right: ${pxToRem(Layout.grid.unit)};
 
-  ${LunaMedia.above('medium')`
-    max-width: ${pxToRem(Layout.maxWidth.large + Layout.grid.unit * 2)};
+  ${LunaMedia.above('small')`
+    max-width: calc(${pxToRem(Layout.maxWidth.large)} + 8vw);
+    padding-left: 4vw;
+    padding-right: 4vw;
   `}
 
-  ${LunaMedia.above('xlarge')`
-    max-width: ${pxToRem(Layout.maxWidth.large + Layout.grid.unit * 2)};
+  ${LunaMedia.above('maxWidthLarge')`
+    max-width: calc(${pxToRem(Layout.maxWidth.large)} + 8vw);
+    padding-left: 4vw;
+    padding-right: 4vw;
   `}
 `
 
