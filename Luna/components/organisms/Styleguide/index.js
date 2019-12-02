@@ -40,6 +40,8 @@ import { Spacer } from '../../../tools'
 import { Color } from '../../../config/color'
 import { Grid, GridItem } from '../../layouts/Grid'
 import { IconWrapper } from '../../atoms/Icon/IconWrapper'
+import { Font } from '../../../config/font'
+import { TextStyles } from '../../../config/textStyle'
 
 const SELECT_OPTIONS = [
   { label: 'Ms', value: 'Ms' },
@@ -122,21 +124,41 @@ const ThisStyleGuide = ({ children }) => (
         <ColorSwatchRow>{renderSuccessColorBlocks()}</ColorSwatchRow>
         <Spacer spaceMultiplier={3} />
         <StyleguideTitle>Font Styles</StyleguideTitle>
-        <Title>Title</Title>
-        <Display>Display</Display>
-        <Large>Large</Large>
-        <BodyCopy>
-          BodyCopy for bits of text and paragraphs etc. This is an example of a{' '}
-          <TextLink>TextLink</TextLink> inside another style. Lorem ipsum dolor
-          sit amet, consectetur adipisicing elit. Dignissimos molestias
-          necessitatibus, eaque ipsum odio possimus quia facere omnis cupiditate
-          dolor consectetur animi ipsa fugit, est obcaecati dolore. Ipsam,
-          facere repellendus! Lorem ipsum dolor sit amet consectetur adipisicing
-          elit. Earum tempore laboriosam dignissimos repellendus ratione,
-          voluptatem velit quae! Amet, quas ipsa. Sit quibusdam ipsam quas qui
-          iusto. Voluptate perferendis doloribus atque.
-        </BodyCopy>
-        <Small>Small</Small>
+        <div>
+          <BodyCopy># Title</BodyCopy>
+          <Title>
+            {Font.family.brand}, {Font.weight.normal}, {TextStyles.title.size} /{' '}
+            {TextStyles.title.lineHeight}
+          </Title>
+        </div>
+        <div>
+          <BodyCopy># Display</BodyCopy>
+          <Display>
+            {Font.family.brand}, {Font.weight.normal}, {TextStyles.display.size}{' '}
+            / {TextStyles.display.lineHeight}
+          </Display>
+        </div>
+        <div>
+          <BodyCopy># Large</BodyCopy>
+          <Large>
+            {Font.family.brand}, {Font.weight.normal}, {TextStyles.large.size} /{' '}
+            {TextStyles.large.lineHeight}
+          </Large>
+        </div>
+        <div>
+          <BodyCopy># BodyCopy</BodyCopy>
+          <BodyCopy>
+            {Font.family.brand}, {Font.weight.normal},{' '}
+            {TextStyles.bodyCopy.size} / {TextStyles.bodyCopy.lineHeight}
+          </BodyCopy>
+        </div>
+        <div>
+          <Small># Small</Small>
+          <Small>
+            {Font.family.brand}, {Font.weight.normal}, {TextStyles.small.size} /{' '}
+            {TextStyles.small.lineHeight}
+          </Small>
+        </div>
         <BodyCopy>
           <ButtonText>Button Text</ButtonText> - This is a button which takes
           the styles from TextLink

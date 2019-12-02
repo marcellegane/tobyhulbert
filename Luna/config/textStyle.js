@@ -3,7 +3,7 @@ import { Font } from './font'
 import { Color } from './color'
 import { pxToRem } from '../tools/calculate'
 
-const styles = {
+const TextStyles = {
   statement: {
     size: 40,
     lineHeight: 56,
@@ -33,43 +33,43 @@ const styles = {
 const Statement = css`
   font-family: ${Font.family.brand};
   font-weight: ${Font.weight.medium};
-  font-size: ${pxToRem(styles.statement.size)};
-  line-height: ${styles.statement.lineHeight / styles.statement.size};
+  font-size: ${pxToRem(TextStyles.statement.size)};
+  line-height: ${TextStyles.statement.lineHeight / TextStyles.statement.size};
 `
 
 const Title = css`
   font-family: ${Font.family.brand};
   font-weight: ${Font.weight.normal};
-  font-size: ${pxToRem(styles.title.size)};
-  line-height: ${styles.title.lineHeight / styles.title.size};
+  font-size: ${pxToRem(TextStyles.title.size)};
+  line-height: ${TextStyles.title.lineHeight / TextStyles.title.size};
 `
 
 const Display = css`
   font-family: ${Font.family.brand};
   font-weight: ${Font.weight.normal};
-  font-size: ${pxToRem(styles.display.size)};
-  line-height: ${styles.display.lineHeight / styles.display.size};
+  font-size: ${pxToRem(TextStyles.display.size)};
+  line-height: ${TextStyles.display.lineHeight / TextStyles.display.size};
 `
 
 const Large = css`
   font-family: ${Font.family.brand};
   font-weight: ${Font.weight.normal};
-  font-size: ${pxToRem(styles.large.size)};
-  line-height: ${styles.large.lineHeight / styles.large.size};
+  font-size: ${pxToRem(TextStyles.large.size)};
+  line-height: ${TextStyles.large.lineHeight / TextStyles.large.size};
 `
 
 const BodyCopy = css`
   font-family: ${Font.family.brand};
   font-weight: ${Font.weight.normal};
-  font-size: ${pxToRem(styles.bodyCopy.size)};
-  line-height: ${styles.bodyCopy.lineHeight / styles.bodyCopy.size};
+  font-size: ${pxToRem(TextStyles.bodyCopy.size)};
+  line-height: ${TextStyles.bodyCopy.lineHeight / TextStyles.bodyCopy.size};
 `
 
 const Small = css`
   font-family: ${Font.family.brand};
   font-weight: ${Font.weight.normal};
-  font-size: ${pxToRem(styles.small.size)};
-  line-height: ${styles.small.lineHeight / styles.small.size};
+  font-size: ${pxToRem(TextStyles.small.size)};
+  line-height: ${TextStyles.small.lineHeight / TextStyles.small.size};
 `
 
 const TextLink = css`
@@ -93,4 +93,4 @@ const TextStyle = {
   TextLink,
 }
 
-export { TextStyle }
+export { TextStyles, TextStyle }
