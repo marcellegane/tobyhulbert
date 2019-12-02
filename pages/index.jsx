@@ -1,11 +1,26 @@
 import React from 'react'
-import LunaStyleGuide from '../Luna/layouts/LunaStyleGuide'
-import { Styleguide } from '../Luna/Styleguide'
+import PropTypes from 'prop-types'
+import {
+  GlobalStyle,
+  MainContent,
+} from '../Luna/components/layouts/default.style'
+import { ContentWrapper } from '../Luna'
+import { Spacer } from '../Luna/tools/Spacer/index.style'
 
 const Index = () => (
-  <LunaStyleGuide>
-    <Styleguide />
-  </LunaStyleGuide>
+  <React.Fragment>
+    <GlobalStyle />
+    <MainContent>
+      <Spacer></Spacer>
+      <ContentWrapper>
+        <h1>Hello World!</h1>
+      </ContentWrapper>
+    </MainContent>
+  </React.Fragment>
 )
+
+Index.propTypes = {
+  children: PropTypes.node,
+}
 
 export default Index

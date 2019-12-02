@@ -1,11 +1,17 @@
 import React from 'react'
-import LunaStyleGuide from '../../Luna/layouts/LunaStyleGuide'
+import {
+  GlobalStyle,
+  MainContent,
+} from '../../Luna/components/layouts/default.style'
 import { Styleguide } from '../../Luna/components/organisms/Styleguide'
 
 const Index = () => (
-  <LunaStyleGuide>
-    <Styleguide />
-  </LunaStyleGuide>
+  <>
+    <GlobalStyle />
+    <MainContent>
+      <Styleguide />
+    </MainContent>
+  </>
 )
 
 export default Index
