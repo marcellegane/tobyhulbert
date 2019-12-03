@@ -35,8 +35,6 @@ import {
   IconPinpoint,
 } from '../../../svgs/icons'
 
-import { Spacer } from '../../../tools'
-
 import { Color } from '../../../config/color'
 import { Grid, GridItem } from '../../layouts/Grid'
 import { IconWrapper } from '../../atoms/Icon/IconWrapper'
@@ -122,7 +120,6 @@ const ThisStyleGuide = ({ children }) => (
         <ColorSwatchRow>{renderErrorColorBlocks()}</ColorSwatchRow>
         <Display>Success Colors</Display>
         <ColorSwatchRow>{renderSuccessColorBlocks()}</ColorSwatchRow>
-        <Spacer spaceMultiplier={3} />
         <StyleguideTitle>Font Styles</StyleguideTitle>
         <div>
           <BodyCopy># Title</BodyCopy>
@@ -163,7 +160,6 @@ const ThisStyleGuide = ({ children }) => (
           <ButtonText>Button Text</ButtonText> - This is a button which takes
           the styles from TextLink
         </BodyCopy>
-        <Spacer spaceMultiplier={3} />
         <StyleguideTitle>Grid</StyleguideTitle>
         <Grid>
           <GridItem small={6} medium={4} large={3}>
@@ -194,7 +190,6 @@ const ThisStyleGuide = ({ children }) => (
             <ColorBlock />
           </GridItem>
         </Grid>
-        <Spacer spaceMultiplier={3} />
         <StyleguideTitle>Components</StyleguideTitle>
         <Title>Buttons</Title>
         <ButtonRow>
@@ -209,12 +204,10 @@ const ThisStyleGuide = ({ children }) => (
           <ButtonAccent disabled>Accent Disabled</ButtonAccent>
           <ButtonAlternative disabled>Alternative Disabled</ButtonAlternative>
         </ButtonRow>
-        <Spacer spaceMultiplier={3} />
         <StyleguideTitle>Form Elements</StyleguideTitle>
         <Display>Validation Message</Display>
         <ValidationMessage message="Oh dear! Something went wrong!" />
         <SuccessMessage message="Yes! Something went right!" />
-        <Spacer spaceMultiplier={3} />
         <StyleguideTitle>Form Fields</StyleguideTitle>
         <InputWithLabel
           name="defaultInput"
@@ -275,7 +268,6 @@ const ThisStyleGuide = ({ children }) => (
           name="defaultTextArea-disabled"
           disabled
         />
-        <Spacer spaceMultiplier={3} />
         <StyleguideTitle>Icons</StyleguideTitle>
         <IconWrapper>
           <IconCross />
