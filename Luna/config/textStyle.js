@@ -79,7 +79,7 @@ const TextLink = css`
   font-size: inherit;
   line-height: inherit;
   text-decoration: underline;
-  color: ${Color.primary.brand};
+  color: ${Color.primary.base};
   cursor: pointer;
 `
 

@@ -19,7 +19,7 @@ const AccordionItemHeader = styled.button`
   padding-bottom: ${pxToRem(8)};
   padding-left: 0;
   border: none;
-  border-bottom: ${pxToRem(1)} solid ${Color.primary.brand};
+  border-bottom: ${pxToRem(1)} solid ${Color.primary.base};
   background: transparent;
 
   :hover,
@@ -27,10 +27,10 @@ const AccordionItemHeader = styled.button`
   :active {
     outline: none;
     cursor: pointer;
-    color: ${Color.secondary.contrast};
+    color: ${Color.tertiary.base};
   }
 
-  color: ${Color.primary.brand};
+  color: ${Color.primary.base};
 `
 
 const AccordionItemLabel = styled.div`

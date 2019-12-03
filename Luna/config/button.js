@@ -20,28 +20,28 @@ const Button = {
     transition: 'all 0.3s ease',
   },
   brand: {
-    background: Color.primary.contrast,
-    borderColor: Color.primary.contrast,
-    color: Color.primary.brand,
+    background: Color.secondary.base,
+    borderColor: Color.secondary.base,
+    color: Color.primary.base,
     psuedo: {
-      background: Color.primary.brand,
-      borderColor: Color.primary.contrast,
-      color: Color.primary.contrast,
+      background: Color.primary.base,
+      borderColor: Color.secondary.base,
+      color: Color.secondary.base,
     },
     disabled: {
-      color: Color.secondary.accent,
-      backgroundColor: Color.primary.accent,
-      borderColor: Color.primary.accent,
+      color: Color.primary.light,
+      backgroundColor: Color.primary.dark,
+      borderColor: Color.primary.dark,
     },
   },
   contrast: {
-    background: Color.primary.contrast,
-    borderColor: Color.primary.contrast,
-    color: Color.primary.brand,
+    background: Color.secondary.base,
+    borderColor: Color.secondary.base,
+    color: Color.primary.base,
     psuedo: {
-      background: Color.primary.accent,
-      borderColor: Color.primary.accent,
-      color: Color.primary.contrast,
+      background: Color.primary.dark,
+      borderColor: Color.primary.dark,
+      color: Color.secondary.base,
     },
     disabled: {
       color: Color.grey.light,
@@ -51,11 +51,11 @@ const Button = {
   },
   accent: {
     background: Color.background,
-    borderColor: Color.primary.brand,
-    color: Color.primary.brand,
+    borderColor: Color.primary.base,
+    color: Color.primary.base,
     psuedo: {
-      background: Color.primary.brand,
-      borderColor: Color.primary.brand,
+      background: Color.primary.base,
+      borderColor: Color.primary.base,
       color: Color.background,
     },
     disabled: {
@@ -65,12 +65,12 @@ const Button = {
     },
   },
   alternative: {
-    background: Color.primary.brand,
-    borderColor: Color.primary.brand,
+    background: Color.primary.base,
+    borderColor: Color.primary.base,
     color: Color.background,
     psuedo: {
-      background: Color.primary.accent,
-      borderColor: Color.primary.accent,
+      background: Color.primary.dark,
+      borderColor: Color.primary.dark,
       color: Color.background,
     },
     disabled: {

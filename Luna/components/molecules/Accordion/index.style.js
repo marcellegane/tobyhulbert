@@ -5,7 +5,7 @@ const Accordion = styled.div``
 
 const AccordionTitle = styled.h3`
   ${Luna.TextStyle.Large}
-  color: ${Luna.color.primary.brand};
+  color: ${Luna.color.primary.base};
   font-weight: ${Luna.font.weight.bold};
 
   + ${Accordion} {

@@ -15,7 +15,7 @@ const RadioGroup = styled.div`
 	overflow: hidden;
 	border-radius: ${pxToRem(4)};
 	border: ${pxToRem(1)} solid ${Luna.color.background};
-	background-color: ${Luna.color.primary.brand};
+	background-color: ${Luna.color.primary.base};
 
 	${RadioGroupOption} + ${RadioGroupOption} {
 		border-left: ${pxToRem(1)} solid ${Luna.color.background};
@@ -36,10 +36,10 @@ const RadioGroupLabel = styled.label`
 	font-weight: ${Luna.font.weight.medium};
 	color: ${Luna.color.background};
 	text-align: center;
-	background-color: ${Luna.color.primary.brand};
+	background-color: ${Luna.color.primary.base};
 
 	${RadioGroupInput}:checked + & {
-		color: ${Luna.color.primary.brand};
+		color: ${Luna.color.primary.base};
 		background-color: ${Luna.color.background};
 	}
 `

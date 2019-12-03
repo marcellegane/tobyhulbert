@@ -45,8 +45,8 @@ const TextLink = styled.span`
 const ColorSwatchRow = styled.div`
   display: flex;
   flex-wrap: wrap;
-  margin-left: ${pxToRem(-Layout.grid.unit)};
-  margin-right: ${pxToRem(-Layout.grid.unit)};
+  margin-left: ${pxToRem(-Layout.grid.unit, 0.5)};
+  margin-right: ${pxToRem(-Layout.grid.unit, 0.5)};
 `
 
 const ColorSwatchBlock = styled.div`
@@ -55,8 +55,8 @@ const ColorSwatchBlock = styled.div`
   justify-content: center;
   align-items: center;
   width: 100%;
-  max-width: ${pxToRem(120)};
-  margin: ${pxToRem(Layout.grid.unit)};
+  max-width: ${pxToRem(100)};
+  margin: ${pxToRem(Layout.grid.unit, 0.5)};
   text-align: center;
 `
 
@@ -64,8 +64,7 @@ const ColorSwatch = styled.span`
   display: flex;
   flex-direction: column;
   width: 100%;
-  margin-bottom: ${pxToRem(Layout.grid.unit)};
-  border-radius: 100%;
+  margin-bottom: ${pxToRem(Layout.grid.unit, 0.5)};
   background-color: ${props => props.backgroundColor};
   border-width: ${pxToRem(Border.width)};
   border-style: ${Border.style};

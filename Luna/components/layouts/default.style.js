@@ -16,7 +16,7 @@ const GlobalStyle = createGlobalStyle`
 	body {
 		font-family: ${Luna.font.family.brand};
 		font-size: ${pxToRem(Luna.font.size.base)};
-		color: ${Luna.color.primary.brand};
+		color: ${Luna.color.primary.base};
 		background-color: ${Luna.color.background};
 	}
 `

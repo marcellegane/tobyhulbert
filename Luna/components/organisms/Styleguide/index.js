@@ -54,6 +54,7 @@ function renderPrimaryColorBlocks() {
     <ColorSwatchBlock key={name}>
       <ColorSwatch backgroundColor={Color.primary[name]} />
       <Small>{name}</Small>
+      <Small>{Color.primary[name]}</Small>
     </ColorSwatchBlock>
   ))
 }
@@ -63,6 +64,27 @@ function renderSecondaryColorBlocks() {
     <ColorSwatchBlock key={name}>
       <ColorSwatch backgroundColor={Color.secondary[name]} />
       <Small>{name}</Small>
+      <Small>{Color.secondary[name]}</Small>
+    </ColorSwatchBlock>
+  ))
+}
+
+function renderTertiaryColorBlocks() {
+  return Object.keys(Color.tertiary).map(name => (
+    <ColorSwatchBlock key={name}>
+      <ColorSwatch backgroundColor={Color.tertiary[name]} />
+      <Small>{name}</Small>
+      <Small>{Color.tertiary[name]}</Small>
+    </ColorSwatchBlock>
+  ))
+}
+
+function renderGreyColorBlocks() {
+  return Object.keys(Color.grey).map(name => (
+    <ColorSwatchBlock key={name}>
+      <ColorSwatch backgroundColor={Color.grey[name]} />
+      <Small>{name}</Small>
+      <Small>{Color.grey[name]}</Small>
     </ColorSwatchBlock>
   ))
 }
@@ -89,37 +111,15 @@ const ThisStyleGuide = ({ children }) => (
   <StyleGuide>
     <ContentWrapper>
       <Stack>
-        <StyleguideTitle>Color Palette</StyleguideTitle>
-        <Display>Primary Colors</Display>
+        <StyleguideTitle>Colours</StyleguideTitle>
+        <Display>Primary</Display>
         <ColorSwatchRow>{renderPrimaryColorBlocks()}</ColorSwatchRow>
-        <Display>Secondary Colors</Display>
+        <Display>Secondary</Display>
         <ColorSwatchRow>{renderSecondaryColorBlocks()}</ColorSwatchRow>
-        <Display>Other Colors</Display>
-        <ColorSwatchRow>
-          <ColorSwatchBlock>
-            <ColorSwatch backgroundColor={Color.foreground} />
-            <Small>foreground</Small>
-          </ColorSwatchBlock>
-          <ColorSwatchBlock>
-            <ColorSwatch
-              backgroundColor={Color.background}
-              borderColor={Color.border}
-            />
-            <Small>background</Small>
-          </ColorSwatchBlock>
-          <ColorSwatchBlock>
-            <ColorSwatch backgroundColor={Color.neutral} />
-            <Small>neutral</Small>
-          </ColorSwatchBlock>
-          <ColorSwatchBlock>
-            <ColorSwatch backgroundColor={Color.border} />
-            <Small>border</Small>
-          </ColorSwatchBlock>
-        </ColorSwatchRow>
-        <Display>Error Colors</Display>
-        <ColorSwatchRow>{renderErrorColorBlocks()}</ColorSwatchRow>
-        <Display>Success Colors</Display>
-        <ColorSwatchRow>{renderSuccessColorBlocks()}</ColorSwatchRow>
+        <Display>Tertiary</Display>
+        <ColorSwatchRow>{renderTertiaryColorBlocks()}</ColorSwatchRow>
+        <Display>Grey</Display>
+        <ColorSwatchRow>{renderGreyColorBlocks()}</ColorSwatchRow>
         <StyleguideTitle>Font Styles</StyleguideTitle>
         <div>
           <BodyCopy># Title</BodyCopy>

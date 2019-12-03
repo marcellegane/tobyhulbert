@@ -10,14 +10,14 @@ const Form = {
     paddingHorizontal: Layout.grid.unit,
     marginVertical: Layout.grid.unit,
     marginHorizontal: 0,
-    borderColor: Color.primary.brand,
+    borderColor: Color.primary.base,
     borderWidth: Border.width,
     borderStyle: Border.style,
     fontSize: 16,
     fontFamily: Font.family.brand,
-    color: Color.primary.brand,
+    color: Color.primary.base,
     backgroundColor: Color.background,
-    placeholderColor: Color.primary.brand,
+    placeholderColor: Color.primary.base,
   },
   validation: {
     error: {
@@ -35,7 +35,7 @@ const Form = {
     color: Color.disabled.color,
   },
   focus: {
-    borderColor: Color.primary.contrast,
+    borderColor: Color.secondary.base,
     backgroundColor: Color.background,
   },
 }
