@@ -1,7 +1,6 @@
 import styled from 'styled-components'
 import Util from '../../../tools/util'
 import { Form } from '../../../config/form'
-import { Layout } from '../../../config/layout'
 import { pxToRem } from '../../../tools/calculate'
 
 const TextAreaStyle = styled.textarea`
@@ -28,7 +27,8 @@ const TextAreaStyle = styled.textarea`
   background-color: ${props =>
     Util.calculateBackgroundColor(props.disabled, props.valid)};
   color: ${props => Util.calculateColor(props.disabled, props.valid)};
-  border-color: ${props => Util.calculateBorderColor(props.disabled, props.valid)};
+  border-color: ${props =>
+    Util.calculateBorderColor(props.disabled, props.valid)};
 
   border-width: ${props =>
     props.valid ? Form.base.borderWidth : Form.validation.error.borderWidth};
@@ -36,7 +36,7 @@ const TextAreaStyle = styled.textarea`
   border-style: ${props =>
     props.valid ? Form.base.borderStyle : Form.validation.error.borderStyle};
 
-	:focus,
+  :focus,
   :active,
   :hover {
     outline: none;

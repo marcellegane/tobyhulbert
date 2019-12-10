@@ -1,5 +1,4 @@
 import styled from 'styled-components'
-import { Layout } from '../../../config/layout'
 import { pxToRem } from '../../../tools/calculate'
 
 const Separator = styled.hr`

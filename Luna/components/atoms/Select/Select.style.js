@@ -1,7 +1,6 @@
 import styled from 'styled-components'
 import { Form } from '../../../config/form'
 import Util from '../../../tools/util'
-import { Luna } from '../../../config'
 import { pxToRem } from '../../../tools'
 
 const SelectStyle = styled.select`

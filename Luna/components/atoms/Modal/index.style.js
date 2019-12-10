@@ -2,7 +2,6 @@ import styled from 'styled-components'
 import { Border } from '../../../config/border'
 import { Color } from '../../../config/color'
 import { Font } from '../../../config/font'
-import { Layout } from '../../../config/layout'
 import { pxToRem } from '../../../tools/calculate'
 
 const Modal = styled.div`
