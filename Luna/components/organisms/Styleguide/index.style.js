@@ -13,9 +13,9 @@ const StyleguideTitle = styled.h2`
 `
 
 const StyleGuide = styled.div`
-  padding-top: ${pxToRem(Layout.grid.unit, 2)};
-  padding-bottom: ${pxToRem(Layout.grid.unit, 2)};
-  margin-bottom: ${pxToRem(Layout.grid.unit, 3)};
+  padding-top: ${pxToRem('default', 2)};
+  padding-bottom: ${pxToRem('default', 2)};
+  margin-bottom: ${pxToRem('default', 3)};
 `
 
 const Title = styled.p`
@@ -56,7 +56,7 @@ const ColorSwatchBlock = styled.div`
   align-items: center;
   width: 100%;
   max-width: ${pxToRem(100)};
-  margin: ${pxToRem(Layout.grid.unit, 0.5)};
+  margin: ${pxToRem('default', 0.5)};
   text-align: center;
 `
 
@@ -64,7 +64,7 @@ const ColorSwatch = styled.span`
   display: flex;
   flex-direction: column;
   width: 100%;
-  margin-bottom: ${pxToRem(Layout.grid.unit, 0.5)};
+  margin-bottom: ${pxToRem('default', 0.5)};
   background-color: ${props => props.backgroundColor};
   border-width: ${pxToRem(Border.width)};
   border-style: ${Border.style};
@@ -91,7 +91,7 @@ const ButtonRow = styled.div`
 `
 
 const ColorBlock = styled.div`
-  padding: ${pxToRem(Layout.grid.unit)};
+  padding: ${pxToRem('default')};
   background-color: ${Color.grey.light};
 
   &:before {

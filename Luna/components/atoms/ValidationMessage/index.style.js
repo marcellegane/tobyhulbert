@@ -10,7 +10,7 @@ const ValidationMessage = styled.p`
   display: flex;
   justify-content: flex-start;
   align-items: flex-start;
-  margin-top: ${pxToRem(Layout.grid.unit, 0.5)};
+  margin-top: ${pxToRem('default', 0.5)};
   font-style: normal;
   flex-direction: column;
   color: ${Color.background};

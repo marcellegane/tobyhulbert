@@ -5,8 +5,8 @@ import { pxToRem, LunaMedia } from '../../../tools'
 const ContentWrapper = styled.div`
   margin-left: auto;
   margin-right: auto;
-  padding-left: ${pxToRem(Layout.grid.unit)};
-  padding-right: ${pxToRem(Layout.grid.unit)};
+  padding-left: ${pxToRem('default')};
+  padding-right: ${pxToRem('default')};
 
   ${LunaMedia.above('small')`
     max-width: calc(${pxToRem(Layout.maxWidth.large)} + 8vw);

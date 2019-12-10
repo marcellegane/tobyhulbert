@@ -1,7 +1,6 @@
 import { css } from 'styled-components'
 import { Button } from '../../../config/button'
 import { pxToRem } from '../../../tools/calculate'
-import { Layout } from '../../../config/layout'
 
 const ButtonBase = css`
   display: inline-flex;
@@ -34,7 +33,7 @@ const ButtonBase = css`
   }
 
   > * + * {
-    margin-left: ${pxToRem(Layout.grid.unit, 0.5)};
+    margin-left: ${pxToRem('default', 0.5)};
   }
 `
 

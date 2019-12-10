@@ -1,5 +1,4 @@
 import { Form } from '../config/form'
-import { Color } from '../config/color'
 
 class Util {
   static calculateBorderColor(disabled, valid) {

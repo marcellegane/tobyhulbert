@@ -21,7 +21,7 @@ const TextAreaStyle = styled.textarea`
   margin-right: ${pxToRem(Form.base.marginHorizontal)};
   font-size: ${pxToRem(Form.base.fontSize)};
   font-family: ${Form.base.fontFamily};
-  height: ${pxToRem(Layout.grid.unit, 6)};
+  height: ${pxToRem('default', 6)};
   resize: vertical;
   overflow: auto;
 

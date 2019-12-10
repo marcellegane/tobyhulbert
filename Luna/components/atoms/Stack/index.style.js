@@ -6,7 +6,7 @@ const Stack = styled.div`
 	width: 100%;
 	
     > * + * {
-        margin-top: ${props => `${pxToRem(Layout.grid.unit, props.stackMultiplier)}`};
+        margin-top: ${props => `${pxToRem('default', props.stackMultiplier)}`};
 	};
 `
 

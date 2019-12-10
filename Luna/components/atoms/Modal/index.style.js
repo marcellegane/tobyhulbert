@@ -12,7 +12,7 @@ const Modal = styled.div`
   left: 0;
   width: 100%;
   height: 100%;
-  padding: ${pxToRem(Layout.grid.unit)};
+  padding: ${pxToRem('default')};
   font-family: ${Font.family.brand};
   z-index: 999;
 `
@@ -45,14 +45,14 @@ const ModalInner = styled.div`
 `
 
 const ModalHeader = styled.div`
-  padding: ${pxToRem(Layout.grid.unit)};
+  padding: ${pxToRem('default')};
   border-top-left-radius: ${pxToRem(Border.radius)};
   border-top-right-radius: ${pxToRem(Border.radius)};
 
   p {
     color: ${Color.foreground};
     margin-top: 0;
-    margin-bottom: ${pxToRem(Layout.grid.unit, 2)} !important;
+    margin-bottom: ${pxToRem('default', 2)} !important;
     font-size: ${pxToRem(14)};
   }
 
@@ -76,7 +76,7 @@ const ModalHeading = styled.div``
 const ModalTitle = styled.h2`
   font-family: ${Font.headings};
   color: ${Color.foreground};
-  margin-bottom: ${pxToRem(Layout.grid.unit)};
+  margin-bottom: ${pxToRem('default')};
   font-size: ${pxToRem(22)};
   display: flex;
   justify-content: ${props => getModalHeaderAlign(props.align)};
@@ -86,7 +86,7 @@ const ModalBody = styled.div`
   flex: 1;
   overflow-x: hidden;
   overflow-y: scroll;
-  padding: ${pxToRem(Layout.grid.unit)};
+  padding: ${pxToRem('default')};
   font-family: ${Font.family.brand};
 `
 
@@ -98,7 +98,7 @@ const ModalBodyFullWidth = styled.div`
 
 const ModalFooter = styled.div`
   background: ${Color.background};
-  padding: ${pxToRem(Layout.grid.unit)};
+  padding: ${pxToRem('default')};
   border-bottom-left-radius: ${pxToRem(Border.radius)};
   border-bottom-right-radius: ${pxToRem(Border.radius)};
   display: flex;
@@ -121,7 +121,7 @@ const ModalClose = styled.span`
 `
 
 const ModalCloseText = styled.span`
-  margin-right: ${pxToRem(Layout.grid.unit, 0.5)};
+  margin-right: ${pxToRem('default', 0.5)};
 `
 
 const ModalBodyText = styled.p`
@@ -131,14 +131,14 @@ const ModalBodyText = styled.p`
   color: ${Color.foreground};
   display: flex;
   flex-direction: column;
-  padding-left: ${pxToRem(Layout.grid.unit)};
-  padding-right: ${pxToRem(Layout.grid.unit)};
+  padding-left: ${pxToRem('default')};
+  padding-right: ${pxToRem('default')};
   justify-content: ${props => (props.center ? 'center' : 'flex-start')};
   align-content: center;
   line-height: ${pxToRem(24)};
   text-align: ${props => (props.center ? 'center' : 'flex-start')};
   margin-top: 0;
-  margin-bottom: ${pxToRem(Layout.grid.unit, 1)};
+  margin-bottom: ${pxToRem('default', 1)};
 `
 
 export {

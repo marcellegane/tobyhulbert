@@ -6,7 +6,7 @@ const Separator = styled.hr`
   border: none;
   height: ${pxToRem(2)};
   background-color: ${props => props.bgColor};
-  margin-top: ${pxToRem(Layout.grid.unit, 0.5)};
+  margin-top: ${pxToRem('default', 0.5)};
 `
 
 export { Separator }

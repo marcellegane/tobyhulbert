@@ -9,11 +9,11 @@ const AccordionTitle = styled.h3`
   font-weight: ${Luna.font.weight.bold};
 
   + ${Accordion} {
-    margin-top: ${pxToRem(Luna.layout.grid.unit, 1.5)};
+    margin-top: ${pxToRem('default', 1.5)};
   }
 
   ${LunaMedia.below('large')`
-    margin-top:${pxToRem(Luna.layout.grid.unit, 2)};
+    margin-top:${pxToRem('default', 2)};
 	`}
 `
 

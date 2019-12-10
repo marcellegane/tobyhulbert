@@ -13,7 +13,7 @@ const SelectStyle = styled.select`
   padding-top: ${pxToRem(Form.base.paddingVertical)};
   padding-bottom: ${pxToRem(Form.base.paddingVertical)};
   padding-left: ${pxToRem(Form.base.paddingHorizontal)};
-  padding-right: ${pxToRem(Luna.layout.grid.unit, 2.5)};
+  padding-right: ${pxToRem('default', 2.5)};
   margin-left: ${pxToRem(Form.base.marginHorizontal)};
   margin-right: ${pxToRem(Form.base.marginHorizontal)};
   pointer-events: ${props => (!props.disabled ? 'auto' : 'none')};

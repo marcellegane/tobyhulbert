@@ -1,11 +1,16 @@
 import { Font } from '../config/font'
+import { Layout } from '../config/layout'
 
 function pxToRem(pixelValue, multipler = 1) {
-  return `${(pixelValue * multipler) / Font.size.base}rem`
+  const pixelInt = pixelValue === 'default' ? Layout.grid.unit : pixelValue
+
+  return `${(pixelInt * multipler) / Font.size.base}rem`
 }
 
 function pxToEm(pixelValue, multipler = 1, pixelBase = 16) {
-  return `${(pixelValue * multipler) / pixelBase}em`
+  const pixelInt = pixelValue === 'default' ? Layout.grid.unit : pixelValue
+
+  return `${(pixelInt * multipler) / pixelBase}em`
 }
 
 export { pxToRem, pxToEm }

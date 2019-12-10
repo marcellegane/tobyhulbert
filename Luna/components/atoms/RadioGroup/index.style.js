@@ -31,7 +31,7 @@ const RadioGroupInput = styled.input`
 const RadioGroupLabel = styled.label`
 	display: block;
 	width: 100%;
-	padding: ${pxToRem(Luna.layout.grid.unit, 0.75)};
+	padding: ${pxToRem('default', 0.75)};
 	${Luna.TextStyle.BodyCopy}
 	font-weight: ${Luna.font.weight.medium};
 	color: ${Luna.color.background};

@@ -17,10 +17,10 @@ const SuccessMessage = styled.p`
   border-radius: ${pxToRem(Border.radius)};
   font-size: ${pxToRem(Form.validation.fontSize)};
   font-weight: 300;
-  padding-top: ${pxToRem(Layout.grid.unit, 0.5)};
-  padding-bottom: ${pxToRem(Layout.grid.unit, 0.5)};
-  padding-left: ${pxToRem(Layout.grid.unit, 1)};
-  padding-right: ${pxToRem(Layout.grid.unit, 1)};
+  padding-top: ${pxToRem('default', 0.5)};
+  padding-bottom: ${pxToRem('default', 0.5)};
+  padding-left: ${pxToRem('default', 1)};
+  padding-right: ${pxToRem('default', 1)};
 `
 
 export { SuccessMessage }
