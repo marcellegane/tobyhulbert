@@ -27,21 +27,13 @@ const getSizeFromBreakpoint = (breakpointValue, breakpoints = {}) => {
 const generateMedia = breakpoints => {
   const below = breakpoint => (...args) => css`
     @media (max-width: ${pxToEm(
-        getSizeFromBreakpoint(breakpoint, breakpoints)
+        getSizeFromBreakpoint(breakpoint, breakpoints) - 1
       )}) {
       ${css(...args)}
     }
   `
 
   const above = breakpoint => (...args) => css`
-    @media (min-width: ${pxToEm(
-        getSizeFromBreakpoint(breakpoint, breakpoints) + 1
-      )}) {
-      ${css(...args)}
-    }
-  `
-
-  const currentAndAbove = breakpoint => (...args) => css`
     @media (min-width: ${pxToEm(
         getSizeFromBreakpoint(breakpoint, breakpoints)
       )}) {
@@ -51,9 +43,9 @@ const generateMedia = breakpoints => {
 
   const between = (firstBreakpoint, secondBreakpoint) => (...args) => css`
     @media (min-width: ${pxToEm(
-        getSizeFromBreakpoint(firstBreakpoint, breakpoints) + 1
+        getSizeFromBreakpoint(firstBreakpoint, breakpoints)
       )}) and (max-width: ${pxToEm(
-        getSizeFromBreakpoint(secondBreakpoint, breakpoints)
+        getSizeFromBreakpoint(secondBreakpoint, breakpoints) - 1
       )}) {
       ${css(...args)}
     }
@@ -63,7 +55,6 @@ const generateMedia = breakpoints => {
     below,
     above,
     between,
-    currentAndAbove,
   })
 }
 
