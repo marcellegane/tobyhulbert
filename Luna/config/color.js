@@ -23,7 +23,7 @@ const Color = {
     light: '#B7B7B7',
     lightest: '#F2F2F2',
   },
-  background: '#FFFFFF',
+  background: '#ebebeb',
   foreground: '#111111',
   border: '#F2F2F2',
   error: {

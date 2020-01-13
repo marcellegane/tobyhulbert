@@ -1,24 +1,19 @@
 import React from 'react'
-import PropTypes from 'prop-types'
 import {
   GlobalStyle,
-  MainContent,
+  Main,
 } from '../Luna/components/layouts/default.style'
-import { ContentWrapper } from '../Luna'
+import { Home } from '../components/Home'
+import { Navigation } from '../components/Navigation'
 
 const Index = () => (
   <React.Fragment>
     <GlobalStyle />
-    <MainContent>
-      <ContentWrapper>
-        <h1>Hello World!</h1>
-      </ContentWrapper>
-    </MainContent>
+    <Navigation />
+    <Main>
+      <Home />
+    </Main>
   </React.Fragment>
 )
-
-Index.propTypes = {
-  children: PropTypes.node,
-}
 
 export default Index

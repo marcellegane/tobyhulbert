@@ -16,11 +16,16 @@ const GlobalStyle = createGlobalStyle`
 	body {
 		font-family: ${Luna.font.family.brand};
 		font-size: ${pxToRem(Luna.font.size.base)};
+		line-height: 1.5;
 		color: ${Luna.color.primary.base};
 		background-color: ${Luna.color.background};
 	}
+
+	h1,h2,h3,h4,h5,h6 {
+		font-weight: ${Luna.font.weight.normal};
+	}
 `
 
-const MainContent = styled.main``
+const Main = styled.main``
 
-export { GlobalStyle, MainContent }
+export { GlobalStyle, Main }

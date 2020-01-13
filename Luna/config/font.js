@@ -1,5 +1,8 @@
 const family = {
-  brand: 'Helvetica Neue, sans-serif',
+  brand: 'Karla, serif',
+  secondary: 'Biryani, serif',
+  tertiary: 'Catamaran, serif',
+  quaternary: 'Exo, serif',
 }
 
 const weight = {
