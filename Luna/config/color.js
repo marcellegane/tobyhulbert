@@ -6,7 +6,7 @@ const Color = {
     lightest: '#D9E0E4',
   },
   secondary: {
-    base: '#FF916F',
+    base: '#0000EE',
     dark: '#B3664E',
     light: '#FFBDA9',
     lightest: '#FFF4F0',
@@ -18,12 +18,12 @@ const Color = {
     lightest: '#FDE6EA',
   },
   grey: {
-    base: '#666666',
+    base: '#717372',
     dark: '#111111',
     light: '#B7B7B7',
     lightest: '#F2F2F2',
   },
-  background: '#ebebeb',
+  background: '#FAFAFA',
   foreground: '#111111',
   border: '#F2F2F2',
   error: {
