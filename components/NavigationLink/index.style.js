@@ -7,9 +7,7 @@ const NavigationLink = styled.a`
   z-index: 100;
   font-size: ${pxToRem(24)};
   font-weight: ${Luna.font.weight.bold};
-  color: #5100ee;
-  color: #0000EE;
-  /* color: #2F7F6F; */
+  color: ${Luna.color.secondary.one};
   text-decoration: none;
 
   ${props =>
@@ -65,6 +63,10 @@ const NavigationLinkUnderline = styled.span`
     left: 0;
     width: 100%;
     height: 100%;
+  }
+
+  path {
+    opacity: 0;
   }
 `
 

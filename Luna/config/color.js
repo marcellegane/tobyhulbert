@@ -14,7 +14,7 @@ const Color = {
     lightest: '#FFF4F0',
   },
   tertiary: {
-    base: '#EF576F',
+    base: '#6E13BA',
     dark: '#A33B4C',
     light: '#F59AA9',
     lightest: '#FDE6EA',

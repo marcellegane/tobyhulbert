@@ -21,6 +21,9 @@ const GlobalStyle = createGlobalStyle`
 		background-color: ${Luna.color.background};
 	}
 
+	::-moz-selection { background: ${Luna.color.grey.lightest}; }
+	::selection { background: ${Luna.color.grey.lightest}; }
+
 	h1,h2,h3,h4,h5,h6 {
 		font-weight: ${Luna.font.weight.normal};
 	}

@@ -1,5 +1,5 @@
-import React, { useEffect, useRef } from 'react'
-import { Luna } from '../../Luna'
+import React, { useEffect, useRef, useState } from 'react'
+import gsap from 'gsap'
 import { SineWave } from '../svgs/SineWave'
 import { SquareWave } from '../svgs/SquareWave'
 import { TriangleWave } from '../svgs/TriangleWave'
@@ -12,24 +12,55 @@ import {
 const ThisNavigationLink = props => {
   const { children, text, width, svg, svgWidth, svgHeight } = props
   const hiddenSvg = useRef(null)
+  let isRepeating = true
+  const tl = useRef()
+
+  tl.current = gsap.timeline({
+    repeat: -1,
+    paused: true,
+    defaults: { duration: 0.6 },
+    onRepeat: () => {
+      if (!isRepeating) {
+        tl.current.pause()
+      }
+    },
+  })
 
   useEffect(() => {
     const path = hiddenSvg.current
+    const pathLength = path.getTotalLength()
 
-    if (!path.style.strokeDasharray) {
-      const pathLength = path.getTotalLength()
-      path.style.strokeDasharray = pathLength
-      path.style.strokeDashoffset = pathLength
-      path.style.transition = 'all 1s ease'
-    }
-  })
+    gsap.set(path, {
+      opacity: 1,
+      strokeDasharray: pathLength,
+      strokeDashoffset: 0,
+    })
 
-  const handleMouseEnter = e => {
-    hiddenSvg.current.style.strokeDashoffset = 0
+    tl.current
+      .fromTo(
+        path,
+        { strokeDashoffset: 0 },
+        {
+          strokeDashoffset: -pathLength,
+          ease: 'power2.inOut',
+        }
+      )
+      .fromTo(
+        path,
+        { strokeDashoffset: pathLength },
+        { strokeDashoffset: 0, ease: 'power2.inOut' }
+      )
+
+    gsap.fromTo(path, { strokeDashoffset: pathLength }, { strokeDashoffset: 0 })
+  }, [tl])
+
+  const handleMouseEnter = () => {
+    isRepeating = true
+    tl.current.play()
   }
 
-  const handleMouseLeave = e => {
-    hiddenSvg.current.style.strokeDashoffset = -hiddenSvg.current.getTotalLength()
+  const handleMouseLeave = () => {
+    isRepeating = false
   }
 
   return (
@@ -46,22 +77,19 @@ const ThisNavigationLink = props => {
       >
         {svg === 'sine' && (
           <>
-            <SineWave />
-            <SineWave ref={hiddenSvg} fill={Luna.color.tertiary.base} />
+            <SineWave ref={hiddenSvg} />
           </>
         )}
 
         {svg === 'square' && (
           <>
-            <SquareWave />
-            <SquareWave ref={hiddenSvg} fill={Luna.color.tertiary.base} />
+            <SquareWave ref={hiddenSvg} />
           </>
         )}
 
         {svg === 'triangle' && (
           <>
-            <TriangleWave />
-            <TriangleWave ref={hiddenSvg} fill={Luna.color.tertiary.base} />
+            <TriangleWave ref={hiddenSvg} />
           </>
         )}
       </NavigationLinkUnderline>
