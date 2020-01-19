@@ -1,33 +1,21 @@
-import {
-  Navigation,
-  NavigationLink,
-  NavigationLinkText,
-  NavigationLinkUnderline,
-} from './index.style'
-import { SineWave } from '../svgs/SineWave'
-import { SquareWave } from '../svgs/SquareWave'
-import { TriangleWave } from '../svgs/TriangleWave'
+import { NavigationLink } from '../NavigationLink'
+import { Navigation } from './index.style'
 
 const ThisNavigation = () => (
   <Navigation>
-    <NavigationLink href="#" topLeft>
-      <NavigationLinkText>Projects</NavigationLinkText>
-      <NavigationLinkUnderline width={100}>
-        <SineWave />
-      </NavigationLinkUnderline>
-    </NavigationLink>
-    <NavigationLink href="#" topRight>
-      <NavigationLinkText>About</NavigationLinkText>
-      <NavigationLinkUnderline width={80}>
-        <TriangleWave />
-      </NavigationLinkUnderline>
-    </NavigationLink>
-    <NavigationLink href="#" bottomLeft>
-      <NavigationLinkText>Contact</NavigationLinkText>
-      <NavigationLinkUnderline>
-        <SquareWave />
-      </NavigationLinkUnderline>
-    </NavigationLink>
+    <NavigationLink
+      href="#"
+      text="Projects"
+      width={90}
+      svg="sine"
+      svgWidth={96}
+      svgHeight={18}
+      topLeft
+    />
+
+    {/* <NavigationLink href="#" text="About" width={80} svg="triangle" topRight />
+
+    <NavigationLink href="#" text="Contact" svg="square" bottomLeft /> */}
   </Navigation>
 )
 

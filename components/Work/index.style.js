@@ -5,7 +5,7 @@ const Work = styled.div`
   position: relative;
   width: calc(100% - ${pxToRem(400)});
   max-width: ${pxToRem(840)};
-  margin-top: 82vh;
+  margin-top: 78vh;
   margin-left: auto;
   margin-right: auto;
   padding-bottom: 10vh;
@@ -26,6 +26,10 @@ const FilmGrid = styled.div`
 
 const WorkImg = styled.img`
   display: block;
+
+  :nth-child(2n) {
+    margin-top: ${pxToRem(Luna.layout.grid.unit * 3)};
+  }
 `
 
 const FilmImg = styled.img`
