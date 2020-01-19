@@ -10,15 +10,16 @@ import {
 } from './index.style'
 
 const ThisNavigationLink = props => {
-  const { children, text, width, svg, svgWidth, svgHeight } = props
-  const hiddenSvg = useRef(null)
+  const { text, width, svg, svgWidth, svgHeight } = props
+  const textRef = useRef(null)
+  const svgPathRef = useRef(null)
   let isRepeating = true
   const tl = useRef()
 
   tl.current = gsap.timeline({
     repeat: -1,
     paused: true,
-    defaults: { duration: 0.6 },
+    defaults: { duration: 0.7, ease: 'none' },
     onRepeat: () => {
       if (!isRepeating) {
         tl.current.pause()
@@ -27,7 +28,8 @@ const ThisNavigationLink = props => {
   })
 
   useEffect(() => {
-    const path = hiddenSvg.current
+    const text = textRef.current
+    const path = svgPathRef.current
     const pathLength = path.getTotalLength()
 
     gsap.set(path, {
@@ -42,16 +44,17 @@ const ThisNavigationLink = props => {
         { strokeDashoffset: 0 },
         {
           strokeDashoffset: -pathLength,
-          ease: 'power2.inOut',
         }
       )
-      .fromTo(
-        path,
-        { strokeDashoffset: pathLength },
-        { strokeDashoffset: 0, ease: 'power2.inOut' }
-      )
+      .fromTo(path, { strokeDashoffset: pathLength }, { strokeDashoffset: 0 })
 
-    gsap.fromTo(path, { strokeDashoffset: pathLength }, { strokeDashoffset: 0 })
+    // Page load animations
+    gsap.to(text, { opacity: 1, ease: 'power2.inOut', duration: 0.7 })
+    gsap.fromTo(
+      path,
+      { strokeDashoffset: pathLength },
+      { strokeDashoffset: 0, ease: 'power2.inOut', duration: 0.7 }
+    )
   }, [tl])
 
   const handleMouseEnter = () => {
@@ -69,7 +72,7 @@ const ThisNavigationLink = props => {
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
     >
-      <NavigationLinkText>{text}</NavigationLinkText>
+      <NavigationLinkText ref={textRef}>{text}</NavigationLinkText>
       <NavigationLinkUnderline
         width={width}
         svgWidth={svgWidth}
@@ -77,19 +80,19 @@ const ThisNavigationLink = props => {
       >
         {svg === 'sine' && (
           <>
-            <SineWave ref={hiddenSvg} />
+            <SineWave ref={svgPathRef} />
           </>
         )}
 
         {svg === 'square' && (
           <>
-            <SquareWave ref={hiddenSvg} />
+            <SquareWave ref={svgPathRef} />
           </>
         )}
 
         {svg === 'triangle' && (
           <>
-            <TriangleWave ref={hiddenSvg} />
+            <TriangleWave ref={svgPathRef} />
           </>
         )}
       </NavigationLinkUnderline>

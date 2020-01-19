@@ -13,9 +13,25 @@ const ThisNavigation = () => (
       topLeft
     />
 
-    {/* <NavigationLink href="#" text="About" width={80} svg="triangle" topRight />
+    <NavigationLink
+      href="#"
+      text="About"
+      width={90}
+      svg="sine"
+      svgWidth={96}
+      svgHeight={18}
+      topRight
+    />
 
-    <NavigationLink href="#" text="Contact" svg="square" bottomLeft /> */}
+    <NavigationLink
+      href="#"
+      text="Contact"
+      width={90}
+      svg="sine"
+      svgWidth={96}
+      svgHeight={18}
+      bottomLeft
+    />
   </Navigation>
 )
 

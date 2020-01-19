@@ -35,6 +35,7 @@ const NavigationLink = styled.a`
 const NavigationLinkText = styled.span`
   display: block;
   padding-bottom: ${pxToRem(18)};
+  opacity: 0;
 `
 
 const NavigationLinkUnderline = styled.span`

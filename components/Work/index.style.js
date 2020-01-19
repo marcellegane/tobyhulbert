@@ -10,6 +10,7 @@ const Work = styled.div`
   margin-right: auto;
   padding-bottom: 10vh;
   background: ${Luna.color.background};
+  opacity: 0;
 `
 
 const WorkGrid = styled.div`
