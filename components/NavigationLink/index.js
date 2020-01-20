@@ -10,7 +10,7 @@ import {
 } from './index.style'
 
 const ThisNavigationLink = props => {
-  const { text, width, svg, svgWidth, svgHeight } = props
+  const { text, width, svg, svgWidth, svgHeight, position } = props
   const textRef = useRef(null)
   const svgPathRef = useRef(null)
   let isRepeating = true
@@ -49,13 +49,26 @@ const ThisNavigationLink = props => {
       .fromTo(path, { strokeDashoffset: pathLength }, { strokeDashoffset: 0 })
 
     // Page load animations
-    gsap.to(text, { opacity: 1, ease: 'power2.inOut', duration: 0.7 })
+    if (position === 'topLeft' || position === 'bottomLeft') {
+      gsap.fromTo(
+        text,
+        { opacity: 0, x: 20 },
+        { opacity: 1, x: 0, ease: 'power2.inOut', duration: 0.7 }
+      )
+    } else {
+      gsap.fromTo(
+        text,
+        { opacity: 0, x: -20 },
+        { opacity: 1, x: 0, ease: 'power2.inOut', duration: 0.7 }
+      )
+    }
+
     gsap.fromTo(
       path,
       { strokeDashoffset: pathLength },
       { strokeDashoffset: 0, ease: 'power2.inOut', duration: 0.7 }
     )
-  }, [tl])
+  }, [position, tl])
 
   const handleMouseEnter = () => {
     isRepeating = true

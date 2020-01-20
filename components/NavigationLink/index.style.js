@@ -10,26 +10,27 @@ const NavigationLink = styled.a`
   color: ${Luna.color.secondary.one};
   text-decoration: none;
 
-  ${props =>
-    props.topLeft &&
-    `
-    top: 0;
-    left: 0;
-  `}
-
-  ${props =>
-    props.topRight &&
-    `
-    top: 0;
-    right: 0;
-  `}
-
-  ${props =>
-    props.bottomLeft &&
-    `
-    bottom: 0;
-    left: 0;
-  `}
+  ${props => {
+    const { position } = props
+    if (position === 'topLeft') {
+      return `
+        top: 0;
+        left: 0;
+      `
+    }
+    if (position === 'topRight') {
+      return `
+        top: 0;
+        right: 0;
+      `
+    }
+    if (position === 'bottomLeft') {
+      return `
+        bottom: 0;
+        left: 0;
+      `
+    }
+  }}
 `
 
 const NavigationLinkText = styled.span`
