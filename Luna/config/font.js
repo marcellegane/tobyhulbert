@@ -1,13 +1,11 @@
 const family = {
-  brand: 'Karla, serif',
-  secondary: 'Biryani, serif',
-  tertiary: 'Catamaran, serif',
-  quaternary: 'Exo, serif',
+  brand: 'Josefin Sans, serif',
 }
 
 const weight = {
   normal: 400,
   medium: 500,
+  semibold: 600,
   bold: 700,
 }
 

@@ -12,7 +12,6 @@ const Hero = styled.div`
   align-items: center;
   justify-content: center;
   height: 90vh;
-  opacity: 0;
 `
 
 const HeroTitle = styled.h1`

@@ -19,7 +19,7 @@ const ThisNavigationLink = props => {
   tl.current = gsap.timeline({
     repeat: -1,
     paused: true,
-    defaults: { duration: 0.7, ease: 'none' },
+    defaults: { duration: 0.5, ease: 'none' },
     onRepeat: () => {
       if (!isRepeating) {
         tl.current.pause()
