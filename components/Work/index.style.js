@@ -3,8 +3,7 @@ import { pxToRem, Luna } from '../../Luna'
 
 const Work = styled.div`
   position: relative;
-  width: calc(100% - ${pxToRem(400)});
-  max-width: ${pxToRem(840)};
+  width: calc(100% - ${pxToRem(480)});
   margin-top: 75vh;
   margin-left: auto;
   margin-right: auto;
