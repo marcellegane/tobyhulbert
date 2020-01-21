@@ -5,12 +5,10 @@ const Work = styled.div`
   position: relative;
   width: calc(100% - ${pxToRem(400)});
   max-width: ${pxToRem(840)};
-  margin-top: 78vh;
+  margin-top: 75vh;
   margin-left: auto;
   margin-right: auto;
   padding-bottom: 10vh;
-  background: ${Luna.color.background};
-  opacity: 0;
 `
 
 const WorkGrid = styled.div`

@@ -12,6 +12,8 @@ const Hero = styled.div`
   align-items: center;
   justify-content: center;
   height: 90vh;
+  opacity: ${props => (props.isHidden ? '0' : '1')};
+  transition: opacity 0.2s ease-out;
 `
 
 const HeroTitle = styled.h1`

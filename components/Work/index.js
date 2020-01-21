@@ -1,3 +1,4 @@
+import React from 'react'
 import { Work, WorkGrid, FilmGrid, WorkImg, FilmImg } from './index.style'
 
 const workImages = [
@@ -48,8 +49,8 @@ const filmImages = [
   'Zookeeper-wife-poster-focus-features.jpg',
 ]
 
-const ThisWork = () => (
-  <Work>
+const ThisWork = React.forwardRef((props, ref) => (
+  <Work ref={ref}>
     <WorkGrid>
       {workImages.map(imageSrc => (
         <WorkImg key={imageSrc} src={`/images/work/${imageSrc}`} />
@@ -61,6 +62,8 @@ const ThisWork = () => (
       ))}
     </FilmGrid>
   </Work>
-)
+))
+
+ThisWork.displayName = 'Work'
 
 export { ThisWork as Work }
