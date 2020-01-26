@@ -24,10 +24,6 @@ const FilmGrid = styled.div`
 
 const WorkImg = styled.img`
   display: block;
-
-  :nth-child(2n) {
-    margin-top: ${pxToRem(Luna.layout.grid.unit * 3)};
-  }
 `
 
 const FilmImg = styled.img`

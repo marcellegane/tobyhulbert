@@ -7,26 +7,32 @@ import { About } from '../components/About'
 
 const useIsInView = (margin = '0px') => {
   const [isIntersecting, setIntersecting] = useState(false)
-  const ref = useRef()
+  const workRef = useRef()
 
   useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        setIntersecting(entry.isIntersecting)
-      },
-      { rootMargin: margin }
-    )
-    if (ref.current) observer.observe(ref.current)
+    const observerCallback = ([entry]) => {
+      setIntersecting(entry.isIntersecting)
+    }
+    const observerOptions = { rootMargin: margin }
+    const observer = new IntersectionObserver(observerCallback, observerOptions)
+    const refCurrent = workRef.current
+
+    if (refCurrent) {
+      observer.observe(refCurrent)
+    }
+
     return () => {
-      observer.unobserve(ref.current)
+      if (refCurrent) {
+        observer.unobserve(refCurrent)
+      }
     }
   }, [margin])
 
-  return [ref, isIntersecting]
+  return [workRef, isIntersecting]
 }
 
 const Index = () => {
-  const [ref, isIntersecting] = useIsInView('-34%')
+  const [workRef, isIntersecting] = useIsInView('-28%')
 
   return (
     <React.Fragment>
@@ -34,7 +40,7 @@ const Index = () => {
       <Navigation />
       <Main>
         <Hero isHidden={isIntersecting} />
-        <Work ref={ref} />
+        <Work ref={workRef} />
         <About />
       </Main>
     </React.Fragment>

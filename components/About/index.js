@@ -2,7 +2,7 @@ import { About, AboutTitle, AboutText } from './index.style'
 import { Stack } from '../../Luna/components/atoms/Stack/index.style'
 
 const ThisAbout = () => (
-  <About>
+  <About id="about">
     <Stack>
       <AboutTitle>About</AboutTitle>
       <AboutText>

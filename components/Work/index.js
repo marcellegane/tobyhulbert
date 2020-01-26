@@ -50,7 +50,7 @@ const filmImages = [
 ]
 
 const ThisWork = React.forwardRef((props, ref) => (
-  <Work ref={ref}>
+  <Work id="work" ref={ref}>
     <WorkGrid>
       {workImages.map(imageSrc => (
         <WorkImg key={imageSrc} src={`/images/work/${imageSrc}`} />

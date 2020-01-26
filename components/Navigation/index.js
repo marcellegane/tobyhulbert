@@ -4,7 +4,7 @@ import { Navigation } from './index.style'
 const ThisNavigation = () => (
   <Navigation>
     <NavigationLink
-      href="#"
+      href="#work"
       text="Projects"
       width={90}
       svg="sine"
@@ -14,7 +14,7 @@ const ThisNavigation = () => (
     />
 
     <NavigationLink
-      href="#"
+      href="#about"
       text="About"
       width={74}
       svg="triangle"
@@ -24,7 +24,7 @@ const ThisNavigation = () => (
     />
 
     <NavigationLink
-      href="#"
+      href="#contact"
       text="Contact"
       width={100}
       svg="square"

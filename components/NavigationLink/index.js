@@ -1,5 +1,6 @@
-import React, { useEffect, useRef, useState } from 'react'
+import React, { useEffect, useRef } from 'react'
 import gsap from 'gsap'
+import { ScrollToPlugin } from 'gsap/ScrollToPlugin'
 import { SineWave } from '../svgs/SineWave'
 import { SquareWave } from '../svgs/SquareWave'
 import { TriangleWave } from '../svgs/TriangleWave'
@@ -9,11 +10,13 @@ import {
   NavigationLinkUnderline,
 } from './index.style'
 
+gsap.registerPlugin(ScrollToPlugin)
+
 const ThisNavigationLink = props => {
-  const { text, width, svg, svgWidth, svgHeight, position } = props
+  const { href, text, width, svg, svgWidth, svgHeight, position } = props
+  let isRepeating = true
   const textRef = useRef(null)
   const svgPathRef = useRef(null)
-  let isRepeating = true
   const tl = useRef()
 
   tl.current = gsap.timeline({
@@ -79,11 +82,21 @@ const ThisNavigationLink = props => {
     isRepeating = false
   }
 
+  const scrollToSection = e => {
+    e.preventDefault()
+
+    // gsap.to(window, {
+    //   duration: 2,
+    //   scrollTo: href,
+    // })
+  }
+
   return (
     <NavigationLink
       {...props}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
+      onClick={scrollToSection}
     >
       <NavigationLinkText ref={textRef}>{text}</NavigationLinkText>
       <NavigationLinkUnderline

@@ -1,4 +1,6 @@
-module.exports = {
+import withTM from 'next-transpile-modules'
+
+export default withTM({
   webpack(config) {
     config.module.rules = config.module.rules.map(rule => {
       if (!rule.test.test('.svg')) {
@@ -19,4 +21,5 @@ module.exports = {
 
     return config
   },
-}
+  transpileModules: ['gsap'],
+})
