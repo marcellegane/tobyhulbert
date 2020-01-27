@@ -14,6 +14,7 @@ const WorkGrid = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-gap: ${pxToRem(Luna.layout.grid.unit)};
+  opacity: 0;
 `
 
 const FilmGrid = styled.div`

@@ -32,14 +32,21 @@ const useIsInView = (margin = '0px') => {
 }
 
 const Index = () => {
+  const [showText, setShowText] = useState(false)
   const [workRef, isIntersecting] = useIsInView('-28%')
+
+  useEffect(() => {
+    setTimeout(() => {
+      setShowText(true)
+    }, 200)
+  }, [])
 
   return (
     <React.Fragment>
       <GlobalStyle />
       <Navigation />
       <Main>
-        <Hero isHidden={isIntersecting} />
+        <Hero isHidden={isIntersecting} showText={showText} />
         <Work ref={workRef} />
         <About />
       </Main>

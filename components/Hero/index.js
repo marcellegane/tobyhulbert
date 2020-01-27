@@ -1,9 +1,13 @@
-import { Hero, HeroTitle, HeroSubtitle } from './index.style'
+import { Hero, HeroTextMask, HeroTitle, HeroSubtitle } from './index.style'
 
-const ThisHero = ({ isHidden }) => (
+const ThisHero = ({ isHidden, showText }) => (
   <Hero isHidden={isHidden}>
-    <HeroSubtitle>Engineer. Mixer. Producer</HeroSubtitle>
-    <HeroTitle>Toby Hulbert</HeroTitle>
+    <HeroTextMask>
+      <HeroSubtitle showText={showText}>Engineer. Mixer. Producer</HeroSubtitle>
+    </HeroTextMask>
+    <HeroTextMask>
+      <HeroTitle showText={showText}>Toby Hulbert</HeroTitle>
+    </HeroTextMask>
   </Hero>
 )
 
