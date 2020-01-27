@@ -1,14 +1,23 @@
 import styled from 'styled-components'
-import { Luna, pxToRem } from '../../Luna'
+import { Luna, pxToRem, LunaMedia } from '../../Luna'
 
 const NavigationLink = styled.a`
   position: fixed;
-  padding: ${pxToRem(24)} ${pxToRem(36)} ${pxToRem(32)};
+  padding: ${pxToRem('default', 1)} ${pxToRem('default', 1)}
+    ${pxToRem('default', 1)};
   z-index: 100;
-  font-size: ${pxToRem(24)};
+  font-size: ${pxToRem(18)};
   font-weight: ${Luna.font.weight.bold};
   color: ${Luna.color.secondary.one};
   text-decoration: none;
+
+  ${LunaMedia.above('medium')`
+    padding: ${pxToRem('default', 1.5)} ${pxToRem('default', 2)} ${pxToRem(
+    'default',
+    2
+  )};
+    font-size: ${pxToRem(24)};
+  `}
 
   ${props => {
     const { position } = props
@@ -33,6 +42,10 @@ const NavigationLink = styled.a`
   }}
 `
 
+const NavigationLinkMain = styled.div`
+  position: relative;
+`
+
 const NavigationLinkText = styled.span`
   display: block;
   padding-bottom: ${pxToRem(18)};
@@ -41,11 +54,11 @@ const NavigationLinkText = styled.span`
 
 const NavigationLinkUnderline = styled.span`
   position: absolute;
-  bottom: ${pxToRem(32)};
+  bottom: 0;
   left: 50%;
   transform: translateX(-50%);
   display: block;
-  width: ${props => (props.width ? `${pxToRem(props.width)}` : pxToRem(100))};
+  width: 100%;
 
   :before {
     content: '';
@@ -72,4 +85,9 @@ const NavigationLinkUnderline = styled.span`
   }
 `
 
-export { NavigationLink, NavigationLinkText, NavigationLinkUnderline }
+export {
+  NavigationLink,
+  NavigationLinkMain,
+  NavigationLinkText,
+  NavigationLinkUnderline,
+}

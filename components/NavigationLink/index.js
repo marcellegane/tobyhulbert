@@ -1,6 +1,5 @@
 import React, { useEffect, useRef } from 'react'
 import gsap from 'gsap'
-import { ScrollToPlugin } from 'gsap/ScrollToPlugin'
 import { SineWave } from '../svgs/SineWave'
 import { SquareWave } from '../svgs/SquareWave'
 import { TriangleWave } from '../svgs/TriangleWave'
@@ -8,9 +7,8 @@ import {
   NavigationLink,
   NavigationLinkText,
   NavigationLinkUnderline,
+  NavigationLinkMain,
 } from './index.style'
-
-gsap.registerPlugin(ScrollToPlugin)
 
 const ThisNavigationLink = props => {
   const { href, text, width, svg, svgWidth, svgHeight, position } = props
@@ -98,30 +96,32 @@ const ThisNavigationLink = props => {
       onMouseLeave={handleMouseLeave}
       onClick={scrollToSection}
     >
-      <NavigationLinkText ref={textRef}>{text}</NavigationLinkText>
-      <NavigationLinkUnderline
-        width={width}
-        svgWidth={svgWidth}
-        svgHeight={svgHeight}
-      >
-        {svg === 'sine' && (
-          <>
-            <SineWave ref={svgPathRef} />
-          </>
-        )}
+      <NavigationLinkMain>
+        <NavigationLinkText ref={textRef}>{text}</NavigationLinkText>
+        <NavigationLinkUnderline
+          width={width}
+          svgWidth={svgWidth}
+          svgHeight={svgHeight}
+        >
+          {svg === 'sine' && (
+            <>
+              <SineWave ref={svgPathRef} />
+            </>
+          )}
 
-        {svg === 'square' && (
-          <>
-            <SquareWave ref={svgPathRef} />
-          </>
-        )}
+          {svg === 'square' && (
+            <>
+              <SquareWave ref={svgPathRef} />
+            </>
+          )}
 
-        {svg === 'triangle' && (
-          <>
-            <TriangleWave ref={svgPathRef} />
-          </>
-        )}
-      </NavigationLinkUnderline>
+          {svg === 'triangle' && (
+            <>
+              <TriangleWave ref={svgPathRef} />
+            </>
+          )}
+        </NavigationLinkUnderline>
+      </NavigationLinkMain>
     </NavigationLink>
   )
 }
