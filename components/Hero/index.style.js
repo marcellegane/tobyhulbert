@@ -17,26 +17,42 @@ const Hero = styled.div`
   transition: opacity 0.2s ease-out;
 `
 
+const minVw = 23.4375
+const maxVw = 60
+let minFontSize = 2.75
+let maxFontSize = 4.375
+
 const HeroTitle = styled.h1`
   justify-self: center;
-  font-size: 40px;
+  font-size: ${minFontSize}rem;
   line-height: 1.1;
   font-weight: ${Luna.font.weight.bold};
   text-align: center;
 
-  ${LunaMedia.above('medium')`
-    font-size: 70px;
+  ${LunaMedia.above('xxsmall')`
+    font-size: calc(${minFontSize}rem + ((100vw - ${minVw}rem) / (${maxVw} - ${minVw})) * (${maxFontSize} - ${minFontSize}));
+  `}
+
+  ${LunaMedia.above('large')`
+    font-size: ${maxFontSize}rem;
   `}
 `
 
+minFontSize = 1.5
+maxFontSize = 2.375
+
 const HeroSubtitle = styled.h2`
   font-family: ${Luna.font.family.brand};
-  font-size: 24px;
+  font-size: ${minFontSize}rem;
   color: ${Luna.color.grey.base};
   text-align: center;
 
-  ${LunaMedia.above('medium')`
-    font-size: 38px;
+  ${LunaMedia.above('xxsmall')`
+    font-size: calc(${minFontSize}rem + ((100vw - ${minVw}rem) / (${maxVw} - ${minVw})) * (${maxFontSize} - ${minFontSize}));
+  `}
+
+  ${LunaMedia.above('large')`
+    font-size: ${maxFontSize}rem;
   `}
 `
 
