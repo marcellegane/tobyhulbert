@@ -1,8 +1,8 @@
 import { NavigationLink } from '../NavigationLink'
 import { Navigation } from './index.style'
 
-const ThisNavigation = () => (
-  <Navigation>
+const ThisNavigation = ({ menuIsOpen }) => (
+  <Navigation menuIsOpen={menuIsOpen} data-test={menuIsOpen}>
     <NavigationLink
       href="#work"
       text="Projects"

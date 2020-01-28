@@ -1,23 +1,114 @@
-import React from 'react'
-import { Work, WorkGrid, FilmGrid, WorkImg, FilmImg } from './index.style'
+import React, { useEffect } from 'react'
+import gsap from 'gsap'
+import ImagesLoaded from 'react-images-loaded'
+import {
+  Work,
+  WorkGrid,
+  WorkItem,
+  WorkImg,
+  WorkArtist,
+  WorkProject,
+  WorkRole,
+  WorkOverlay,
+} from './index.style'
 
-const workImages = [
-  'bat-for-lashes.png',
-  'R-12747002-1544654280-2085.jpeg.jpg',
-  'frank-ocean-blond.jpg',
-  'nc-distant-sky.jpg',
-  'oh-wonder.jpg',
-  'chic.jpg',
-  'kasabian-4813.jpg',
-  'kyan-lonely-river.jpg',
-  'Daniel+Elms+-+Islandia+front.jpg',
-  'royorbison_rpo_hp_mob3.jpg',
-  'sam-smith.jpg',
-  'sting.jpg',
-  'thebasics-age-of-entitlement.jpg',
-  'tonbruket-nubian-swimtrip.jpg',
-  'yann-tiersen-eusa.jpg',
-  'beach-boys.jpg',
+const workItems = [
+  {
+    artist: 'Airbourne',
+    project: 'Forthcoming album',
+    role: 'Recording engineer',
+    imageSrc: 'bat-for-lashes.png',
+  },
+  {
+    artist: 'Keith Urban',
+    project: 'Burden',
+    role: 'Recording engineer',
+    imageSrc: 'R-12747002-1544654280-2085.jpeg.jpg',
+  },
+  {
+    artist: 'Dawes',
+    project: 'Forthcoming album',
+    role: 'Recording and Mixing',
+    imageSrc: 'frank-ocean-blond.jpg',
+  },
+  {
+    artist: 'Artist',
+    project: 'Project of note',
+    role: 'Recording engineer',
+    imageSrc: 'nc-distant-sky.jpg',
+  },
+  {
+    artist: 'Artist',
+    project: 'Project of note',
+    role: 'Recording engineer',
+    imageSrc: 'oh-wonder.jpg',
+  },
+  {
+    artist: 'Artist',
+    project: 'Project of note',
+    role: 'Recording engineer',
+    imageSrc: 'chic.jpg',
+  },
+  {
+    artist: 'Artist',
+    project: 'Project of note',
+    role: 'Recording engineer',
+    imageSrc: 'kasabian-4813.jpg',
+  },
+  {
+    artist: 'Artist',
+    project: 'Project of note',
+    role: 'Recording engineer',
+    imageSrc: 'kyan-lonely-river.jpg',
+  },
+  {
+    artist: 'Artist',
+    project: 'Project of note',
+    role: 'Recording engineer',
+    imageSrc: 'Daniel+Elms+-+Islandia+front.jpg',
+  },
+  {
+    artist: 'Artist',
+    project: 'Project of note',
+    role: 'Recording engineer',
+    imageSrc: 'royorbison_rpo_hp_mob3.jpg',
+  },
+  {
+    artist: 'Artist',
+    project: 'Project of note',
+    role: 'Recording engineer',
+    imageSrc: 'sam-smith.jpg',
+  },
+  {
+    artist: 'Artist',
+    project: 'Project of note',
+    role: 'Recording engineer',
+    imageSrc: 'sting.jpg',
+  },
+  {
+    artist: 'Artist',
+    project: 'Project of note',
+    role: 'Recording engineer',
+    imageSrc: 'thebasics-age-of-entitlement.jpg',
+  },
+  {
+    artist: 'Artist',
+    project: 'Project of note',
+    role: 'Recording engineer',
+    imageSrc: 'tonbruket-nubian-swimtrip.jpg',
+  },
+  {
+    artist: 'Artist',
+    project: 'Project of note',
+    role: 'Recording engineer',
+    imageSrc: 'yann-tiersen-eusa.jpg',
+  },
+  {
+    artist: 'Artist',
+    project: 'Project of note',
+    role: 'Recording engineer',
+    imageSrc: 'beach-boys.jpg',
+  },
 ]
 
 const filmImages = [
@@ -49,20 +140,41 @@ const filmImages = [
   'Zookeeper-wife-poster-focus-features.jpg',
 ]
 
-const ThisWork = React.forwardRef((props, ref) => (
-  <Work id="work" ref={ref}>
-    <WorkGrid>
-      {workImages.map(imageSrc => (
-        <WorkImg key={imageSrc} src={`/images/work/${imageSrc}`} />
-      ))}
-    </WorkGrid>
-    <FilmGrid>
-      {filmImages.map(imageSrc => (
-        <FilmImg key={imageSrc} src={`/images/film/${imageSrc}`} />
-      ))}
-    </FilmGrid>
-  </Work>
-))
+const ThisWork = React.forwardRef((props, ref) => {
+  const onImageLoaded = instance => {
+    const overlayWrapper = instance.elements[0]
+    const overlay = overlayWrapper.querySelector('[data-work-overlay]')
+    const img = overlayWrapper.querySelector('img')
+    const tl = gsap.timeline()
+
+    tl.to(overlay, { scaleY: 1, duration: 0.4, ease: 'power3.out' })
+    tl.set(img, { opacity: 1 })
+    tl.set(overlay, { transformOrigin: '50% 0%' })
+    tl.to(overlay, { scaleY: 0, duration: 0.4, ease: 'power3.out' })
+    tl.set(overlay, { clearProps: true })
+  }
+
+  useEffect(() => {}, [])
+
+  return (
+    <Work id="work" ref={ref}>
+      <WorkGrid>
+        {workItems.map((workItem, index) => (
+          <WorkItem key={index}>
+            <ImagesLoaded done={onImageLoaded}>
+              <WorkImg src={`/images/work/${workItem.imageSrc}`} />
+              <WorkOverlay data-work-overlay>
+                <WorkArtist>{workItem.artist}</WorkArtist>
+                <WorkProject>{workItem.project}</WorkProject>
+                <WorkRole>{workItem.role}</WorkRole>
+              </WorkOverlay>
+            </ImagesLoaded>
+          </WorkItem>
+        ))}
+      </WorkGrid>
+    </Work>
+  )
+})
 
 ThisWork.displayName = 'Work'
 

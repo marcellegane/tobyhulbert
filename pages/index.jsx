@@ -1,9 +1,14 @@
 import React, { useState, useEffect, useRef } from 'react'
 import { GlobalStyle, Main } from '../Luna/components/layouts/default.style'
+import {
+  MenuToggle,
+  MenuToggleText,
+} from '../components/pages/Home/index.style'
 import { Hero } from '../components/Hero'
 import { Navigation } from '../components/Navigation'
 import { Work } from '../components/Work'
 import { About } from '../components/About'
+import { SineWave } from '../components/svgs/SineWave'
 
 const useIsInView = (margin = '0px') => {
   const [isIntersecting, setIntersecting] = useState(false)
@@ -33,7 +38,12 @@ const useIsInView = (margin = '0px') => {
 
 const Index = () => {
   const [showText, setShowText] = useState(false)
+  const [menuIsOpen, setMenuIsOpen] = useState(false)
   const [workRef, isIntersecting] = useIsInView('-28%')
+
+  const toggleNavigation = () => {
+    setMenuIsOpen(!menuIsOpen)
+  }
 
   useEffect(() => {
     setTimeout(() => {
@@ -44,7 +54,11 @@ const Index = () => {
   return (
     <React.Fragment>
       <GlobalStyle />
-      <Navigation />
+      <MenuToggle onClick={toggleNavigation}>
+        <MenuToggleText>Open menu</MenuToggleText>
+        <SineWave />
+      </MenuToggle>
+      <Navigation menuIsOpen={menuIsOpen} />
       <Main>
         <Hero isHidden={isIntersecting} showText={showText} />
         <Work ref={workRef} />

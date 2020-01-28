@@ -24,6 +24,8 @@ const grid = {
 const zIndex = {
   negative: -1,
   default: 1,
+  nav: 2,
+  menuToggle: 3,
 }
 
 const Layout = {

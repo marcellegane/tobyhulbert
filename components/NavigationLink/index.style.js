@@ -2,21 +2,24 @@ import styled from 'styled-components'
 import { Luna, pxToRem, LunaMedia } from '../../Luna'
 
 const NavigationLink = styled.a`
-  position: fixed;
-  padding: ${pxToRem('default', 1)} ${pxToRem('default', 1)}
-    ${pxToRem('default', 1)};
-  z-index: 100;
-  font-size: ${pxToRem(18)};
+  position: relative;
+  font-size: ${pxToRem(24)};
   font-weight: ${Luna.font.weight.bold};
   color: ${Luna.color.secondary.one};
   text-decoration: none;
 
-  ${LunaMedia.above('medium')`
-    padding: ${pxToRem('default', 1.5)} ${pxToRem('default', 2)} ${pxToRem(
+  ${LunaMedia.below('large')`
+    & + & {
+      margin-top: 1.5em;
+    }
+  `}
+
+  ${LunaMedia.above('large')`
+    position: fixed;
+    padding: ${pxToRem('default', 1.5)} ${pxToRem('default', 1.75)} ${pxToRem(
     'default',
     2
   )};
-    font-size: ${pxToRem(24)};
   `}
 
   ${props => {
