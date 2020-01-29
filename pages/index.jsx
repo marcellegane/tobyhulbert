@@ -61,7 +61,7 @@ const Index = () => {
       <Navigation menuIsOpen={menuIsOpen} />
       <Main>
         <Hero isHidden={isIntersecting} showText={showText} />
-        <Work ref={workRef} />
+        <Work forwardedRef={workRef} />
         <About />
       </Main>
     </React.Fragment>

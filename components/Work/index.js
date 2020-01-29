@@ -140,41 +140,56 @@ const filmImages = [
   'Zookeeper-wife-poster-focus-features.jpg',
 ]
 
-const ThisWork = React.forwardRef((props, ref) => {
-  const onImageLoaded = instance => {
-    const overlayWrapper = instance.elements[0]
-    const overlay = overlayWrapper.querySelector('[data-work-overlay]')
-    const img = overlayWrapper.querySelector('img')
-    const tl = gsap.timeline()
+class ThisWork extends React.Component {
+  static onImageLoaded(instance) {
+    const workBlocks = instance.elements[0]
+    const overlays = workBlocks.querySelectorAll('[data-work-overlay]')
+    const imgs = workBlocks.querySelectorAll('img')
+    const tl = gsap.timeline({ delay: 0.5 })
 
-    tl.to(overlay, { scaleY: 1, duration: 0.4, ease: 'power3.out' })
-    tl.set(img, { opacity: 1 })
-    tl.set(overlay, { transformOrigin: '50% 0%' })
-    tl.to(overlay, { scaleY: 0, duration: 0.4, ease: 'power3.out' })
-    tl.set(overlay, { clearProps: true })
+    tl.to(overlays, {
+      scaleY: 1,
+      duration: 0.4,
+      ease: 'power3.out',
+      stagger: 0.1,
+    })
+    tl.set(imgs, { opacity: 1 }, 0.4)
+    tl.set(overlays, { transformOrigin: '50% 0%' }, 0.4)
+    tl.to(
+      overlays,
+      {
+        scaleY: 0,
+        duration: 0.4,
+        ease: 'power3.out',
+        stagger: 0.1,
+      },
+      0.6
+    )
+    tl.set(overlays, { clearProps: true })
   }
 
-  useEffect(() => {}, [])
-
-  return (
-    <Work id="work" ref={ref}>
-      <WorkGrid>
-        {workItems.map((workItem, index) => (
-          <WorkItem key={index}>
-            <ImagesLoaded done={onImageLoaded}>
-              <WorkImg src={`/images/work/${workItem.imageSrc}`} />
-              <WorkOverlay data-work-overlay>
-                <WorkArtist>{workItem.artist}</WorkArtist>
-                <WorkProject>{workItem.project}</WorkProject>
-                <WorkRole>{workItem.role}</WorkRole>
-              </WorkOverlay>
-            </ImagesLoaded>
-          </WorkItem>
-        ))}
-      </WorkGrid>
-    </Work>
-  )
-})
+  render() {
+    const { forwardedRef } = this.props
+    return (
+      <Work id="work" ref={forwardedRef}>
+        <WorkGrid>
+          <ImagesLoaded done={ThisWork.onImageLoaded}>
+            {workItems.map((workItem, index) => (
+              <WorkItem key={index}>
+                <WorkImg src={`/images/work/${workItem.imageSrc}`} />
+                <WorkOverlay data-work-overlay>
+                  <WorkArtist>{workItem.artist}</WorkArtist>
+                  <WorkProject>{workItem.project}</WorkProject>
+                  <WorkRole>{workItem.role}</WorkRole>
+                </WorkOverlay>
+              </WorkItem>
+            ))}
+          </ImagesLoaded>
+        </WorkGrid>
+      </Work>
+    )
+  }
+}
 
 ThisWork.displayName = 'Work'
 

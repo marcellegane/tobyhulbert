@@ -58,6 +58,8 @@ const WorkOverlay = styled.div`
   padding: 0.5em;
   text-align: center;
   background: #ffd519;
+  transform: scaleY(0);
+  transform-origin: 50% 0%;
   transition: opacity 0.15s ease;
 
   ${WorkItem}:hover &,
