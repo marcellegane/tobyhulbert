@@ -6,7 +6,7 @@ const Color = {
     lightest: '#D9E0E4',
   },
   secondary: {
-    one: '#0000EE',
+    one: '#0001B3',
     two: '#2e77ff',
     base: '#2e77ff',
     dark: '#B3664E',

@@ -26,6 +26,7 @@ const WorkItem = styled.button`
   width: calc(50% - ${pxToRem('default')});
   margin: ${pxToRem('default', 0.5)};
   padding: 0;
+  overflow: hidden;
   font-family: ${Luna.font.family.brand};
   font-size: 1em;
   border: none;
@@ -45,6 +46,17 @@ const WorkImg = styled.img`
   opacity: 0;
 `
 
+const WorkLoader = styled.div`
+  position: absolute;
+  top: ${pxToRem(-1)};
+  right: ${pxToRem(-1)};
+  bottom: ${pxToRem(-1)};
+  left: ${pxToRem(-1)};
+  background: #ffd519;
+  transform: scaleY(0);
+  transform-origin: 50% 0%;
+`
+
 const WorkOverlay = styled.div`
   position: absolute;
   top: 0;
@@ -53,32 +65,29 @@ const WorkOverlay = styled.div`
   left: 0;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 0.5em;
-  text-align: center;
+  align-items: flex-start;
+  justify-content: flex-end;
+  padding: ${pxToRem(16)};
+  text-align: left;
   background: #ffd519;
-  transform: scaleY(0);
-  transform-origin: 50% 0%;
+  opacity: 0;
   transition: opacity 0.15s ease;
 
   ${WorkItem}:hover &,
   ${WorkItem}:focus & {
     opacity: 1;
   }
-
-  > * {
-    opacity: 0;
-  }
 `
 
 const WorkArtist = styled.h3`
-  font-size: 1.25em;
+  font-size: 1.3125em;
+  line-height: 1.2;
   font-weight: ${Luna.font.weight.bold};
 `
 
 const WorkProject = styled.h4`
-  font-size: 1.125em;
+  margin-top: ${pxToRem(4)};
+  font-size: 1em;
   line-height: 1.2;
 `
 
@@ -109,6 +118,7 @@ export {
   WorkItem,
   FilmGrid,
   WorkImg,
+  WorkLoader,
   WorkArtist,
   WorkProject,
   WorkRole,

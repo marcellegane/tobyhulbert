@@ -6,6 +6,7 @@ import {
   WorkGrid,
   WorkItem,
   WorkImg,
+  WorkLoader,
   WorkArtist,
   WorkProject,
   WorkRole,
@@ -14,100 +15,100 @@ import {
 
 const workItems = [
   {
+    artist: 'Nick Cave and the Bad Seeds',
+    project: 'Live Concert 5.1 Mix',
+    role: 'Mixing',
+    imageSrc: 'nc-distant-sky.jpg',
+  },
+  {
+    artist: 'Yussef Dayes x Alfa Mist',
+    project: 'Love is the Message Live Session',
+    role: 'Engineer',
+    imageSrc: 'yussef-dayes.jpg',
+  },
+  {
+    artist: 'Oh Wonder',
+    project: 'Oh Wonder',
+    role: 'Strings Engineer',
+    imageSrc: 'oh-wonder.jpg',
+  },
+  {
+    artist: 'Frank Ocean',
+    project: 'Blonde',
+    role: 'Assistant Engineer',
+    imageSrc: 'frank-ocean-blond.jpg',
+  },
+  {
+    artist: 'Yann Tiersen',
+    project: 'Eusa',
+    role: 'Engineer',
+    imageSrc: 'yann-tiersen-eusa.png',
+  },
+  {
+    artist: 'Kasabian',
+    project: '48.13',
+    role: 'Strings Engineer',
+    imageSrc: 'kasabian-4813.jpg',
+  },
+  {
+    artist: 'The 1975',
+    project: 'A Brief Enquiry Into Online Relationships',
+    role: 'Strings Assistant Engineer',
+    imageSrc: 'the-1975.png',
+  },
+  {
     artist: 'Airbourne',
-    project: 'Forthcoming album',
-    role: 'Recording engineer',
-    imageSrc: 'bat-for-lashes.png',
+    project: 'Boneshaker',
+    role: 'Engineer',
+    imageSrc: 'airbourne.jpg',
+  },
+  {
+    artist: 'Dirty Heads',
+    project: 'Super Moon',
+    role: 'Engineer, Mixing',
+    imageSrc: 'dirty-heads.jpg',
   },
   {
     artist: 'Keith Urban',
     project: 'Burden',
-    role: 'Recording engineer',
+    role: 'Engineer',
     imageSrc: 'R-12747002-1544654280-2085.jpeg.jpg',
   },
   {
+    artist: 'The Highwomen',
+    project: 'The Highwomen',
+    role: 'Assistant Engineer',
+    imageSrc: 'yann-tiersen-eusa.png',
+  },
+  {
+    artist: 'The Highwomen',
+    project: 'The Chain',
+    role: 'Engineer',
+    imageSrc: 'yann-tiersen-eusa.png',
+  },
+  {
+    artist: 'Chic / Nile Rodgers',
+    project: "It's About Time",
+    role: 'Assistant Engineer',
+    imageSrc: 'yann-tiersen-eusa.png',
+  },
+  {
     artist: 'Dawes',
-    project: 'Forthcoming album',
-    role: 'Recording and Mixing',
-    imageSrc: 'frank-ocean-blond.jpg',
-  },
-  {
-    artist: 'Artist',
-    project: 'Project of note',
-    role: 'Recording engineer',
-    imageSrc: 'nc-distant-sky.jpg',
-  },
-  {
-    artist: 'Artist',
-    project: 'Project of note',
-    role: 'Recording engineer',
-    imageSrc: 'oh-wonder.jpg',
-  },
-  {
-    artist: 'Artist',
-    project: 'Project of note',
-    role: 'Recording engineer',
-    imageSrc: 'chic.jpg',
-  },
-  {
-    artist: 'Artist',
-    project: 'Project of note',
-    role: 'Recording engineer',
+    project: 'Forthcoming Record',
+    role: '',
     imageSrc: 'kasabian-4813.jpg',
   },
   {
-    artist: 'Artist',
-    project: 'Project of note',
-    role: 'Recording engineer',
+    artist: 'Lori McKenna',
+    project: 'Forthcoming Record',
+    role: '',
     imageSrc: 'kyan-lonely-river.jpg',
   },
   {
-    artist: 'Artist',
-    project: 'Project of note',
-    role: 'Recording engineer',
+    artist: 'Anderson East',
+    project: 'Forthcoming Record',
+    role: '',
     imageSrc: 'Daniel+Elms+-+Islandia+front.jpg',
-  },
-  {
-    artist: 'Artist',
-    project: 'Project of note',
-    role: 'Recording engineer',
-    imageSrc: 'royorbison_rpo_hp_mob3.jpg',
-  },
-  {
-    artist: 'Artist',
-    project: 'Project of note',
-    role: 'Recording engineer',
-    imageSrc: 'sam-smith.jpg',
-  },
-  {
-    artist: 'Artist',
-    project: 'Project of note',
-    role: 'Recording engineer',
-    imageSrc: 'sting.jpg',
-  },
-  {
-    artist: 'Artist',
-    project: 'Project of note',
-    role: 'Recording engineer',
-    imageSrc: 'thebasics-age-of-entitlement.jpg',
-  },
-  {
-    artist: 'Artist',
-    project: 'Project of note',
-    role: 'Recording engineer',
-    imageSrc: 'tonbruket-nubian-swimtrip.jpg',
-  },
-  {
-    artist: 'Artist',
-    project: 'Project of note',
-    role: 'Recording engineer',
-    imageSrc: 'yann-tiersen-eusa.jpg',
-  },
-  {
-    artist: 'Artist',
-    project: 'Project of note',
-    role: 'Recording engineer',
-    imageSrc: 'beach-boys.jpg',
   },
 ]
 
@@ -141,31 +142,30 @@ const filmImages = [
 ]
 
 class ThisWork extends React.Component {
-  static onImageLoaded(instance) {
+  static onImagesLoaded(instance) {
     const workBlocks = instance.elements[0]
-    const overlays = workBlocks.querySelectorAll('[data-work-overlay]')
+    const loaders = workBlocks.querySelectorAll('[data-work-loader]')
     const imgs = workBlocks.querySelectorAll('img')
     const tl = gsap.timeline({ delay: 0.5 })
 
-    tl.to(overlays, {
+    tl.to(loaders, {
       scaleY: 1,
       duration: 0.4,
-      ease: 'power3.out',
+      ease: 'power3.inOut',
       stagger: 0.1,
     })
-    tl.set(imgs, { opacity: 1 }, 0.4)
-    tl.set(overlays, { transformOrigin: '50% 0%' }, 0.4)
+    tl.set(imgs, { opacity: 1, stagger: 0.1 }, 0.4)
+    tl.set(loaders, { transformOrigin: '50% 100%', stagger: 0.1 }, 0.4)
     tl.to(
-      overlays,
+      loaders,
       {
         scaleY: 0,
         duration: 0.4,
-        ease: 'power3.out',
+        ease: 'power3.inOut',
         stagger: 0.1,
       },
-      0.6
+      0.5
     )
-    tl.set(overlays, { clearProps: true })
   }
 
   render() {
@@ -173,11 +173,12 @@ class ThisWork extends React.Component {
     return (
       <Work id="work" ref={forwardedRef}>
         <WorkGrid>
-          <ImagesLoaded done={ThisWork.onImageLoaded}>
+          <ImagesLoaded done={ThisWork.onImagesLoaded}>
             {workItems.map((workItem, index) => (
               <WorkItem key={index}>
                 <WorkImg src={`/images/work/${workItem.imageSrc}`} />
-                <WorkOverlay data-work-overlay>
+                <WorkLoader data-work-loader />
+                <WorkOverlay>
                   <WorkArtist>{workItem.artist}</WorkArtist>
                   <WorkProject>{workItem.project}</WorkProject>
                   <WorkRole>{workItem.role}</WorkRole>
