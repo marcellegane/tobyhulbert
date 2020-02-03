@@ -1,13 +1,14 @@
-import { Hero, HeroTextMask, HeroTitle, HeroSubtitle } from './index.style'
+import { Hero, HeroTitle, HeroSubtitle } from './index.style'
+import { TextMask } from '../TextMask'
 
 const ThisHero = ({ isHidden, showText }) => (
   <Hero isHidden={isHidden}>
-    <HeroTextMask>
-      <HeroSubtitle showText={showText}>Engineer. Mixer. Producer</HeroSubtitle>
-    </HeroTextMask>
-    <HeroTextMask>
-      <HeroTitle showText={showText}>Toby Hulbert</HeroTitle>
-    </HeroTextMask>
+    <TextMask show={showText}>
+      <HeroSubtitle>Engineer. Mixer. Producer</HeroSubtitle>
+    </TextMask>
+    <TextMask show={showText}>
+      <HeroTitle>Toby Hulbert</HeroTitle>
+    </TextMask>
   </Hero>
 )
 

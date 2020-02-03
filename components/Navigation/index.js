@@ -1,9 +1,10 @@
 import { NavigationLink } from '../NavigationLink'
 import { Navigation } from './index.style'
 
-const ThisNavigation = ({ menuIsOpen }) => (
+const ThisNavigation = ({ menuIsOpen, showText }) => (
   <Navigation menuIsOpen={menuIsOpen} data-test={menuIsOpen}>
     <NavigationLink
+      showText={showText}
       href="#work"
       text="Projects"
       width={90}
@@ -14,6 +15,7 @@ const ThisNavigation = ({ menuIsOpen }) => (
     />
 
     <NavigationLink
+      showText={showText}
       href="#about"
       text="About"
       width={74}
@@ -24,6 +26,7 @@ const ThisNavigation = ({ menuIsOpen }) => (
     />
 
     <NavigationLink
+      showText={showText}
       href="#contact"
       text="Contact"
       width={100}

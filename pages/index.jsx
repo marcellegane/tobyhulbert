@@ -48,7 +48,7 @@ const Index = () => {
   useEffect(() => {
     setTimeout(() => {
       setShowText(true)
-    }, 200)
+    }, 400)
   }, [])
 
   return (
@@ -58,7 +58,7 @@ const Index = () => {
         <MenuToggleText>Open menu</MenuToggleText>
         <SineWave />
       </MenuToggle>
-      <Navigation menuIsOpen={menuIsOpen} />
+      <Navigation menuIsOpen={menuIsOpen} showText={showText} />
       <Main>
         <Hero isHidden={isIntersecting} showText={showText} />
         <Work forwardedRef={workRef} />

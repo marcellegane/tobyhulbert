@@ -17,26 +17,12 @@ const Hero = styled.div`
   transition: opacity 0.2s ease-out;
 `
 
-const HeroTextMask = styled.div`
-  position: relative;
-  overflow: hidden;
-`
-
-const HeroText = css`
-  padding-top: 0.2em;
-  line-height: 1;
-  transform: ${props =>
-    props.showText ? `translateY(0)` : `translateY(110%)`};
-  transition: transform 0.3s cubic-bezier(0.18, 0.89, 0.32, 1.28);
-`
-
 const minVw = 23.4375
 const maxVw = 60
 let minFontSize = 2.75
 let maxFontSize = 4.375
 
 const HeroTitle = styled.h1`
-  ${HeroText}
   justify-self: center;
   font-size: ${minFontSize}rem;
   font-weight: ${Luna.font.weight.bold};
@@ -56,7 +42,6 @@ minFontSize = 1.5
 maxFontSize = 2.375
 
 const HeroSubtitle = styled.h2`
-  ${HeroText}
   font-family: ${Luna.font.family.brand};
   font-size: ${minFontSize}rem;
   color: ${Luna.color.grey.base};
@@ -71,4 +56,4 @@ const HeroSubtitle = styled.h2`
   `}
 `
 
-export { Hero, HeroTextMask, HeroTitle, HeroSubtitle }
+export { Hero, HeroTitle, HeroSubtitle }

@@ -9,9 +9,19 @@ import {
   NavigationLinkUnderline,
   NavigationLinkMain,
 } from './index.style'
+import { TextMask } from '../TextMask'
 
 const ThisNavigationLink = props => {
-  const { href, text, width, svg, svgWidth, svgHeight, position } = props
+  const {
+    showText,
+    href,
+    text,
+    width,
+    svg,
+    svgWidth,
+    svgHeight,
+    position,
+  } = props
   let isRepeating = true
   const textRef = useRef(null)
   const svgPathRef = useRef(null)
@@ -29,7 +39,6 @@ const ThisNavigationLink = props => {
   })
 
   useEffect(() => {
-    const text = textRef.current
     const path = svgPathRef.current
     const pathLength = path.getTotalLength()
 
@@ -50,20 +59,6 @@ const ThisNavigationLink = props => {
       .fromTo(path, { strokeDashoffset: pathLength }, { strokeDashoffset: 0 })
 
     // Page load animations
-    if (position === 'topLeft' || position === 'bottomLeft') {
-      gsap.fromTo(
-        text,
-        { opacity: 0, x: 20 },
-        { opacity: 1, x: 0, ease: 'power2.inOut', duration: 0.7 }
-      )
-    } else {
-      gsap.fromTo(
-        text,
-        { opacity: 0, x: -20 },
-        { opacity: 1, x: 0, ease: 'power2.inOut', duration: 0.7 }
-      )
-    }
-
     gsap.fromTo(
       path,
       { strokeDashoffset: pathLength },
@@ -97,7 +92,9 @@ const ThisNavigationLink = props => {
       onClick={scrollToSection}
     >
       <NavigationLinkMain>
-        <NavigationLinkText ref={textRef}>{text}</NavigationLinkText>
+        <TextMask show={showText}>
+          <NavigationLinkText ref={textRef}>{text}</NavigationLinkText>
+        </TextMask>
         <NavigationLinkUnderline
           width={width}
           svgWidth={svgWidth}

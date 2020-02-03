@@ -3,8 +3,6 @@ import { Luna, pxToRem, LunaMedia } from '../../Luna'
 
 const NavigationLink = styled.a`
   position: relative;
-  font-size: ${pxToRem(24)};
-  font-weight: ${Luna.font.weight.bold};
   color: ${Luna.color.secondary.one};
   text-decoration: none;
 
@@ -47,12 +45,13 @@ const NavigationLink = styled.a`
 
 const NavigationLinkMain = styled.div`
   position: relative;
+  padding-bottom: ${pxToRem(18)};
 `
 
 const NavigationLinkText = styled.span`
   display: block;
-  padding-bottom: ${pxToRem(18)};
-  opacity: 0;
+  font-size: ${pxToRem(24)};
+  font-weight: ${Luna.font.weight.bold};
 `
 
 const NavigationLinkUnderline = styled.span`
