@@ -60,7 +60,7 @@ const Index = () => {
       </MenuToggle>
       <Navigation menuIsOpen={menuIsOpen} showText={showText} />
       <Main>
-        <Hero isHidden={isIntersecting} showText={showText} />
+        <Hero isHidden={isIntersecting} />
         <Work forwardedRef={workRef} />
         <About />
       </Main>

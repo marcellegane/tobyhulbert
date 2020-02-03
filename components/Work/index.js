@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import gsap from 'gsap'
 import ImagesLoaded from 'react-images-loaded'
 import {
@@ -141,55 +141,65 @@ const filmImages = [
   'Zookeeper-wife-poster-focus-features.jpg',
 ]
 
-class ThisWork extends React.Component {
-  static onImagesLoaded(instance) {
-    const workBlocks = instance.elements[0]
-    const loaders = workBlocks.querySelectorAll('[data-work-loader]')
-    const imgs = workBlocks.querySelectorAll('img')
-    const tl = gsap.timeline({ delay: 0.5 })
+const ThisWork = ({ forwardedRef }) => {
+  const [imagesLoaded, setImagesLoaded] = useState(false)
+  const [startLoadAnimation, setStartLoadAnimation] = useState(false)
 
-    tl.to(loaders, {
-      scaleY: 1,
-      duration: 0.4,
-      ease: 'power3.inOut',
-      stagger: 0.1,
-    })
-    tl.set(imgs, { opacity: 1, stagger: 0.1 }, 0.4)
-    tl.set(loaders, { transformOrigin: '50% 100%', stagger: 0.1 }, 0.4)
-    tl.to(
-      loaders,
-      {
-        scaleY: 0,
+  setTimeout(() => {
+    setStartLoadAnimation(true)
+  }, 500)
+
+  const onImagesLoaded = () => {
+    setImagesLoaded(true)
+  }
+
+  useEffect(() => {
+    if (imagesLoaded && startLoadAnimation) {
+      const workBlocks = forwardedRef.current
+      const loaders = workBlocks.querySelectorAll('[data-work-loader]')
+      const imgs = workBlocks.querySelectorAll('img')
+      const tl = gsap.timeline({ delay: 0.5 })
+
+      tl.to(loaders, {
+        scaleY: 1,
         duration: 0.4,
         ease: 'power3.inOut',
         stagger: 0.1,
-      },
-      0.5
-    )
-  }
+      })
+      tl.set(imgs, { opacity: 1, stagger: 0.1 }, 0.4)
+      tl.set(loaders, { transformOrigin: '50% 100%', stagger: 0.1 }, 0.4)
+      tl.to(
+        loaders,
+        {
+          scaleY: 0,
+          duration: 0.4,
+          ease: 'power3.inOut',
+          stagger: 0.1,
+        },
+        0.5
+      )
+    }
+  }, [forwardedRef, imagesLoaded, startLoadAnimation])
 
-  render() {
-    const { forwardedRef } = this.props
-    return (
-      <Work id="work" ref={forwardedRef}>
-        <WorkGrid>
-          <ImagesLoaded done={ThisWork.onImagesLoaded}>
-            {workItems.map((workItem, index) => (
-              <WorkItem key={index}>
-                <WorkImg src={`/images/work/${workItem.imageSrc}`} />
-                <WorkLoader data-work-loader />
-                <WorkOverlay>
-                  <WorkArtist>{workItem.artist}</WorkArtist>
-                  <WorkProject>{workItem.project}</WorkProject>
-                  <WorkRole>{workItem.role}</WorkRole>
-                </WorkOverlay>
-              </WorkItem>
-            ))}
-          </ImagesLoaded>
-        </WorkGrid>
-      </Work>
-    )
-  }
+  return (
+    <Work id="work" ref={forwardedRef}>
+      <WorkGrid>
+        <ImagesLoaded done={onImagesLoaded}>
+          {workItems.map((workItem, index) => (
+            <WorkItem key={index}>
+              <WorkImg src={`/images/work/${workItem.imageSrc}`} />
+              <WorkLoader data-work-loader />
+              <WorkOverlay>
+                <WorkArtist>{workItem.artist}</WorkArtist>
+                <WorkProject>{workItem.project}</WorkProject>
+                <WorkRole>{workItem.role}</WorkRole>
+              </WorkOverlay>
+            </WorkItem>
+          ))}
+        </ImagesLoaded>
+      </WorkGrid>
+    </Work>
+  )
 }
 
 ThisWork.displayName = 'Work'
