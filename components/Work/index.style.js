@@ -19,11 +19,13 @@ const Work = styled.div`
 const WorkGrid = styled.div`
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
 `
 
 const WorkItem = styled.button`
   position: relative;
-  width: calc(50% - ${pxToRem('default')});
+  width: calc(100% - ${pxToRem('default')});
+  max-width: ${pxToRem(300)};
   margin: ${pxToRem('default', 0.5)};
   padding: 0;
   overflow: hidden;
@@ -33,10 +35,14 @@ const WorkItem = styled.button`
   background: none;
 
   ${LunaMedia.above('xsmall')`
-    width: calc(33.3333% - ${pxToRem('default')});
+    width: calc(50% - ${pxToRem('default')});
   `}
 
   ${LunaMedia.above('small')`
+    width: calc(33.3333% - ${pxToRem('default')});
+  `}
+
+  ${LunaMedia.above('xxlarge')`
     width: calc(25% - ${pxToRem('default')});
   `}
 `

@@ -183,8 +183,8 @@ const ThisWork = ({ forwardedRef }) => {
 
   return (
     <Work id="work" ref={forwardedRef}>
-      <WorkGrid>
-        <ImagesLoaded done={onImagesLoaded}>
+      <ImagesLoaded done={onImagesLoaded}>
+        <WorkGrid>
           {workItems.map((workItem, index) => (
             <WorkItem key={index}>
               <WorkImg src={`/images/work/${workItem.imageSrc}`} />
@@ -196,8 +196,8 @@ const ThisWork = ({ forwardedRef }) => {
               </WorkOverlay>
             </WorkItem>
           ))}
-        </ImagesLoaded>
-      </WorkGrid>
+        </WorkGrid>
+      </ImagesLoaded>
     </Work>
   )
 }
