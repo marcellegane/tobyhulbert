@@ -7,7 +7,7 @@ const About = styled.div`
   padding-left: ${pxToRem('default', 1)};
   padding-right: ${pxToRem('default', 1)};
   padding-bottom: 10vh;
-  background-color: ${Luna.color.background};
+  /* background-color: ${Luna.color.background}; */
 
   ${LunaMedia.above('large')`
     width: calc(100% - ${pxToRem(400)});
