@@ -1,5 +1,6 @@
-import React, { useEffect, useRef } from 'react'
-import gsap from 'gsap'
+import React from 'react'
+import gsap from 'gsap/dist/gsap'
+import { ScrollToPlugin } from 'gsap/dist/ScrollToPlugin.js'
 import { SineWave } from '../svgs/SineWave'
 import { SquareWave } from '../svgs/SquareWave'
 import { TriangleWave } from '../svgs/TriangleWave'
@@ -11,116 +12,122 @@ import {
 } from './index.style'
 import { TextMask } from '../TextMask'
 
-const ThisNavigationLink = props => {
-  const {
-    showText,
-    href,
-    text,
-    width,
-    svg,
-    svgWidth,
-    svgHeight,
-    position,
-  } = props
-  let isRepeating = true
-  const textRef = useRef(null)
-  const svgPathRef = useRef(null)
-  const tl = useRef()
+gsap.registerPlugin(ScrollToPlugin)
 
-  tl.current = gsap.timeline({
-    repeat: -1,
-    paused: true,
-    defaults: { duration: 0.5, ease: 'none' },
-    onRepeat: () => {
-      if (!isRepeating) {
-        tl.current.pause()
-      }
-    },
-  })
+class ThisNavigationLink extends React.Component {
+  constructor(props) {
+    super(props)
 
-  useEffect(() => {
-    const path = svgPathRef.current
-    const pathLength = path.getTotalLength()
+    this.svgPath = null
+    this.isRepeating = true
+    this.tl = gsap.timeline({
+      repeat: -1,
+      paused: true,
+      defaults: { duration: 0.5, ease: 'none' },
+      onRepeat: () => {
+        if (!this.isRepeating) {
+          this.tl.pause()
+        }
+      },
+    })
 
-    gsap.set(path, {
+    this.handleMouseEnter = this.handleMouseEnter.bind(this)
+    this.handleMouseLeave = this.handleMouseLeave.bind(this)
+    this.handleClick = this.handleClick.bind(this)
+  }
+
+  componentDidMount() {
+    const pathLength = this.svgPath.getTotalLength()
+
+    gsap.set(this.svgPath, {
       opacity: 1,
       strokeDasharray: pathLength,
       strokeDashoffset: 0,
     })
 
-    tl.current
+    this.tl
       .fromTo(
-        path,
+        this.svgPath,
         { strokeDashoffset: 0 },
         {
           strokeDashoffset: -pathLength,
         }
       )
-      .fromTo(path, { strokeDashoffset: pathLength }, { strokeDashoffset: 0 })
+      .fromTo(
+        this.svgPath,
+        { strokeDashoffset: pathLength },
+        { strokeDashoffset: 0 }
+      )
 
     // Page load animations
     gsap.fromTo(
-      path,
+      this.svgPath,
       { strokeDashoffset: pathLength },
       { strokeDashoffset: 0, ease: 'power2.inOut', duration: 0.7 }
     )
-  }, [position, tl])
-
-  const handleMouseEnter = () => {
-    isRepeating = true
-    tl.current.play()
   }
 
-  const handleMouseLeave = () => {
-    isRepeating = false
+  handleMouseEnter() {
+    this.isRepeating = true
+    this.tl.play()
   }
 
-  const scrollToSection = e => {
+  handleMouseLeave() {
+    this.isRepeating = false
+  }
+
+  handleClick(e) {
+    const { href } = this.props
     e.preventDefault()
 
-    // gsap.to(window, {
-    //   duration: 2,
-    //   scrollTo: href,
-    // })
+    gsap.to(window, {
+      duration: 0.8,
+      scrollTo: href,
+      ease: 'power3.out',
+    })
   }
 
-  return (
-    <NavigationLink
-      {...props}
-      onMouseEnter={handleMouseEnter}
-      onMouseLeave={handleMouseLeave}
-      onClick={scrollToSection}
-    >
-      <NavigationLinkMain>
-        <TextMask show={showText}>
-          <NavigationLinkText ref={textRef}>{text}</NavigationLinkText>
-        </TextMask>
-        <NavigationLinkUnderline
-          width={width}
-          svgWidth={svgWidth}
-          svgHeight={svgHeight}
-        >
-          {svg === 'sine' && (
-            <>
-              <SineWave ref={svgPathRef} />
-            </>
-          )}
+  render() {
+    const { showText, href, text, width, svg, svgWidth, svgHeight } = this.props
 
-          {svg === 'square' && (
-            <>
-              <SquareWave ref={svgPathRef} />
-            </>
-          )}
+    return (
+      <NavigationLink
+        {...this.props}
+        onMouseEnter={this.handleMouseEnter}
+        onMouseLeave={this.handleMouseLeave}
+        onClick={this.handleClick}
+      >
+        <NavigationLinkMain>
+          <TextMask show={showText}>
+            <NavigationLinkText>{text}</NavigationLinkText>
+          </TextMask>
+          <NavigationLinkUnderline
+            width={width}
+            svgWidth={svgWidth}
+            svgHeight={svgHeight}
+          >
+            {svg === 'sine' && (
+              <>
+                <SineWave ref={path => (this.svgPath = path)} />
+              </>
+            )}
 
-          {svg === 'triangle' && (
-            <>
-              <TriangleWave ref={svgPathRef} />
-            </>
-          )}
-        </NavigationLinkUnderline>
-      </NavigationLinkMain>
-    </NavigationLink>
-  )
+            {svg === 'square' && (
+              <>
+                <SquareWave ref={path => (this.svgPath = path)} />
+              </>
+            )}
+
+            {svg === 'triangle' && (
+              <>
+                <TriangleWave ref={path => (this.svgPath = path)} />
+              </>
+            )}
+          </NavigationLinkUnderline>
+        </NavigationLinkMain>
+      </NavigationLink>
+    )
+  }
 }
 
 export { ThisNavigationLink as NavigationLink }

@@ -8,6 +8,7 @@ import { Hero } from '../components/Hero'
 import { Navigation } from '../components/Navigation'
 import { Work } from '../components/Work'
 import { About } from '../components/About'
+import { Contact } from '../components/Contact'
 import { SineWave } from '../components/svgs/SineWave'
 
 const useIsInView = (margin = '0px') => {
@@ -63,6 +64,7 @@ const Index = () => {
         <Hero isHidden={isIntersecting} />
         <Work forwardedRef={workRef} />
         <About />
+        <Contact />
       </Main>
     </React.Fragment>
   )

@@ -18,6 +18,7 @@ const NavigationLink = styled.a`
     'default',
     2
   )};
+    z-index: ${Luna.layout.zIndex.nav};
   `}
 
   ${props => {
