@@ -9,11 +9,11 @@ const ThisHero = ({ isHidden }) => {
   useEffect(() => {
     setTimeout(() => {
       setshowSubtitle(true)
-    }, 600)
+    }, 400)
 
     setTimeout(() => {
       setshowTitle(true)
-    }, 700)
+    }, 100)
   }, [])
 
   return (

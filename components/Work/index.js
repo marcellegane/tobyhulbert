@@ -158,25 +158,25 @@ const ThisWork = ({ forwardedRef }) => {
       const workBlocks = forwardedRef.current
       const loaders = workBlocks.querySelectorAll('[data-work-loader]')
       const imgs = workBlocks.querySelectorAll('img')
-      const tl = gsap.timeline({ delay: 0.5 })
+      const tl = gsap.timeline()
 
       tl.to(loaders, {
         scaleY: 1,
         duration: 0.4,
-        ease: 'power3.inOut',
-        stagger: 0.1,
+        ease: 'power3.in',
+        stagger: 0.05,
       })
-      tl.set(imgs, { opacity: 1, stagger: 0.1 }, 0.4)
-      tl.set(loaders, { transformOrigin: '50% 100%', stagger: 0.1 }, 0.4)
+      tl.set(imgs, { opacity: 1, stagger: 0.05 }, 0.4)
+      tl.set(loaders, { transformOrigin: '50% 100%', stagger: 0.05 }, 0.4)
       tl.to(
         loaders,
         {
           scaleY: 0,
           duration: 0.4,
-          ease: 'power3.inOut',
-          stagger: 0.1,
+          ease: 'power3.in',
+          stagger: 0.05,
         },
-        0.5
+        0.4
       )
     }
   }, [forwardedRef, imagesLoaded, startLoadAnimation])
