@@ -78,19 +78,19 @@ const workItems = [
     artist: 'The Highwomen',
     project: 'The Highwomen',
     role: 'Assistant Engineer',
-    imageSrc: 'yann-tiersen-eusa.png',
+    imageSrc: 'thehighwomen-thehighwomen.jpg',
   },
   {
     artist: 'The Highwomen',
     project: 'The Chain',
     role: 'Engineer',
-    imageSrc: 'yann-tiersen-eusa.png',
+    imageSrc: 'thehighwomen-thechain.jpg',
   },
   {
     artist: 'Chic / Nile Rodgers',
     project: "It's About Time",
     role: 'Assistant Engineer',
-    imageSrc: 'yann-tiersen-eusa.png',
+    imageSrc: 'chic-time.jpg',
   },
   {
     artist: 'Dawes',
