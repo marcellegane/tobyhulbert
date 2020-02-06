@@ -82,7 +82,7 @@ class ThisNavigationLink extends React.Component {
 
     gsap.to(window, {
       duration: 0.8,
-      scrollTo: href,
+      scrollTo: { y: href, offsetY: 32 },
       ease: 'power3.out',
     })
   }
