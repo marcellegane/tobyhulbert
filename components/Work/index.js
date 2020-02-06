@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState, useRef } from 'react'
 import gsap from 'gsap'
 import ImagesLoaded from 'react-images-loaded'
 import {
@@ -141,7 +141,8 @@ const filmImages = [
   'Zookeeper-wife-poster-focus-features.jpg',
 ]
 
-const ThisWork = ({ forwardedRef }) => {
+const ThisWork = () => {
+  const forwardedRef = useRef()
   const [imagesLoaded, setImagesLoaded] = useState(false)
   const [startLoadAnimation, setStartLoadAnimation] = useState(false)
 

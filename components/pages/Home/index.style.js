@@ -32,4 +32,6 @@ const MenuToggleText = styled.p`
   right: 100%;
 `
 
-export { MenuToggle, MenuToggleText }
+const HomeMain = styled.div``
+
+export { MenuToggle, MenuToggleText, HomeMain }

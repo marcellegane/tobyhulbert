@@ -3,6 +3,7 @@ import { GlobalStyle, Main } from '../Luna/components/layouts/default.style'
 import {
   MenuToggle,
   MenuToggleText,
+  HomeMain,
 } from '../components/pages/Home/index.style'
 import { Hero } from '../components/Hero'
 import { Navigation } from '../components/Navigation'
@@ -40,7 +41,7 @@ const useIsInView = (margin = '0px') => {
 const Index = () => {
   const [showText, setShowText] = useState(false)
   const [menuIsOpen, setMenuIsOpen] = useState(false)
-  const [workRef, isIntersecting] = useIsInView('-28%')
+  const [workRef, isIntersecting] = useIsInView('-300px')
 
   const toggleNavigation = () => {
     setMenuIsOpen(!menuIsOpen)
@@ -62,9 +63,11 @@ const Index = () => {
       <Navigation menuIsOpen={menuIsOpen} showText={showText} />
       <Main>
         <Hero isHidden={isIntersecting} />
-        <Work forwardedRef={workRef} />
-        <About />
-        <Contact />
+        <HomeMain ref={workRef}>
+          <Work />
+          <About />
+          <Contact />
+        </HomeMain>
       </Main>
     </React.Fragment>
   )
