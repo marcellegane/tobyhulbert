@@ -34,4 +34,19 @@ const MenuToggleText = styled.p`
 
 const HomeMain = styled.div``
 
-export { MenuToggle, MenuToggleText, HomeMain }
+const HomeSection = styled.div`
+  position: relative;
+  width: 100%;
+  padding-left: ${pxToRem('default', 1)};
+  padding-right: ${pxToRem('default', 1)};
+  padding-bottom: 10vh;
+
+  ${LunaMedia.above('large')`
+    width: calc(100% - ${pxToRem(400)});
+    max-width: ${pxToRem(650)};
+    margin-left: auto;
+    margin-right: auto;
+  `}
+`
+
+export { MenuToggle, MenuToggleText, HomeMain, HomeSection }

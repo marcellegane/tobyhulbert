@@ -1,8 +1,9 @@
-import { About, AboutTitle, AboutText } from './index.style'
+import { HomeSection } from '../pages/Home/index.style'
+import { AboutTitle, AboutText } from './index.style'
 import { Stack } from '../../Luna/components/atoms/Stack/index.style'
 
 const ThisAbout = () => (
-  <About id="about">
+  <HomeSection id="about">
     <Stack>
       <AboutTitle>About</AboutTitle>
 
@@ -46,7 +47,7 @@ const ThisAbout = () => (
         enable artists to be their most creative.
       </AboutText>
     </Stack>
-  </About>
+  </HomeSection>
 )
 
 export { ThisAbout as About }
