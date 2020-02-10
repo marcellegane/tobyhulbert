@@ -1,4 +1,12 @@
+const isProd = (process.env.NODE_ENV || 'production') === 'production'
+
 module.exports = {
+  assetPrefix: isProd ? '/toby-hulbert' : '',
+  exportPathMap() {
+    return {
+      '/': { page: '/' },
+    }
+  },
   webpack(config) {
     config.module.rules = config.module.rules.map(rule => {
       if (!rule.test.test('.svg')) {
