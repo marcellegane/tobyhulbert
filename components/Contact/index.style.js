@@ -16,14 +16,14 @@ const ContactList = styled.ul`
   display: flex;
   flex-wrap: wrap;
   margin-top: ${pxToRem(16)};
-  margin-left: ${pxToRem(-8)};
-  margin-right: ${pxToRem(-8)};
+  margin-left: ${pxToRem(-16)};
+  margin-right: ${pxToRem(-16)};
   padding: 0;
   list-style: none;
 `
 
 const ContactListItem = styled.li`
-  padding: ${pxToRem(8)};
+  padding: ${pxToRem(8)} ${pxToRem(16)};
 `
 
 const slide = keyframes`
