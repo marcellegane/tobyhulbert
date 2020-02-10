@@ -1,10 +1,55 @@
 import { HomeSection } from '../pages/Home/index.style'
-import { ContactTitle, ContactText } from './index.style'
+import {
+  ContactTitle,
+  ContactText,
+  ContactList,
+  ContactListItem,
+  ContactLink,
+} from './index.style'
 
 const ThisContact = () => (
   <HomeSection id="contact">
     <ContactTitle>Contact</ContactTitle>
     <ContactText>tobyhulbert@gmail.com</ContactText>
+    <ContactList>
+      <ContactListItem>
+        <ContactLink
+          target="_blank"
+          href="https://www.imdb.com/name/nm4782614/"
+        >
+          IMDb
+        </ContactLink>
+      </ContactListItem>
+      <ContactListItem>
+        <ContactLink
+          target="_blank"
+          href="https://www.allmusic.com/artist/toby-hulbert-mn0001698943/credits"
+        >
+          All Music
+        </ContactLink>
+      </ContactListItem>
+      <ContactListItem>
+        <ContactLink
+          target="_blank"
+          href="https://www.discogs.com/artist/3069150-Toby-Hulbert?page=2"
+        >
+          Discogs
+        </ContactLink>
+      </ContactListItem>
+      <ContactListItem>
+        <ContactLink target="_blank" href="https://twitter.com/tobyhulbert">
+          Twitter
+        </ContactLink>
+      </ContactListItem>
+      <ContactListItem>
+        <ContactLink
+          target="_blank"
+          href="https://www.instagram.com/toby.hulbert/"
+        >
+          Instagram
+        </ContactLink>
+      </ContactListItem>
+    </ContactList>
   </HomeSection>
 )
 

@@ -96,19 +96,19 @@ const workItems = [
     artist: 'Dawes',
     project: 'Forthcoming Record',
     role: '',
-    imageSrc: 'kasabian-4813.jpg',
+    imageSrc: 'default-grey.png',
   },
   {
     artist: 'Lori McKenna',
     project: 'Forthcoming Record',
     role: '',
-    imageSrc: 'kyan-lonely-river.jpg',
+    imageSrc: 'default-grey.png',
   },
   {
     artist: 'Anderson East',
     project: 'Forthcoming Record',
     role: '',
-    imageSrc: 'Daniel+Elms+-+Islandia+front.jpg',
+    imageSrc: 'default-grey.png',
   },
 ]
 

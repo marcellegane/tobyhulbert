@@ -41,7 +41,7 @@ const useIsInView = (margin = '0px') => {
 const Index = () => {
   const [showText, setShowText] = useState(false)
   const [menuIsOpen, setMenuIsOpen] = useState(false)
-  const [workRef, isIntersecting] = useIsInView('-300px')
+  const [workRef, isIntersecting] = useIsInView('-250px')
 
   const toggleNavigation = () => {
     setMenuIsOpen(!menuIsOpen)
