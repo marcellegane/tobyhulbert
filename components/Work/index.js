@@ -188,7 +188,7 @@ const ThisWork = () => {
         <WorkGrid>
           {workItems.map((workItem, index) => (
             <WorkItem key={index}>
-              <WorkImg src={`/images/work/${workItem.imageSrc}`} />
+              <WorkImg src={`images/work/${workItem.imageSrc}`} />
               <WorkLoader data-work-loader />
               <WorkOverlay>
                 <WorkArtist>{workItem.artist}</WorkArtist>
