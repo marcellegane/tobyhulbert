@@ -4867,7 +4867,7 @@ var ThisWork = function ThisWork() {
       },
       __self: this
     }, __jsx(_index_style__WEBPACK_IMPORTED_MODULE_3__["WorkImg"], {
-      src: "/images/work/".concat(workItem.imageSrc),
+      src: "images/work/".concat(workItem.imageSrc),
       __source: {
         fileName: _jsxFileName,
         lineNumber: 191
