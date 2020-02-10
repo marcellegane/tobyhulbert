@@ -22,31 +22,78 @@ export default class MyDocument extends Document {
     return (
       <html lang="en">
         <Head>
-          <link rel="apple-touch-icon" sizes="180x180" href="favicons/apple-touch-icon.png">
-          <link rel="icon" type="image/png" sizes="32x32" href="favicons/favicon-32x32.png">
-          <link rel="icon" type="image/png" sizes="16x16" href="favicons/favicon-16x16.png">
-          <link rel="manifest" href="favicons/site.webmanifest">
-          <link rel="mask-icon" href="favicons/safari-pinned-tab.svg" color="#5bbad5">
-          <link rel="shortcut icon" href="favicons/favicon.ico">
-          <meta name="msapplication-TileColor" content="#da532c">
-          <meta name="msapplication-config" content="favicons/browserconfig.xml">
-          <meta name="theme-color" content="#ffffff">
+          <link
+            rel="apple-touch-icon"
+            sizes="180x180"
+            href="favicons/apple-touch-icon.png"
+          />
+          <link
+            rel="icon"
+            type="image/png"
+            sizes="32x32"
+            href="favicons/favicon-32x32.png"
+          />
+          <link
+            rel="icon"
+            type="image/png"
+            sizes="16x16"
+            href="favicons/favicon-16x16.png"
+          />
+          <link rel="manifest" href="favicons/site.webmanifest" />
+          <link
+            rel="mask-icon"
+            href="favicons/safari-pinned-tab.svg"
+            color="#5bbad5"
+          />
+          <link rel="shortcut icon" href="favicons/favicon.ico" />
+          <meta name="msapplication-TileColor" content="#da532c" />
+          <meta
+            name="msapplication-config"
+            content="favicons/browserconfig.xml"
+          />
+          <meta name="theme-color" content="#ffffff" />
 
-          <title>Toby Hulbert | Engineer. Mixer. Producer</title>
-          <meta name="title" content="Toby Hulbert | Engineer. Mixer. Producer">
-          <meta name="description" content="In an era of laptop producers, Toby is a rare breed.">
+          <meta
+            name="title"
+            content="Toby Hulbert | Engineer. Mixer. Producer"
+          />
+          <meta
+            name="description"
+            content="In an era of laptop producers, Toby is a rare breed."
+          />
 
-          <meta property="og:type" content="website">
-          <meta property="og:url" content="http://www.tobyhulbert.co.uk/">
-          <meta property="og:title" content="Toby Hulbert | Engineer. Mixer. Producer">
-          <meta property="og:description" content="In an era of laptop producers, Toby is a rare breed.">
-          <meta property="og:image" content="http://www.tobyhulbert.co.uk/images/toby-hulbert.png">
+          <meta property="og:type" content="website" />
+          <meta property="og:url" content="http://www.tobyhulbert.co.uk/" />
+          <meta
+            property="og:title"
+            content="Toby Hulbert | Engineer. Mixer. Producer"
+          />
+          <meta
+            property="og:description"
+            content="In an era of laptop producers, Toby is a rare breed."
+          />
+          <meta
+            property="og:image"
+            content="http://www.tobyhulbert.co.uk/images/toby-hulbert.png"
+          />
 
-          <meta property="twitter:card" content="summary_large_image">
-          <meta property="twitter:url" content="http://www.tobyhulbert.co.uk/">
-          <meta property="twitter:title" content="Toby Hulbert | Engineer. Mixer. Producer">
-          <meta property="twitter:description" content="In an era of laptop producers, Toby is a rare breed.">
-          <meta property="twitter:image" content="http://www.tobyhulbert.co.uk/images/toby-hulbert.png"></meta>
+          <meta property="twitter:card" content="summary_large_image" />
+          <meta
+            property="twitter:url"
+            content="http://www.tobyhulbert.co.uk/"
+          />
+          <meta
+            property="twitter:title"
+            content="Toby Hulbert | Engineer. Mixer. Producer"
+          />
+          <meta
+            property="twitter:description"
+            content="In an era of laptop producers, Toby is a rare breed."
+          />
+          <meta
+            property="twitter:image"
+            content="http://www.tobyhulbert.co.uk/images/toby-hulbert.png"
+          />
 
           <link
             href="https://fonts.googleapis.com/css?family=Josefin+Sans:400,600,700&display=swap"

@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react'
+import Head from 'next/head'
 import { GlobalStyle, Main } from '../Luna/components/layouts/default.style'
 import {
   MenuToggle,
@@ -55,6 +56,9 @@ const Index = () => {
 
   return (
     <React.Fragment>
+      <Head>
+        <title>Toby Hulbert | Engineer. Mixer. Producer</title>
+      </Head>
       <GlobalStyle />
       <MenuToggle onClick={toggleNavigation}>
         <MenuToggleText>Open menu</MenuToggleText>
