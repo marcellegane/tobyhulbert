@@ -22,7 +22,8 @@ const AboutTitle = styled.h3`
 `
 
 const AboutText = styled.p`
-  font-size: 1.125em;
+  font-family: ${Luna.font.family.body};
+  font-size: 1.125rem;
 `
 
 export { About, AboutTitle, AboutText }
