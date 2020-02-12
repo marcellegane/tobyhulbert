@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react'
 import Head from 'next/head'
+import { useScrollPosition } from '@n8tb1t/use-scroll-position'
 import { GlobalStyle, Main } from '../Luna/components/layouts/default.style'
 import {
   MenuToggle,
@@ -13,40 +14,24 @@ import { About } from '../components/About'
 import { Contact } from '../components/Contact'
 import { SineWave } from '../components/svgs/SineWave'
 
-const useIsInView = (margin = '0px') => {
-  const [isIntersecting, setIntersecting] = useState(false)
-  const workRef = useRef()
-
-  useEffect(() => {
-    const observerCallback = ([entry]) => {
-      setIntersecting(entry.isIntersecting)
-    }
-    const observerOptions = { rootMargin: margin }
-    const observer = new IntersectionObserver(observerCallback, observerOptions)
-    const refCurrent = workRef.current
-
-    if (refCurrent) {
-      observer.observe(refCurrent)
-    }
-
-    return () => {
-      if (refCurrent) {
-        observer.unobserve(refCurrent)
-      }
-    }
-  }, [margin])
-
-  return [workRef, isIntersecting]
-}
-
 const Index = () => {
   const [showText, setShowText] = useState(false)
   const [menuIsOpen, setMenuIsOpen] = useState(false)
-  const [workRef, isIntersecting] = useIsInView('-250px')
+  const [heroIsHidden, setHeroIsHidden] = useState(false)
 
   const toggleNavigation = () => {
     setMenuIsOpen(!menuIsOpen)
   }
+
+  useScrollPosition(
+    ({ currPos }) => {
+      const shouldBeHidden = currPos.y < -50
+      if (shouldBeHidden !== heroIsHidden) {
+        setHeroIsHidden(shouldBeHidden)
+      }
+    },
+    [heroIsHidden]
+  )
 
   useEffect(() => {
     setTimeout(() => {
@@ -66,8 +51,8 @@ const Index = () => {
       </MenuToggle>
       <Navigation menuIsOpen={menuIsOpen} showText={showText} />
       <Main>
-        <Hero isHidden={isIntersecting} />
-        <HomeMain ref={workRef}>
+        <Hero isHidden={heroIsHidden} />
+        <HomeMain>
           <Work />
           <About />
           <Contact />

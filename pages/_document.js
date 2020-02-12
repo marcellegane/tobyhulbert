@@ -96,9 +96,9 @@ export default class MyDocument extends Document {
           />
 
           <link
-            href="https://fonts.googleapis.com/css?family=Josefin+Sans:400,600,700&display=swap"
+            href="https://fonts.googleapis.com/css?family=Karla|Josefin+Sans:400,600,700&display=swap"
             rel="stylesheet"
-          ></link>
+          />
           {/* Step 5: Output the styles in the head  */}
           {this.props.styleTags}
         </Head>

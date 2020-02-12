@@ -1,5 +1,6 @@
 const family = {
-  brand: 'Josefin Sans, serif',
+  brand: 'Josefin Sans, sans-serif',
+  body: 'Karla',
 }
 
 const weight = {
