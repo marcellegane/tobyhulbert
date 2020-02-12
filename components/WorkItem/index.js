@@ -62,7 +62,7 @@ const ThisWorkItem = ({ content, loaded }) => {
       onBlur={handleLeave}
       onMouseLeave={handleLeave}
     >
-      <WorkImg src={`/images/work/${content.imageSrc}`} />
+      <WorkImg src={`images/work/${content.imageSrc}`} />
       <WorkBackground ref={backgroundRef} data-work-loader />
       <WorkOverlay ref={overlayRef} loaded={loaded}>
         <WorkArtist>{content.artist}</WorkArtist>
