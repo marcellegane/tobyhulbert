@@ -24,6 +24,10 @@ const WorkItem = styled.button`
   ${LunaMedia.above('xxlarge')`
     width: calc(25% - ${pxToRem('default')});
   `}
+
+  :focus {
+    outline: none;
+  }
 `
 
 const WorkImg = styled.img`
