@@ -4,7 +4,6 @@ import { pxToRem, Luna, LunaMedia } from '../../Luna'
 const Work = styled.div`
   position: relative;
   width: calc(100% - 4vw);
-  margin-top: 75vh;
   margin-left: auto;
   margin-right: auto;
   padding-left: ${pxToRem('default', 0.5)};

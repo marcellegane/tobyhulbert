@@ -34,6 +34,8 @@ const GlobalStyle = createGlobalStyle`
 	}
 `
 
-const Main = styled.main``
+const Main = styled.main`
+  padding-top: 75vh;
+`
 
 export { GlobalStyle, Main }
