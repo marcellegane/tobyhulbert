@@ -1,17 +1,8 @@
 import React, { useEffect, useState, useRef } from 'react'
 import gsap from 'gsap'
 import ImagesLoaded from 'react-images-loaded'
-import {
-  Work,
-  WorkGrid,
-  WorkItem,
-  WorkImg,
-  WorkLoader,
-  WorkArtist,
-  WorkProject,
-  WorkRole,
-  WorkOverlay,
-} from './index.style'
+import { WorkItem } from '../WorkItem'
+import { Work, WorkGrid } from './index.style'
 
 const workItems = [
   {
@@ -144,22 +135,27 @@ const filmImages = [
 const ThisWork = () => {
   const forwardedRef = useRef()
   const [imagesLoaded, setImagesLoaded] = useState(false)
+  const [workLoaded, setWorkLoaded] = useState(false)
   const [startLoadAnimation, setStartLoadAnimation] = useState(false)
-
-  setTimeout(() => {
-    setStartLoadAnimation(true)
-  }, 500)
 
   const onImagesLoaded = () => {
     setImagesLoaded(true)
   }
+
+  setTimeout(() => {
+    setStartLoadAnimation(true)
+  }, 500)
 
   useEffect(() => {
     if (imagesLoaded && startLoadAnimation) {
       const workBlocks = forwardedRef.current
       const loaders = workBlocks.querySelectorAll('[data-work-loader]')
       const imgs = workBlocks.querySelectorAll('img')
-      const tl = gsap.timeline()
+      const tl = gsap.timeline({
+        onComplete: () => {
+          setWorkLoaded(true)
+        },
+      })
 
       tl.to(loaders, {
         scaleY: 1,
@@ -187,15 +183,7 @@ const ThisWork = () => {
       <ImagesLoaded done={onImagesLoaded}>
         <WorkGrid>
           {workItems.map((workItem, index) => (
-            <WorkItem key={index}>
-              <WorkImg src={`/images/work/${workItem.imageSrc}`} />
-              <WorkLoader data-work-loader />
-              <WorkOverlay>
-                <WorkArtist>{workItem.artist}</WorkArtist>
-                <WorkProject>{workItem.project}</WorkProject>
-                <WorkRole>{workItem.role}</WorkRole>
-              </WorkOverlay>
-            </WorkItem>
+            <WorkItem key={index} content={workItem} loaded={workLoaded} />
           ))}
         </WorkGrid>
       </ImagesLoaded>
