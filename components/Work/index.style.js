@@ -18,7 +18,7 @@ const Work = styled.div`
 const WorkGrid = styled.div`
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: flex-start;
 `
 
 export { Work, WorkGrid }

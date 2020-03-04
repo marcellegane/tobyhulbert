@@ -21,8 +21,18 @@ const WorkItem = styled.button`
     width: calc(33.3333% - ${pxToRem('default')});
   `}
 
+  ${LunaMedia.between('small', 'xxlarge')`
+    :nth-child(3n+2) {
+      top: ${pxToRem('default', -2)};
+    }
+  `}
+
   ${LunaMedia.above('xxlarge')`
     width: calc(25% - ${pxToRem('default')});
+
+    :nth-child(even) {
+      top: ${pxToRem('default', -2)};
+    }
   `}
 
   :focus {
