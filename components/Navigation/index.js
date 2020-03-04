@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react'
 import { NavigationLink } from '../NavigationLink'
 import { Navigation } from './index.style'
 
-const ThisNavigation = ({ menuIsOpen, showText }) => {
+const ThisNavigation = ({ menuIsOpen, setMenuIsOpen, showText }) => {
   const [showProjects, setShowProjects] = useState(false)
   const [showAbout, setShowAbout] = useState(false)
   const [showContact, setShowContact] = useState(false)
@@ -34,6 +34,8 @@ const ThisNavigation = ({ menuIsOpen, showText }) => {
         svgWidth={100}
         svgHeight={18}
         position="topLeft"
+        menuIsOpen={menuIsOpen}
+        setMenuIsOpen={setMenuIsOpen}
       />
 
       <NavigationLink
@@ -45,6 +47,8 @@ const ThisNavigation = ({ menuIsOpen, showText }) => {
         svgWidth={84}
         svgHeight={18}
         position="topRight"
+        menuIsOpen={menuIsOpen}
+        setMenuIsOpen={setMenuIsOpen}
       />
 
       <NavigationLink
@@ -56,6 +60,8 @@ const ThisNavigation = ({ menuIsOpen, showText }) => {
         svgWidth={108}
         svgHeight={18}
         position="bottomLeft"
+        menuIsOpen={menuIsOpen}
+        setMenuIsOpen={setMenuIsOpen}
       />
     </Navigation>
   )

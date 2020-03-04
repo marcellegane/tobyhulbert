@@ -18,7 +18,11 @@ const Work = styled.div`
 const WorkGrid = styled.div`
   display: flex;
   flex-wrap: wrap;
-  justify-content: flex-start;
+  justify-content: center;
+
+  ${LunaMedia.above('small')`
+    justify-content: flex-start;
+  `}
 `
 
 export { Work, WorkGrid }

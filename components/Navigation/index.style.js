@@ -15,8 +15,10 @@ const Navigation = styled.nav`
     height: 100vh;
     z-index: ${Luna.layout.zIndex.nav};
     pointer-events: ${props => (props.menuIsOpen ? `visible` : `none`)};
-    opacity: ${props => (props.menuIsOpen ? 1 : 0)};
+    transform: ${props =>
+      props.menuIsOpen ? 'translateX(0)' : 'translateX(-100%)'};
     background: ${Luna.color.background};
+    transition: all 0.3s cubic-bezier(0.22, 0.61, 0.36, 1);
   `}
 `
 

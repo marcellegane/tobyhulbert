@@ -77,8 +77,12 @@ class ThisNavigationLink extends React.Component {
   }
 
   handleClick(e) {
-    const { href } = this.props
+    const { href, menuIsOpen, setMenuIsOpen } = this.props
     e.preventDefault()
+
+    if (menuIsOpen) {
+      setMenuIsOpen(false)
+    }
 
     gsap.to(window, {
       duration: 0.8,

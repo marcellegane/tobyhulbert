@@ -49,7 +49,11 @@ const Index = () => {
         <MenuToggleText>Open menu</MenuToggleText>
         <SineWave />
       </MenuToggle>
-      <Navigation menuIsOpen={menuIsOpen} showText={showText} />
+      <Navigation
+        menuIsOpen={menuIsOpen}
+        setMenuIsOpen={setMenuIsOpen}
+        showText={showText}
+      />
       <Main>
         <Hero isHidden={heroIsHidden} />
         <HomeMain>
