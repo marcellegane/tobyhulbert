@@ -4191,6 +4191,7 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 var ThisNavigation = function ThisNavigation(_ref) {
   var menuIsOpen = _ref.menuIsOpen,
+      setMenuIsOpen = _ref.setMenuIsOpen,
       showText = _ref.showText;
 
   var _useState = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(false),
@@ -4234,6 +4235,8 @@ var ThisNavigation = function ThisNavigation(_ref) {
     svgWidth: 100,
     svgHeight: 18,
     position: "topLeft",
+    menuIsOpen: menuIsOpen,
+    setMenuIsOpen: setMenuIsOpen,
     __source: {
       fileName: _jsxFileName,
       lineNumber: 28
@@ -4248,9 +4251,11 @@ var ThisNavigation = function ThisNavigation(_ref) {
     svgWidth: 84,
     svgHeight: 18,
     position: "topRight",
+    menuIsOpen: menuIsOpen,
+    setMenuIsOpen: setMenuIsOpen,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 39
+      lineNumber: 41
     },
     __self: this
   }), __jsx(_NavigationLink__WEBPACK_IMPORTED_MODULE_1__["NavigationLink"], {
@@ -4262,9 +4267,11 @@ var ThisNavigation = function ThisNavigation(_ref) {
     svgWidth: 108,
     svgHeight: 18,
     position: "bottomLeft",
+    menuIsOpen: menuIsOpen,
+    setMenuIsOpen: setMenuIsOpen,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 50
+      lineNumber: 54
     },
     __self: this
   }));
@@ -4290,7 +4297,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 function _templateObject() {
-  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__["default"])(["\n    position: fixed;\n    top: 0;\n    right: 0;\n    bottom: 0;\n    left: 0;\n    display: flex;\n    flex-direction: column;\n    align-items: center;\n    justify-content: center;\n    height: 100vh;\n    z-index: ", ";\n    pointer-events: ", ";\n    opacity: ", ";\n    background: ", ";\n  "]);
+  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__["default"])(["\n    position: fixed;\n    top: 0;\n    right: 0;\n    bottom: 0;\n    left: 0;\n    display: flex;\n    flex-direction: column;\n    align-items: center;\n    justify-content: center;\n    height: 100vh;\n    z-index: ", ";\n    pointer-events: ", ";\n    transform: ", ";\n    background: ", ";\n    transition: all 0.3s cubic-bezier(0.22, 0.61, 0.36, 1);\n  "]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -4307,7 +4314,7 @@ var Navigation = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].nav.w
 })(["", ""], _Luna__WEBPACK_IMPORTED_MODULE_2__["LunaMedia"].below('large')(_templateObject(), _Luna__WEBPACK_IMPORTED_MODULE_2__["Luna"].layout.zIndex.nav, function (props) {
   return props.menuIsOpen ? "visible" : "none";
 }, function (props) {
-  return props.menuIsOpen ? 1 : 0;
+  return props.menuIsOpen ? 'translateX(0)' : 'translateX(-100%)';
 }, _Luna__WEBPACK_IMPORTED_MODULE_2__["Luna"].color.background));
 
 
@@ -4433,8 +4440,16 @@ function (_React$Component) {
   }, {
     key: "handleClick",
     value: function handleClick(e) {
-      var href = this.props.href;
+      var _this$props = this.props,
+          href = _this$props.href,
+          menuIsOpen = _this$props.menuIsOpen,
+          setMenuIsOpen = _this$props.setMenuIsOpen;
       e.preventDefault();
+
+      if (menuIsOpen) {
+        setMenuIsOpen(false);
+      }
+
       gsap_dist_gsap__WEBPACK_IMPORTED_MODULE_8___default.a.to(window, {
         duration: 0.8,
         scrollTo: {
@@ -4449,40 +4464,40 @@ function (_React$Component) {
     value: function render() {
       var _this2 = this;
 
-      var _this$props = this.props,
-          showText = _this$props.showText,
-          href = _this$props.href,
-          text = _this$props.text,
-          width = _this$props.width,
-          svg = _this$props.svg,
-          svgWidth = _this$props.svgWidth,
-          svgHeight = _this$props.svgHeight;
+      var _this$props2 = this.props,
+          showText = _this$props2.showText,
+          href = _this$props2.href,
+          text = _this$props2.text,
+          width = _this$props2.width,
+          svg = _this$props2.svg,
+          svgWidth = _this$props2.svgWidth,
+          svgHeight = _this$props2.svgHeight;
       return __jsx(_index_style__WEBPACK_IMPORTED_MODULE_13__["NavigationLink"], Object(_babel_runtime_corejs2_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, this.props, {
         onMouseEnter: this.handleMouseEnter,
         onMouseLeave: this.handleMouseLeave,
         onClick: this.handleClick,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 94
+          lineNumber: 98
         },
         __self: this
       }), __jsx(_index_style__WEBPACK_IMPORTED_MODULE_13__["NavigationLinkMain"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 100
+          lineNumber: 104
         },
         __self: this
       }, __jsx(_TextMask__WEBPACK_IMPORTED_MODULE_14__["TextMask"], {
         show: showText,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 101
+          lineNumber: 105
         },
         __self: this
       }, __jsx(_index_style__WEBPACK_IMPORTED_MODULE_13__["NavigationLinkText"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 102
+          lineNumber: 106
         },
         __self: this
       }, text)), __jsx(_index_style__WEBPACK_IMPORTED_MODULE_13__["NavigationLinkUnderline"], {
@@ -4491,7 +4506,7 @@ function (_React$Component) {
         svgHeight: svgHeight,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 104
+          lineNumber: 108
         },
         __self: this
       }, svg === 'sine' && __jsx(react__WEBPACK_IMPORTED_MODULE_7___default.a.Fragment, null, __jsx(_svgs_SineWave__WEBPACK_IMPORTED_MODULE_10__["SineWave"], {
@@ -4500,7 +4515,7 @@ function (_React$Component) {
         },
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 111
+          lineNumber: 115
         },
         __self: this
       })), svg === 'square' && __jsx(react__WEBPACK_IMPORTED_MODULE_7___default.a.Fragment, null, __jsx(_svgs_SquareWave__WEBPACK_IMPORTED_MODULE_11__["SquareWave"], {
@@ -4509,7 +4524,7 @@ function (_React$Component) {
         },
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 117
+          lineNumber: 121
         },
         __self: this
       })), svg === 'triangle' && __jsx(react__WEBPACK_IMPORTED_MODULE_7___default.a.Fragment, null, __jsx(_svgs_TriangleWave__WEBPACK_IMPORTED_MODULE_12__["TriangleWave"], {
@@ -4518,7 +4533,7 @@ function (_React$Component) {
         },
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 123
+          lineNumber: 127
         },
         __self: this
       })))));
@@ -4903,6 +4918,16 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _Luna__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../Luna */ "./Luna/index.js");
 
 
+function _templateObject2() {
+  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__["default"])(["\n    justify-content: flex-start;\n  "]);
+
+  _templateObject2 = function _templateObject2() {
+    return data;
+  };
+
+  return data;
+}
+
 function _templateObject() {
   var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__["default"])(["\n    width: calc(100% - 30vw);\n  "]);
 
@@ -4922,7 +4947,7 @@ var Work = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].div.withCon
 var WorkGrid = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].div.withConfig({
   displayName: "indexstyle__WorkGrid",
   componentId: "blfuh4-1"
-})(["display:flex;flex-wrap:wrap;justify-content:center;"]);
+})(["display:flex;flex-wrap:wrap;justify-content:center;", ""], _Luna__WEBPACK_IMPORTED_MODULE_2__["LunaMedia"].above('small')(_templateObject2()));
 
 
 /***/ }),
@@ -4998,7 +5023,7 @@ var ThisWorkItem = function ThisWorkItem(_ref) {
     },
     __self: this
   }, __jsx(_index_style__WEBPACK_IMPORTED_MODULE_3__["WorkImg"], {
-    src: "/images/work/".concat(content.imageSrc),
+    src: "images/work/".concat(content.imageSrc),
     __source: {
       fileName: _jsxFileName,
       lineNumber: 65
@@ -5070,8 +5095,18 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _Luna__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../Luna */ "./Luna/index.js");
 
 
+function _templateObject4() {
+  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__["default"])(["\n    width: calc(25% - ", ");\n\n    :nth-child(even) {\n      top: ", ";\n    }\n  "]);
+
+  _templateObject4 = function _templateObject4() {
+    return data;
+  };
+
+  return data;
+}
+
 function _templateObject3() {
-  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__["default"])(["\n    width: calc(25% - ", ");\n  "]);
+  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__["default"])(["\n    :nth-child(3n+2) {\n      top: ", ";\n    }\n  "]);
 
   _templateObject3 = function _templateObject3() {
     return data;
@@ -5105,7 +5140,7 @@ function _templateObject() {
 var WorkItem = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].button.withConfig({
   displayName: "indexstyle__WorkItem",
   componentId: "p5z371-0"
-})(["position:relative;width:calc(100% - ", ");max-width:", ";margin:", ";padding:0;overflow:hidden;font-family:", ";font-size:1em;border:none;background:none;", " ", " ", ":focus{outline:none;}"], Object(_Luna__WEBPACK_IMPORTED_MODULE_2__["pxToRem"])('default'), Object(_Luna__WEBPACK_IMPORTED_MODULE_2__["pxToRem"])(300), Object(_Luna__WEBPACK_IMPORTED_MODULE_2__["pxToRem"])('default', 0.5), _Luna__WEBPACK_IMPORTED_MODULE_2__["Luna"].font.family.brand, _Luna__WEBPACK_IMPORTED_MODULE_2__["LunaMedia"].above('xsmall')(_templateObject(), Object(_Luna__WEBPACK_IMPORTED_MODULE_2__["pxToRem"])('default')), _Luna__WEBPACK_IMPORTED_MODULE_2__["LunaMedia"].above('small')(_templateObject2(), Object(_Luna__WEBPACK_IMPORTED_MODULE_2__["pxToRem"])('default')), _Luna__WEBPACK_IMPORTED_MODULE_2__["LunaMedia"].above('xxlarge')(_templateObject3(), Object(_Luna__WEBPACK_IMPORTED_MODULE_2__["pxToRem"])('default')));
+})(["position:relative;width:calc(100% - ", ");max-width:", ";margin:", ";padding:0;overflow:hidden;font-family:", ";font-size:1em;border:none;background:none;", " ", " ", " ", ":focus{outline:none;}"], Object(_Luna__WEBPACK_IMPORTED_MODULE_2__["pxToRem"])('default'), Object(_Luna__WEBPACK_IMPORTED_MODULE_2__["pxToRem"])(300), Object(_Luna__WEBPACK_IMPORTED_MODULE_2__["pxToRem"])('default', 0.5), _Luna__WEBPACK_IMPORTED_MODULE_2__["Luna"].font.family.brand, _Luna__WEBPACK_IMPORTED_MODULE_2__["LunaMedia"].above('xsmall')(_templateObject(), Object(_Luna__WEBPACK_IMPORTED_MODULE_2__["pxToRem"])('default')), _Luna__WEBPACK_IMPORTED_MODULE_2__["LunaMedia"].above('small')(_templateObject2(), Object(_Luna__WEBPACK_IMPORTED_MODULE_2__["pxToRem"])('default')), _Luna__WEBPACK_IMPORTED_MODULE_2__["LunaMedia"].between('small', 'xxlarge')(_templateObject3(), Object(_Luna__WEBPACK_IMPORTED_MODULE_2__["pxToRem"])('default', -2)), _Luna__WEBPACK_IMPORTED_MODULE_2__["LunaMedia"].above('xxlarge')(_templateObject4(), Object(_Luna__WEBPACK_IMPORTED_MODULE_2__["pxToRem"])('default'), Object(_Luna__WEBPACK_IMPORTED_MODULE_2__["pxToRem"])('default', -2)));
 var WorkImg = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].img.withConfig({
   displayName: "indexstyle__WorkImg",
   componentId: "p5z371-1"
@@ -22989,12 +23024,12 @@ exports["default"] = function () {
 
 /***/ "./node_modules/object-assign/index.js":
 /*!***************************************************************************************************!*\
-  !*** delegated ./node_modules/object-assign/index.js from dll-reference dll_e9ad7d891b372a4221cf ***!
+  !*** delegated ./node_modules/object-assign/index.js from dll-reference dll_ea92a4d9664833a26066 ***!
   \***************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = (__webpack_require__(/*! dll-reference dll_e9ad7d891b372a4221cf */ "dll-reference dll_e9ad7d891b372a4221cf"))("./node_modules/object-assign/index.js");
+module.exports = (__webpack_require__(/*! dll-reference dll_ea92a4d9664833a26066 */ "dll-reference dll_ea92a4d9664833a26066"))("./node_modules/object-assign/index.js");
 
 /***/ }),
 
@@ -23195,12 +23230,12 @@ process.umask = function() { return 0; };
 
 /***/ "./node_modules/prop-types/checkPropTypes.js":
 /*!*********************************************************************************************************!*\
-  !*** delegated ./node_modules/prop-types/checkPropTypes.js from dll-reference dll_e9ad7d891b372a4221cf ***!
+  !*** delegated ./node_modules/prop-types/checkPropTypes.js from dll-reference dll_ea92a4d9664833a26066 ***!
   \*********************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = (__webpack_require__(/*! dll-reference dll_e9ad7d891b372a4221cf */ "dll-reference dll_e9ad7d891b372a4221cf"))("./node_modules/prop-types/checkPropTypes.js");
+module.exports = (__webpack_require__(/*! dll-reference dll_ea92a4d9664833a26066 */ "dll-reference dll_ea92a4d9664833a26066"))("./node_modules/prop-types/checkPropTypes.js");
 
 /***/ }),
 
@@ -23835,12 +23870,12 @@ if (true) {
 
 /***/ "./node_modules/prop-types/lib/ReactPropTypesSecret.js":
 /*!*******************************************************************************************************************!*\
-  !*** delegated ./node_modules/prop-types/lib/ReactPropTypesSecret.js from dll-reference dll_e9ad7d891b372a4221cf ***!
+  !*** delegated ./node_modules/prop-types/lib/ReactPropTypesSecret.js from dll-reference dll_ea92a4d9664833a26066 ***!
   \*******************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = (__webpack_require__(/*! dll-reference dll_e9ad7d891b372a4221cf */ "dll-reference dll_e9ad7d891b372a4221cf"))("./node_modules/prop-types/lib/ReactPropTypesSecret.js");
+module.exports = (__webpack_require__(/*! dll-reference dll_ea92a4d9664833a26066 */ "dll-reference dll_ea92a4d9664833a26066"))("./node_modules/prop-types/lib/ReactPropTypesSecret.js");
 
 /***/ }),
 
@@ -24228,12 +24263,12 @@ if (false) {} else {
 
 /***/ "./node_modules/react/index.js":
 /*!*******************************************************************************************!*\
-  !*** delegated ./node_modules/react/index.js from dll-reference dll_e9ad7d891b372a4221cf ***!
+  !*** delegated ./node_modules/react/index.js from dll-reference dll_ea92a4d9664833a26066 ***!
   \*******************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = (__webpack_require__(/*! dll-reference dll_e9ad7d891b372a4221cf */ "dll-reference dll_e9ad7d891b372a4221cf"))("./node_modules/react/index.js");
+module.exports = (__webpack_require__(/*! dll-reference dll_ea92a4d9664833a26066 */ "dll-reference dll_ea92a4d9664833a26066"))("./node_modules/react/index.js");
 
 /***/ }),
 
@@ -26990,6 +27025,7 @@ var Index = function Index() {
     __self: this
   })), __jsx(_components_Navigation__WEBPACK_IMPORTED_MODULE_6__["Navigation"], {
     menuIsOpen: menuIsOpen,
+    setMenuIsOpen: setMenuIsOpen,
     showText: showText,
     __source: {
       fileName: _jsxFileName,
@@ -26999,38 +27035,38 @@ var Index = function Index() {
   }), __jsx(_Luna_components_layouts_default_style__WEBPACK_IMPORTED_MODULE_3__["Main"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 53
+      lineNumber: 57
     },
     __self: this
   }, __jsx(_components_Hero__WEBPACK_IMPORTED_MODULE_5__["Hero"], {
     isHidden: heroIsHidden,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 54
+      lineNumber: 58
     },
     __self: this
   }), __jsx(_components_pages_Home_index_style__WEBPACK_IMPORTED_MODULE_4__["HomeMain"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 55
+      lineNumber: 59
     },
     __self: this
   }, __jsx(_components_Work__WEBPACK_IMPORTED_MODULE_7__["Work"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 56
+      lineNumber: 60
     },
     __self: this
   }), __jsx(_components_About__WEBPACK_IMPORTED_MODULE_8__["About"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 57
+      lineNumber: 61
     },
     __self: this
   }), __jsx(_components_Contact__WEBPACK_IMPORTED_MODULE_9__["Contact"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 58
+      lineNumber: 62
     },
     __self: this
   }))));
@@ -27052,14 +27088,14 @@ module.exports = __webpack_require__(/*! next-client-pages-loader?page=%2F&absol
 
 /***/ }),
 
-/***/ "dll-reference dll_e9ad7d891b372a4221cf":
+/***/ "dll-reference dll_ea92a4d9664833a26066":
 /*!*******************************************!*\
-  !*** external "dll_e9ad7d891b372a4221cf" ***!
+  !*** external "dll_ea92a4d9664833a26066" ***!
   \*******************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = dll_e9ad7d891b372a4221cf;
+module.exports = dll_ea92a4d9664833a26066;
 
 /***/ })
 
