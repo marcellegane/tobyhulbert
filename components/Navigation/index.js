@@ -1,8 +1,9 @@
 import { useEffect, useState } from 'react'
+import PropTypes from 'prop-types'
 import { NavigationLink } from '../NavigationLink'
 import { Navigation } from './index.style'
 
-const ThisNavigation = ({ menuIsOpen, setMenuIsOpen, showText }) => {
+const ThisNavigation = ({ menuIsOpen, setMenuIsOpen }) => {
   const [showProjects, setShowProjects] = useState(false)
   const [showAbout, setShowAbout] = useState(false)
   const [showContact, setShowContact] = useState(false)
@@ -68,6 +69,11 @@ const ThisNavigation = ({ menuIsOpen, setMenuIsOpen, showText }) => {
       />
     </Navigation>
   )
+}
+
+ThisNavigation.propTypes = {
+  menuIsOpen: PropTypes.bool,
+  setMenuIsOpen: PropTypes.func,
 }
 
 export { ThisNavigation as Navigation }

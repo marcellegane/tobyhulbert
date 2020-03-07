@@ -8,10 +8,9 @@ const MenuToggle = styled.button`
   transform: translateX(-50%);
   display: block;
   width: ${pxToRem(80)};
-  height: ${pxToRem('default', 2.5)};
+  height: ${pxToRem('default', 2.75)};
   padding: 0 ${pxToRem(8)};
   z-index: ${Luna.layout.zIndex.menuToggle};
-  overflow: hidden;
   border-width: 0 ${pxToRem(2)} ${pxToRem(2)} ${pxToRem(2)};
   border: none;
   border-radius: 0 0 ${pxToRem(24)} ${pxToRem(24)};
@@ -27,10 +26,25 @@ const MenuToggle = styled.button`
   }
 `
 
+const MenuToggleBezel = styled.div`
+  position: absolute;
+  top: 0;
+
+  :nth-child(1) {
+    right: 100%;
+  }
+
+  :nth-child(2) {
+    left: 100%;
+  }
+`
+
 const MenuToggleText = styled.p`
   position: absolute;
   top: 100%;
   right: 100%;
+  opacity: 0;
+  pointer-events: none;
 `
 
 const HomeMain = styled.div``
@@ -50,4 +64,4 @@ const HomeSection = styled.div`
   `}
 `
 
-export { MenuToggle, MenuToggleText, HomeMain, HomeSection }
+export { MenuToggle, MenuToggleText, MenuToggleBezel, HomeMain, HomeSection }

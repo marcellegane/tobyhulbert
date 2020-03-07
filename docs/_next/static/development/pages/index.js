@@ -4179,8 +4179,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Navigation", function() { return ThisNavigation; });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _NavigationLink__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../NavigationLink */ "./components/NavigationLink/index.js");
-/* harmony import */ var _index_style__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./index.style */ "./components/Navigation/index.style.js");
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _NavigationLink__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../NavigationLink */ "./components/NavigationLink/index.js");
+/* harmony import */ var _index_style__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./index.style */ "./components/Navigation/index.style.js");
 var _jsxFileName = "/Users/marcel/dev/tobyhulbert/components/Navigation/index.js";
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
@@ -4188,10 +4190,10 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 
 
+
 var ThisNavigation = function ThisNavigation(_ref) {
   var menuIsOpen = _ref.menuIsOpen,
-      setMenuIsOpen = _ref.setMenuIsOpen,
-      showText = _ref.showText;
+      setMenuIsOpen = _ref.setMenuIsOpen;
 
   var _useState = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(false),
       showProjects = _useState[0],
@@ -4217,15 +4219,15 @@ var ThisNavigation = function ThisNavigation(_ref) {
       setShowContact(true);
     }, enterDelay * 3);
   });
-  return __jsx(_index_style__WEBPACK_IMPORTED_MODULE_2__["Navigation"], {
+  return __jsx(_index_style__WEBPACK_IMPORTED_MODULE_3__["Navigation"], {
     menuIsOpen: menuIsOpen,
     "data-test": menuIsOpen,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 27
+      lineNumber: 28
     },
     __self: this
-  }, __jsx(_NavigationLink__WEBPACK_IMPORTED_MODULE_1__["NavigationLink"], {
+  }, __jsx(_NavigationLink__WEBPACK_IMPORTED_MODULE_2__["NavigationLink"], {
     index: 3,
     showText: showProjects,
     href: "#work",
@@ -4239,10 +4241,10 @@ var ThisNavigation = function ThisNavigation(_ref) {
     setMenuIsOpen: setMenuIsOpen,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 28
+      lineNumber: 29
     },
     __self: this
-  }), __jsx(_NavigationLink__WEBPACK_IMPORTED_MODULE_1__["NavigationLink"], {
+  }), __jsx(_NavigationLink__WEBPACK_IMPORTED_MODULE_2__["NavigationLink"], {
     index: 2,
     showText: showAbout,
     href: "#about",
@@ -4256,10 +4258,10 @@ var ThisNavigation = function ThisNavigation(_ref) {
     setMenuIsOpen: setMenuIsOpen,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 42
+      lineNumber: 43
     },
     __self: this
-  }), __jsx(_NavigationLink__WEBPACK_IMPORTED_MODULE_1__["NavigationLink"], {
+  }), __jsx(_NavigationLink__WEBPACK_IMPORTED_MODULE_2__["NavigationLink"], {
     index: 1,
     showText: showContact,
     href: "#contact",
@@ -4273,12 +4275,16 @@ var ThisNavigation = function ThisNavigation(_ref) {
     setMenuIsOpen: setMenuIsOpen,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 56
+      lineNumber: 57
     },
     __self: this
   }));
 };
 
+ThisNavigation.propTypes = {
+  menuIsOpen: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.bool,
+  setMenuIsOpen: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.func
+};
 
 
 /***/ }),
@@ -5239,13 +5245,14 @@ var WorkRole = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].p.withC
 /*!**********************************************!*\
   !*** ./components/pages/Home/index.style.js ***!
   \**********************************************/
-/*! exports provided: MenuToggle, MenuToggleText, HomeMain, HomeSection */
+/*! exports provided: MenuToggle, MenuToggleText, MenuToggleBezel, HomeMain, HomeSection */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "MenuToggle", function() { return MenuToggle; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "MenuToggleText", function() { return MenuToggleText; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "MenuToggleBezel", function() { return MenuToggleBezel; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "HomeMain", function() { return HomeMain; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "HomeSection", function() { return HomeSection; });
 /* harmony import */ var _babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/taggedTemplateLiteral */ "./node_modules/@babel/runtime-corejs2/helpers/esm/taggedTemplateLiteral.js");
@@ -5278,18 +5285,22 @@ function _templateObject() {
 var MenuToggle = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].button.withConfig({
   displayName: "indexstyle__MenuToggle",
   componentId: "sc-10lbtlg-0"
-})(["position:fixed;top:0;left:50%;transform:translateX(-50%);display:block;width:", ";height:", ";padding:0 ", ";z-index:", ";overflow:hidden;border-width:0 ", " ", " ", ";border:none;border-radius:0 0 ", " ", ";background:", ";", ":hover,:focus{outline:none;}"], Object(_Luna__WEBPACK_IMPORTED_MODULE_2__["pxToRem"])(80), Object(_Luna__WEBPACK_IMPORTED_MODULE_2__["pxToRem"])('default', 2.5), Object(_Luna__WEBPACK_IMPORTED_MODULE_2__["pxToRem"])(8), _Luna__WEBPACK_IMPORTED_MODULE_2__["Luna"].layout.zIndex.menuToggle, Object(_Luna__WEBPACK_IMPORTED_MODULE_2__["pxToRem"])(2), Object(_Luna__WEBPACK_IMPORTED_MODULE_2__["pxToRem"])(2), Object(_Luna__WEBPACK_IMPORTED_MODULE_2__["pxToRem"])(2), Object(_Luna__WEBPACK_IMPORTED_MODULE_2__["pxToRem"])(24), Object(_Luna__WEBPACK_IMPORTED_MODULE_2__["pxToRem"])(24), _Luna__WEBPACK_IMPORTED_MODULE_2__["Luna"].color.background, _Luna__WEBPACK_IMPORTED_MODULE_2__["LunaMedia"].above('large')(_templateObject()));
+})(["position:fixed;top:0;left:50%;transform:translateX(-50%);display:block;width:", ";height:", ";padding:0 ", ";z-index:", ";border-width:0 ", " ", " ", ";border:none;border-radius:0 0 ", " ", ";background:", ";", ":hover,:focus{outline:none;}"], Object(_Luna__WEBPACK_IMPORTED_MODULE_2__["pxToRem"])(80), Object(_Luna__WEBPACK_IMPORTED_MODULE_2__["pxToRem"])('default', 2.75), Object(_Luna__WEBPACK_IMPORTED_MODULE_2__["pxToRem"])(8), _Luna__WEBPACK_IMPORTED_MODULE_2__["Luna"].layout.zIndex.menuToggle, Object(_Luna__WEBPACK_IMPORTED_MODULE_2__["pxToRem"])(2), Object(_Luna__WEBPACK_IMPORTED_MODULE_2__["pxToRem"])(2), Object(_Luna__WEBPACK_IMPORTED_MODULE_2__["pxToRem"])(2), Object(_Luna__WEBPACK_IMPORTED_MODULE_2__["pxToRem"])(24), Object(_Luna__WEBPACK_IMPORTED_MODULE_2__["pxToRem"])(24), _Luna__WEBPACK_IMPORTED_MODULE_2__["Luna"].color.background, _Luna__WEBPACK_IMPORTED_MODULE_2__["LunaMedia"].above('large')(_templateObject()));
+var MenuToggleBezel = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].div.withConfig({
+  displayName: "indexstyle__MenuToggleBezel",
+  componentId: "sc-10lbtlg-1"
+})(["position:absolute;top:0;:nth-child(1){right:100%;}:nth-child(2){left:100%;}"]);
 var MenuToggleText = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].p.withConfig({
   displayName: "indexstyle__MenuToggleText",
-  componentId: "sc-10lbtlg-1"
-})(["position:absolute;top:100%;right:100%;"]);
+  componentId: "sc-10lbtlg-2"
+})(["position:absolute;top:100%;right:100%;opacity:0;pointer-events:none;"]);
 var HomeMain = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].div.withConfig({
   displayName: "indexstyle__HomeMain",
-  componentId: "sc-10lbtlg-2"
+  componentId: "sc-10lbtlg-3"
 })([""]);
 var HomeSection = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].div.withConfig({
   displayName: "indexstyle__HomeSection",
-  componentId: "sc-10lbtlg-3"
+  componentId: "sc-10lbtlg-4"
 })(["position:relative;width:100%;padding-left:", ";padding-right:", ";padding-bottom:10vh;", ""], Object(_Luna__WEBPACK_IMPORTED_MODULE_2__["pxToRem"])('default', 1), Object(_Luna__WEBPACK_IMPORTED_MODULE_2__["pxToRem"])('default', 1), _Luna__WEBPACK_IMPORTED_MODULE_2__["LunaMedia"].above('large')(_templateObject2(), Object(_Luna__WEBPACK_IMPORTED_MODULE_2__["pxToRem"])(400), Object(_Luna__WEBPACK_IMPORTED_MODULE_2__["pxToRem"])(650)));
 
 
@@ -27053,44 +27064,95 @@ var Index = function Index() {
   return __jsx(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 47
+      lineNumber: 48
     },
     __self: this
   }, __jsx(next_head__WEBPACK_IMPORTED_MODULE_1___default.a, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 48
+      lineNumber: 49
     },
     __self: this
   }, __jsx("title", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 49
+      lineNumber: 50
     },
     __self: this
   }, "Toby Hulbert | Engineer. Mixer. Producer")), __jsx(_Luna_components_layouts_default_style__WEBPACK_IMPORTED_MODULE_3__["GlobalStyle"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 51
+      lineNumber: 52
     },
     __self: this
   }), __jsx(_components_pages_Home_index_style__WEBPACK_IMPORTED_MODULE_4__["MenuToggle"], {
     onClick: toggleNavigation,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 52
+      lineNumber: 53
     },
     __self: this
-  }, __jsx(_components_pages_Home_index_style__WEBPACK_IMPORTED_MODULE_4__["MenuToggleText"], {
+  }, __jsx(_components_pages_Home_index_style__WEBPACK_IMPORTED_MODULE_4__["MenuToggleBezel"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 53
+      lineNumber: 54
+    },
+    __self: this
+  }, __jsx("svg", {
+    xmlns: "http://www.w3.org/2000/svg",
+    width: "22",
+    height: "22",
+    viewBox: "0 0 22 22",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 55
+    },
+    __self: this
+  }, __jsx("path", {
+    fill: "#FAFAFA",
+    fillRule: "evenodd",
+    d: "M22,0 L2,0 L2,20 C3.11111111,15.3333333 5.33333333,11.3333333 8.66666667,8 C12,4.66666667 16.4444444,2 22,0 Z",
+    transform: "matrix(-1 0 0 1 24 0)",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 61
+    },
+    __self: this
+  }))), __jsx(_components_pages_Home_index_style__WEBPACK_IMPORTED_MODULE_4__["MenuToggleBezel"], {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 69
+    },
+    __self: this
+  }, __jsx("svg", {
+    xmlns: "http://www.w3.org/2000/svg",
+    width: "22",
+    height: "22",
+    viewBox: "0 0 22 22",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 70
+    },
+    __self: this
+  }, __jsx("path", {
+    fill: "#FAFAFA",
+    fillRule: "evenodd",
+    d: "M20,0 L0,0 L0,20 C1.11111111,15.3333333 3.33333333,11.3333333 6.66666667,8 C10,4.66666667 14.4444444,2 20,0 Z",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 76
+    },
+    __self: this
+  }))), __jsx(_components_pages_Home_index_style__WEBPACK_IMPORTED_MODULE_4__["MenuToggleText"], {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 83
     },
     __self: this
   }, "Open menu"), __jsx(_components_svgs_SineWave__WEBPACK_IMPORTED_MODULE_10__["SineWave"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 54
+      lineNumber: 84
     },
     __self: this
   })), __jsx(_components_Navigation__WEBPACK_IMPORTED_MODULE_6__["Navigation"], {
@@ -27099,44 +27161,44 @@ var Index = function Index() {
     showText: showText,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 56
+      lineNumber: 86
     },
     __self: this
   }), __jsx(_Luna_components_layouts_default_style__WEBPACK_IMPORTED_MODULE_3__["Main"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 61
+      lineNumber: 91
     },
     __self: this
   }, __jsx(_components_Hero__WEBPACK_IMPORTED_MODULE_5__["Hero"], {
     isHidden: heroIsHidden,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 62
+      lineNumber: 92
     },
     __self: this
   }), __jsx(_components_pages_Home_index_style__WEBPACK_IMPORTED_MODULE_4__["HomeMain"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 63
+      lineNumber: 93
     },
     __self: this
   }, __jsx(_components_Work__WEBPACK_IMPORTED_MODULE_7__["Work"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 64
+      lineNumber: 94
     },
     __self: this
   }), __jsx(_components_About__WEBPACK_IMPORTED_MODULE_8__["About"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 65
+      lineNumber: 95
     },
     __self: this
   }), __jsx(_components_Contact__WEBPACK_IMPORTED_MODULE_9__["Contact"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 66
+      lineNumber: 96
     },
     __self: this
   }))));
