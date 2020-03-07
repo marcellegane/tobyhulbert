@@ -63,7 +63,7 @@ export default class MyDocument extends Document {
           />
 
           <meta property="og:type" content="website" />
-          <meta property="og:url" content="http://www.tobyhulbert.co.uk/" />
+          <meta property="og:url" content="https://tobyhulbert.co.uk/" />
           <meta
             property="og:title"
             content="Toby Hulbert | Engineer. Mixer. Producer"
@@ -74,14 +74,11 @@ export default class MyDocument extends Document {
           />
           <meta
             property="og:image"
-            content="http://www.tobyhulbert.co.uk/images/toby-hulbert.png"
+            content="https://tobyhulbert.co.uk/images/toby-hulbert.png"
           />
 
           <meta property="twitter:card" content="summary_large_image" />
-          <meta
-            property="twitter:url"
-            content="http://www.tobyhulbert.co.uk/"
-          />
+          <meta property="twitter:url" content="https://tobyhulbert.co.uk/" />
           <meta
             property="twitter:title"
             content="Toby Hulbert | Engineer. Mixer. Producer"
@@ -92,7 +89,7 @@ export default class MyDocument extends Document {
           />
           <meta
             property="twitter:image"
-            content="http://www.tobyhulbert.co.uk/images/toby-hulbert.png"
+            content="https://tobyhulbert.co.uk/images/toby-hulbert.png"
           />
 
           <link
