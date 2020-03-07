@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react'
+import React, { useState, useEffect } from 'react'
 import Head from 'next/head'
 import { useScrollPosition } from '@n8tb1t/use-scroll-position'
 import { GlobalStyle, Main } from '../Luna/components/layouts/default.style'
@@ -34,6 +34,10 @@ const Index = () => {
   )
 
   useEffect(() => {
+    if (window.pageYOffset > 0) {
+      setHeroIsHidden(true)
+    }
+
     setTimeout(() => {
       setShowText(true)
     }, 400)
