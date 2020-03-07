@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { pxToRem, Luna, LunaMedia } from '../../Luna'
+import { pxToRem, LunaMedia } from '../../Luna'
 
 const Work = styled.div`
   position: relative;
@@ -23,6 +23,10 @@ const WorkGrid = styled.div`
   ${LunaMedia.above('small')`
     justify-content: flex-start;
   `}
+
+  :nth-child(2) {
+    margin-top: ${pxToRem('default', 6)};
+  }
 `
 
 export { Work, WorkGrid }

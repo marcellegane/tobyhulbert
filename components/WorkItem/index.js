@@ -12,6 +12,7 @@ import {
 } from './index.style'
 
 const ThisWorkItem = ({ content, loaded }) => {
+  const { imageSrc, artist, project, role } = content
   const backgroundRef = useRef()
   const overlayRef = useRef()
   const tlReveal = gsap.timeline({ paused: true })
@@ -62,12 +63,12 @@ const ThisWorkItem = ({ content, loaded }) => {
       onBlur={handleLeave}
       onMouseLeave={handleLeave}
     >
-      <WorkImg src={`images/work/${content.imageSrc}`} />
+      <WorkImg src={`images/work/${imageSrc}`} />
       <WorkBackground ref={backgroundRef} data-work-loader />
       <WorkOverlay ref={overlayRef} loaded={loaded}>
-        <WorkArtist>{content.artist}</WorkArtist>
-        <WorkProject>{content.project}</WorkProject>
-        <WorkRole>{content.role}</WorkRole>
+        <WorkArtist>{artist}</WorkArtist>
+        {project && <WorkProject>{project}</WorkProject>}
+        <WorkRole>{role}</WorkRole>
       </WorkOverlay>
     </WorkItem>
   )

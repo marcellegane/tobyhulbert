@@ -103,33 +103,57 @@ const workItems = [
   },
 ]
 
-const filmImages = [
-  '1d3d-one-direction-this-is-us-poster.jpg',
-  // '220px-The_Kitchen_poster.jpeg',
-  'Alice-Through-The-Looking-Glass2.png',
-  'Allied-Film-Poster.jpeg',
-  'avengers.jpg',
-  'danish_girl-4-FOCUS-FEATURES.jpg',
-  // 'dirty-heads-super-moon.jpg',
-  // 'disobience-poster.jpg',
-  'disobience.jpg',
-  'early-man-poster.jpg',
-  'exodus-gods-and-kings-poster-01.jpg',
-  'Gravity_poster2.jpg',
-  'journeysend-poster.jpg',
-  'london-has-fallen-poster.jpg',
-  'monkeykingdom-poster.jpeg',
-  'Mortdecai.jpg',
-  'Nick-Cave-And-The-Bad-Seeds-Distant-Sky-poster.jpg',
-  'Palm-Trees-in-the-snow-poster.jpg',
-  'prophet_poster2.jpg',
-  'Regression-poster.jpg',
-  'seven-psychopaths-header.jpeg',
-  'Suburbicon-UK-banner.jpg',
-  'Suffragette-poster.jpg',
-  'The-Martian-Poster-20th-century-fox.jpg',
-  'The-Imitation-Game-Final-Poster.jpg',
-  'Zookeeper-wife-poster-focus-features.jpg',
+const filmItems = [
+  {
+    artist: "A Serial Killer's Guide to Life",
+    role: 'Recording Engineer and Mixer',
+    imageSrc: 'film-serial.jpg',
+  },
+  {
+    artist: "Journey's End",
+    role: 'Engineer and Score Mixer',
+    imageSrc: 'film-journeys-end.jpg',
+  },
+  {
+    artist: 'Suburbicon',
+    role: 'Score Recordist',
+    imageSrc: 'film-suburbicon.jpg',
+  },
+  {
+    artist: 'Allied',
+    role: 'Score Recordist',
+    imageSrc: 'film-allied.jpg',
+  },
+  {
+    artist: 'The Martian',
+    role: 'Digital Scoring Engineer',
+    imageSrc: 'film-the-martian.jpg',
+  },
+  {
+    artist: 'Suffragette',
+    role: 'Score Editor and Score Recordist',
+    imageSrc: 'film-suffragette.jpg',
+  },
+  {
+    artist: 'Avengers: Age of Ultron',
+    role: 'Score Recordist',
+    imageSrc: 'film-avengers.jpg',
+  },
+  {
+    artist: 'The Imitation Game',
+    role: 'Score Recordist and Mix Assistant',
+    imageSrc: 'film-the-imitation-game.jpg',
+  },
+  {
+    artist: 'Gravity',
+    role: 'Score Recordist',
+    imageSrc: 'film-gravity.jpg',
+  },
+  {
+    artist: 'Rocketman',
+    role: 'Asssistant Engineer',
+    imageSrc: 'film-rocketman.jpg',
+  },
 ]
 
 const ThisWork = () => {
@@ -183,6 +207,12 @@ const ThisWork = () => {
       <ImagesLoaded done={onImagesLoaded}>
         <WorkGrid>
           {workItems.map((workItem, index) => (
+            <WorkItem key={index} content={workItem} loaded={workLoaded} />
+          ))}
+        </WorkGrid>
+
+        <WorkGrid>
+          {filmItems.map((workItem, index) => (
             <WorkItem key={index} content={workItem} loaded={workLoaded} />
           ))}
         </WorkGrid>
