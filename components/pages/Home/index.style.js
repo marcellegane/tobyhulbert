@@ -7,14 +7,15 @@ const MenuToggle = styled.button`
   left: 50%;
   transform: translateX(-50%);
   display: block;
-  width: ${pxToRem(64)};
-  height: ${pxToRem('default', 3)};
-  padding: 0;
+  width: ${pxToRem(80)};
+  height: ${pxToRem('default', 2.5)};
+  padding: 0 ${pxToRem(8)};
   z-index: ${Luna.layout.zIndex.menuToggle};
   overflow: hidden;
   border-width: 0 ${pxToRem(2)} ${pxToRem(2)} ${pxToRem(2)};
   border: none;
-  background: transparent;
+  border-radius: 0 0 ${pxToRem(24)} ${pxToRem(24)};
+  background: ${Luna.color.background};
 
   ${LunaMedia.above('large')`
     display: none;

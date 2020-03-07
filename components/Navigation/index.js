@@ -26,6 +26,7 @@ const ThisNavigation = ({ menuIsOpen, setMenuIsOpen, showText }) => {
   return (
     <Navigation menuIsOpen={menuIsOpen} data-test={menuIsOpen}>
       <NavigationLink
+        index={3}
         showText={showProjects}
         href="#work"
         text="Projects"
@@ -39,6 +40,7 @@ const ThisNavigation = ({ menuIsOpen, setMenuIsOpen, showText }) => {
       />
 
       <NavigationLink
+        index={2}
         showText={showAbout}
         href="#about"
         text="About"
@@ -52,6 +54,7 @@ const ThisNavigation = ({ menuIsOpen, setMenuIsOpen, showText }) => {
       />
 
       <NavigationLink
+        index={1}
         showText={showContact}
         href="#contact"
         text="Contact"

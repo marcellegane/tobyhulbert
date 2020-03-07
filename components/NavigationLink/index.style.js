@@ -7,6 +7,15 @@ const NavigationLink = styled.a`
   text-decoration: none;
 
   ${LunaMedia.below('large')`
+    opacity: ${props => (props.menuIsOpen ? 1 : 0)};
+    transform: ${props =>
+      props.menuIsOpen ? 'translateY(0)' : 'translateY(-150%)'};
+    transition: ${props =>
+      props.menuIsOpen
+        ? `all ${0.2 +
+            props.index * 0.1}s cubic-bezier(0.65, 0.05, 0.36, 1) 0.2s`
+        : `all 0.05s cubic-bezier(0.65, 0.05, 0.36, 1)`};
+
     & + & {
       margin-top: 1.5em;
     }
