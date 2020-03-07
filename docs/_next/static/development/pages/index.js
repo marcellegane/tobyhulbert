@@ -3877,13 +3877,13 @@ var ThisContact = function ThisContact() {
   }, "tobyhulbert@gmail.com"), __jsx(_index_style__WEBPACK_IMPORTED_MODULE_2__["ContactList"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 14
+      lineNumber: 16
     },
     __self: this
   }, __jsx(_index_style__WEBPACK_IMPORTED_MODULE_2__["ContactListItem"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 15
+      lineNumber: 17
     },
     __self: this
   }, __jsx(_index_style__WEBPACK_IMPORTED_MODULE_2__["ContactLink"], {
@@ -3891,13 +3891,13 @@ var ThisContact = function ThisContact() {
     href: "https://www.imdb.com/name/nm4782614/",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 16
+      lineNumber: 18
     },
     __self: this
   }, "IMDb")), __jsx(_index_style__WEBPACK_IMPORTED_MODULE_2__["ContactListItem"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 23
+      lineNumber: 25
     },
     __self: this
   }, __jsx(_index_style__WEBPACK_IMPORTED_MODULE_2__["ContactLink"], {
@@ -3905,13 +3905,13 @@ var ThisContact = function ThisContact() {
     href: "https://www.allmusic.com/artist/toby-hulbert-mn0001698943/credits",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 24
+      lineNumber: 26
     },
     __self: this
   }, "All Music")), __jsx(_index_style__WEBPACK_IMPORTED_MODULE_2__["ContactListItem"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 31
+      lineNumber: 33
     },
     __self: this
   }, __jsx(_index_style__WEBPACK_IMPORTED_MODULE_2__["ContactLink"], {
@@ -3919,13 +3919,13 @@ var ThisContact = function ThisContact() {
     href: "https://www.discogs.com/artist/3069150-Toby-Hulbert?page=2",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 32
+      lineNumber: 34
     },
     __self: this
   }, "Discogs")), __jsx(_index_style__WEBPACK_IMPORTED_MODULE_2__["ContactListItem"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 39
+      lineNumber: 41
     },
     __self: this
   }, __jsx(_index_style__WEBPACK_IMPORTED_MODULE_2__["ContactLink"], {
@@ -3933,13 +3933,13 @@ var ThisContact = function ThisContact() {
     href: "https://twitter.com/tobyhulbert",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 40
+      lineNumber: 42
     },
     __self: this
   }, "Twitter")), __jsx(_index_style__WEBPACK_IMPORTED_MODULE_2__["ContactListItem"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 44
+      lineNumber: 46
     },
     __self: this
   }, __jsx(_index_style__WEBPACK_IMPORTED_MODULE_2__["ContactLink"], {
@@ -3947,7 +3947,7 @@ var ThisContact = function ThisContact() {
     href: "https://www.instagram.com/toby.hulbert/",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 45
+      lineNumber: 47
     },
     __self: this
   }, "Instagram"))));
@@ -3996,11 +3996,10 @@ var ContactListItem = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].
   displayName: "indexstyle__ContactListItem",
   componentId: "sc-1lknih9-4"
 })(["padding:", " ", ";"], Object(_Luna__WEBPACK_IMPORTED_MODULE_1__["pxToRem"])(8), Object(_Luna__WEBPACK_IMPORTED_MODULE_1__["pxToRem"])(16));
-var slide = Object(styled_components__WEBPACK_IMPORTED_MODULE_0__["keyframes"])(["0%{transform-origin:100% 50%;transform:scaleX(1)}50%{transform-origin:100% 50%;transform:scaleX(0)}51%{transform-origin:0% 50%;transform:scaleX(0)}100%{transform-origin:0% 50%;transform:scaleX(1)}"]);
 var ContactLink = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].a.withConfig({
   displayName: "indexstyle__ContactLink",
   componentId: "sc-1lknih9-5"
-})(["position:relative;display:block;padding:0;font-size:", ";font-weight:", ";line-height:1.3;color:", ";text-decoration:none;&:before{content:'';position:absolute;right:0;bottom:0;left:0;display:block;height:", ";background-color:", ";transform-origin:100% 50%;transition:transform 0.2s cubic-bezier(0.65,0.05,0.36,1);}&:hover:before,&:focus:before{animation:", " 1s cubic-bezier(0.65,0.05,0.36,1) infinite;}"], Object(_Luna__WEBPACK_IMPORTED_MODULE_1__["pxToRem"])(24), _Luna__WEBPACK_IMPORTED_MODULE_1__["Luna"].font.weight.bold, _Luna__WEBPACK_IMPORTED_MODULE_1__["Luna"].color.tertiary.dark, Object(_Luna__WEBPACK_IMPORTED_MODULE_1__["pxToRem"])(3), _Luna__WEBPACK_IMPORTED_MODULE_1__["Luna"].color.tertiary.dark, slide);
+})(["position:relative;display:block;padding:0;font-size:", ";font-weight:", ";line-height:1.3;color:", ";text-decoration:none;&:before{content:'';position:absolute;right:0;bottom:0;left:0;display:block;height:", ";background-color:", ";transition:transform 0.2s cubic-bezier(0.65,0.05,0.36,1);}&:hover:before,&:focus:before{transform:scaleX(0.75);}"], Object(_Luna__WEBPACK_IMPORTED_MODULE_1__["pxToRem"])(24), _Luna__WEBPACK_IMPORTED_MODULE_1__["Luna"].font.weight.bold, _Luna__WEBPACK_IMPORTED_MODULE_1__["Luna"].color.tertiary.dark, Object(_Luna__WEBPACK_IMPORTED_MODULE_1__["pxToRem"])(3), _Luna__WEBPACK_IMPORTED_MODULE_1__["Luna"].color.tertiary.dark);
 
 
 /***/ }),
@@ -4227,6 +4226,7 @@ var ThisNavigation = function ThisNavigation(_ref) {
     },
     __self: this
   }, __jsx(_NavigationLink__WEBPACK_IMPORTED_MODULE_1__["NavigationLink"], {
+    index: 3,
     showText: showProjects,
     href: "#work",
     text: "Projects",
@@ -4243,6 +4243,7 @@ var ThisNavigation = function ThisNavigation(_ref) {
     },
     __self: this
   }), __jsx(_NavigationLink__WEBPACK_IMPORTED_MODULE_1__["NavigationLink"], {
+    index: 2,
     showText: showAbout,
     href: "#about",
     text: "About",
@@ -4255,10 +4256,11 @@ var ThisNavigation = function ThisNavigation(_ref) {
     setMenuIsOpen: setMenuIsOpen,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 41
+      lineNumber: 42
     },
     __self: this
   }), __jsx(_NavigationLink__WEBPACK_IMPORTED_MODULE_1__["NavigationLink"], {
+    index: 1,
     showText: showContact,
     href: "#contact",
     text: "Contact",
@@ -4271,7 +4273,7 @@ var ThisNavigation = function ThisNavigation(_ref) {
     setMenuIsOpen: setMenuIsOpen,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 54
+      lineNumber: 56
     },
     __self: this
   }));
@@ -4297,7 +4299,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 function _templateObject() {
-  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__["default"])(["\n    position: fixed;\n    top: 0;\n    right: 0;\n    bottom: 0;\n    left: 0;\n    display: flex;\n    flex-direction: column;\n    align-items: center;\n    justify-content: center;\n    height: 100vh;\n    z-index: ", ";\n    pointer-events: ", ";\n    transform: ", ";\n    background: ", ";\n    transition: all 0.3s cubic-bezier(0.22, 0.61, 0.36, 1);\n  "]);
+  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__["default"])(["\n    position: fixed;\n    top: 0;\n    right: 0;\n    bottom: 0;\n    left: 0;\n    display: flex;\n    flex-direction: column;\n    align-items: center;\n    justify-content: center;\n    height: 100vh;\n    z-index: ", ";\n    pointer-events: ", ";\n    transform: ", ";\n    background: ", ";\n    transition: all 0.4s cubic-bezier(0.22, 0.61, 0.36, 1);\n  "]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -4314,7 +4316,7 @@ var Navigation = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].nav.w
 })(["", ""], _Luna__WEBPACK_IMPORTED_MODULE_2__["LunaMedia"].below('large')(_templateObject(), _Luna__WEBPACK_IMPORTED_MODULE_2__["Luna"].layout.zIndex.nav, function (props) {
   return props.menuIsOpen ? "visible" : "none";
 }, function (props) {
-  return props.menuIsOpen ? 'translateX(0)' : 'translateX(-100%)';
+  return props.menuIsOpen ? 'translateY(0)' : 'translateY(-100%)';
 }, _Luna__WEBPACK_IMPORTED_MODULE_2__["Luna"].color.background));
 
 
@@ -4576,7 +4578,7 @@ function _templateObject2() {
 }
 
 function _templateObject() {
-  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__["default"])(["\n    & + & {\n      margin-top: 1.5em;\n    }\n  "]);
+  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__["default"])(["\n    opacity: ", ";\n    transform: ", ";\n    transition: ", ";\n\n    & + & {\n      margin-top: 1.5em;\n    }\n  "]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -4590,7 +4592,13 @@ function _templateObject() {
 var NavigationLink = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].a.withConfig({
   displayName: "indexstyle__NavigationLink",
   componentId: "sc-1up4iy-0"
-})(["position:relative;color:", ";text-decoration:none;", " ", " ", ""], _Luna__WEBPACK_IMPORTED_MODULE_2__["Luna"].color.secondary.one, _Luna__WEBPACK_IMPORTED_MODULE_2__["LunaMedia"].below('large')(_templateObject()), _Luna__WEBPACK_IMPORTED_MODULE_2__["LunaMedia"].above('large')(_templateObject2(), Object(_Luna__WEBPACK_IMPORTED_MODULE_2__["pxToRem"])('default', 1.5), Object(_Luna__WEBPACK_IMPORTED_MODULE_2__["pxToRem"])('default', 1.75), Object(_Luna__WEBPACK_IMPORTED_MODULE_2__["pxToRem"])('default', 2), _Luna__WEBPACK_IMPORTED_MODULE_2__["Luna"].layout.zIndex.nav), function (props) {
+})(["position:relative;color:", ";text-decoration:none;", " ", " ", ""], _Luna__WEBPACK_IMPORTED_MODULE_2__["Luna"].color.secondary.one, _Luna__WEBPACK_IMPORTED_MODULE_2__["LunaMedia"].below('large')(_templateObject(), function (props) {
+  return props.menuIsOpen ? 1 : 0;
+}, function (props) {
+  return props.menuIsOpen ? 'translateY(0)' : 'translateY(-150%)';
+}, function (props) {
+  return props.menuIsOpen ? "all ".concat(0.2 + props.index * 0.1, "s cubic-bezier(0.65, 0.05, 0.36, 1) 0.2s") : "all 0.05s cubic-bezier(0.65, 0.05, 0.36, 1)";
+}), _Luna__WEBPACK_IMPORTED_MODULE_2__["LunaMedia"].above('large')(_templateObject2(), Object(_Luna__WEBPACK_IMPORTED_MODULE_2__["pxToRem"])('default', 1.5), Object(_Luna__WEBPACK_IMPORTED_MODULE_2__["pxToRem"])('default', 1.75), Object(_Luna__WEBPACK_IMPORTED_MODULE_2__["pxToRem"])('default', 2), _Luna__WEBPACK_IMPORTED_MODULE_2__["Luna"].layout.zIndex.nav), function (props) {
   var position = props.position;
 
   if (position === 'topLeft') {
@@ -4803,10 +4811,47 @@ var workItems = [{
   role: '',
   imageSrc: 'default-grey.png'
 }];
-var filmImages = ['1d3d-one-direction-this-is-us-poster.jpg', // '220px-The_Kitchen_poster.jpeg',
-'Alice-Through-The-Looking-Glass2.png', 'Allied-Film-Poster.jpeg', 'avengers.jpg', 'danish_girl-4-FOCUS-FEATURES.jpg', // 'dirty-heads-super-moon.jpg',
-// 'disobience-poster.jpg',
-'disobience.jpg', 'early-man-poster.jpg', 'exodus-gods-and-kings-poster-01.jpg', 'Gravity_poster2.jpg', 'journeysend-poster.jpg', 'london-has-fallen-poster.jpg', 'monkeykingdom-poster.jpeg', 'Mortdecai.jpg', 'Nick-Cave-And-The-Bad-Seeds-Distant-Sky-poster.jpg', 'Palm-Trees-in-the-snow-poster.jpg', 'prophet_poster2.jpg', 'Regression-poster.jpg', 'seven-psychopaths-header.jpeg', 'Suburbicon-UK-banner.jpg', 'Suffragette-poster.jpg', 'The-Martian-Poster-20th-century-fox.jpg', 'The-Imitation-Game-Final-Poster.jpg', 'Zookeeper-wife-poster-focus-features.jpg'];
+var filmItems = [{
+  artist: "A Serial Killer's Guide to Life",
+  role: 'Recording Engineer and Mixer',
+  imageSrc: 'film-serial.jpg'
+}, {
+  artist: "Journey's End",
+  role: 'Engineer and Score Mixer',
+  imageSrc: 'film-journeys-end.jpg'
+}, {
+  artist: 'Suburbicon',
+  role: 'Score Recordist',
+  imageSrc: 'film-suburbicon.jpg'
+}, {
+  artist: 'Allied',
+  role: 'Score Recordist',
+  imageSrc: 'film-allied.jpg'
+}, {
+  artist: 'The Martian',
+  role: 'Digital Scoring Engineer',
+  imageSrc: 'film-the-martian.jpg'
+}, {
+  artist: 'Suffragette',
+  role: 'Score Editor and Score Recordist',
+  imageSrc: 'film-suffragette.jpg'
+}, {
+  artist: 'Avengers: Age of Ultron',
+  role: 'Score Recordist',
+  imageSrc: 'film-avengers.jpg'
+}, {
+  artist: 'The Imitation Game',
+  role: 'Score Recordist and Mix Assistant',
+  imageSrc: 'film-the-imitation-game.jpg'
+}, {
+  artist: 'Gravity',
+  role: 'Score Recordist',
+  imageSrc: 'film-gravity.jpg'
+}, {
+  artist: 'Rocketman',
+  role: 'Asssistant Engineer',
+  imageSrc: 'film-rocketman.jpg'
+}];
 
 var ThisWork = function ThisWork() {
   var forwardedRef = Object(react__WEBPACK_IMPORTED_MODULE_0__["useRef"])();
@@ -4867,20 +4912,20 @@ var ThisWork = function ThisWork() {
     ref: forwardedRef,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 182
+      lineNumber: 206
     },
     __self: this
   }, __jsx(react_images_loaded__WEBPACK_IMPORTED_MODULE_2___default.a, {
     done: onImagesLoaded,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 183
+      lineNumber: 207
     },
     __self: this
   }, __jsx(_index_style__WEBPACK_IMPORTED_MODULE_4__["WorkGrid"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 184
+      lineNumber: 208
     },
     __self: this
   }, workItems.map(function (workItem, index) {
@@ -4890,7 +4935,24 @@ var ThisWork = function ThisWork() {
       loaded: workLoaded,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 186
+        lineNumber: 210
+      },
+      __self: this
+    });
+  })), __jsx(_index_style__WEBPACK_IMPORTED_MODULE_4__["WorkGrid"], {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 214
+    },
+    __self: this
+  }, filmItems.map(function (workItem, index) {
+    return __jsx(_WorkItem__WEBPACK_IMPORTED_MODULE_3__["WorkItem"], {
+      key: index,
+      content: workItem,
+      loaded: workLoaded,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 216
       },
       __self: this
     });
@@ -4947,7 +5009,7 @@ var Work = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].div.withCon
 var WorkGrid = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].div.withConfig({
   displayName: "indexstyle__WorkGrid",
   componentId: "blfuh4-1"
-})(["display:flex;flex-wrap:wrap;justify-content:center;", ""], _Luna__WEBPACK_IMPORTED_MODULE_2__["LunaMedia"].above('small')(_templateObject2()));
+})(["display:flex;flex-wrap:wrap;justify-content:center;", ":nth-child(2){margin-top:", ";}"], _Luna__WEBPACK_IMPORTED_MODULE_2__["LunaMedia"].above('small')(_templateObject2()), Object(_Luna__WEBPACK_IMPORTED_MODULE_2__["pxToRem"])('default', 6));
 
 
 /***/ }),
@@ -4979,6 +5041,10 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 var ThisWorkItem = function ThisWorkItem(_ref) {
   var content = _ref.content,
       loaded = _ref.loaded;
+  var imageSrc = content.imageSrc,
+      artist = content.artist,
+      project = content.project,
+      role = content.role;
   var backgroundRef = Object(react__WEBPACK_IMPORTED_MODULE_0__["useRef"])();
   var overlayRef = Object(react__WEBPACK_IMPORTED_MODULE_0__["useRef"])();
   var tlReveal = gsap__WEBPACK_IMPORTED_MODULE_2__["default"].timeline({
@@ -5019,14 +5085,14 @@ var ThisWorkItem = function ThisWorkItem(_ref) {
     onMouseLeave: handleLeave,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 59
+      lineNumber: 60
     },
     __self: this
   }, __jsx(_index_style__WEBPACK_IMPORTED_MODULE_3__["WorkImg"], {
-    src: "images/work/".concat(content.imageSrc),
+    src: "images/work/".concat(imageSrc),
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 65
+      lineNumber: 66
     },
     __self: this
   }), __jsx(_index_style__WEBPACK_IMPORTED_MODULE_3__["WorkBackground"], {
@@ -5034,7 +5100,7 @@ var ThisWorkItem = function ThisWorkItem(_ref) {
     "data-work-loader": true,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 66
+      lineNumber: 67
     },
     __self: this
   }), __jsx(_index_style__WEBPACK_IMPORTED_MODULE_3__["WorkOverlay"], {
@@ -5042,28 +5108,28 @@ var ThisWorkItem = function ThisWorkItem(_ref) {
     loaded: loaded,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 67
+      lineNumber: 68
     },
     __self: this
   }, __jsx(_index_style__WEBPACK_IMPORTED_MODULE_3__["WorkArtist"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 68
-    },
-    __self: this
-  }, content.artist), __jsx(_index_style__WEBPACK_IMPORTED_MODULE_3__["WorkProject"], {
-    __source: {
-      fileName: _jsxFileName,
       lineNumber: 69
     },
     __self: this
-  }, content.project), __jsx(_index_style__WEBPACK_IMPORTED_MODULE_3__["WorkRole"], {
+  }, artist), project && __jsx(_index_style__WEBPACK_IMPORTED_MODULE_3__["WorkProject"], {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 70
     },
     __self: this
-  }, content.role)));
+  }, project), __jsx(_index_style__WEBPACK_IMPORTED_MODULE_3__["WorkRole"], {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 71
+    },
+    __self: this
+  }, role)));
 };
 
 ThisWorkItem.propTypes = {
@@ -5212,7 +5278,7 @@ function _templateObject() {
 var MenuToggle = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].button.withConfig({
   displayName: "indexstyle__MenuToggle",
   componentId: "sc-10lbtlg-0"
-})(["position:fixed;top:0;left:50%;transform:translateX(-50%);display:block;width:", ";height:", ";padding:0;z-index:", ";overflow:hidden;border-width:0 ", " ", " ", ";border:none;background:transparent;", ":hover,:focus{outline:none;}"], Object(_Luna__WEBPACK_IMPORTED_MODULE_2__["pxToRem"])(64), Object(_Luna__WEBPACK_IMPORTED_MODULE_2__["pxToRem"])('default', 3), _Luna__WEBPACK_IMPORTED_MODULE_2__["Luna"].layout.zIndex.menuToggle, Object(_Luna__WEBPACK_IMPORTED_MODULE_2__["pxToRem"])(2), Object(_Luna__WEBPACK_IMPORTED_MODULE_2__["pxToRem"])(2), Object(_Luna__WEBPACK_IMPORTED_MODULE_2__["pxToRem"])(2), _Luna__WEBPACK_IMPORTED_MODULE_2__["LunaMedia"].above('large')(_templateObject()));
+})(["position:fixed;top:0;left:50%;transform:translateX(-50%);display:block;width:", ";height:", ";padding:0 ", ";z-index:", ";overflow:hidden;border-width:0 ", " ", " ", ";border:none;border-radius:0 0 ", " ", ";background:", ";", ":hover,:focus{outline:none;}"], Object(_Luna__WEBPACK_IMPORTED_MODULE_2__["pxToRem"])(80), Object(_Luna__WEBPACK_IMPORTED_MODULE_2__["pxToRem"])('default', 2.5), Object(_Luna__WEBPACK_IMPORTED_MODULE_2__["pxToRem"])(8), _Luna__WEBPACK_IMPORTED_MODULE_2__["Luna"].layout.zIndex.menuToggle, Object(_Luna__WEBPACK_IMPORTED_MODULE_2__["pxToRem"])(2), Object(_Luna__WEBPACK_IMPORTED_MODULE_2__["pxToRem"])(2), Object(_Luna__WEBPACK_IMPORTED_MODULE_2__["pxToRem"])(2), Object(_Luna__WEBPACK_IMPORTED_MODULE_2__["pxToRem"])(24), Object(_Luna__WEBPACK_IMPORTED_MODULE_2__["pxToRem"])(24), _Luna__WEBPACK_IMPORTED_MODULE_2__["Luna"].color.background, _Luna__WEBPACK_IMPORTED_MODULE_2__["LunaMedia"].above('large')(_templateObject()));
 var MenuToggleText = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].p.withConfig({
   displayName: "indexstyle__MenuToggleText",
   componentId: "sc-10lbtlg-1"
@@ -26976,6 +27042,10 @@ var Index = function Index() {
     }
   }, [heroIsHidden]);
   Object(react__WEBPACK_IMPORTED_MODULE_0__["useEffect"])(function () {
+    if (window.pageYOffset > 0) {
+      setHeroIsHidden(true);
+    }
+
     setTimeout(function () {
       setShowText(true);
     }, 400);
@@ -26983,44 +27053,44 @@ var Index = function Index() {
   return __jsx(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 43
+      lineNumber: 47
     },
     __self: this
   }, __jsx(next_head__WEBPACK_IMPORTED_MODULE_1___default.a, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 44
+      lineNumber: 48
     },
     __self: this
   }, __jsx("title", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 45
+      lineNumber: 49
     },
     __self: this
   }, "Toby Hulbert | Engineer. Mixer. Producer")), __jsx(_Luna_components_layouts_default_style__WEBPACK_IMPORTED_MODULE_3__["GlobalStyle"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 47
+      lineNumber: 51
     },
     __self: this
   }), __jsx(_components_pages_Home_index_style__WEBPACK_IMPORTED_MODULE_4__["MenuToggle"], {
     onClick: toggleNavigation,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 48
+      lineNumber: 52
     },
     __self: this
   }, __jsx(_components_pages_Home_index_style__WEBPACK_IMPORTED_MODULE_4__["MenuToggleText"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 49
+      lineNumber: 53
     },
     __self: this
   }, "Open menu"), __jsx(_components_svgs_SineWave__WEBPACK_IMPORTED_MODULE_10__["SineWave"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 50
+      lineNumber: 54
     },
     __self: this
   })), __jsx(_components_Navigation__WEBPACK_IMPORTED_MODULE_6__["Navigation"], {
@@ -27029,44 +27099,44 @@ var Index = function Index() {
     showText: showText,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 52
+      lineNumber: 56
     },
     __self: this
   }), __jsx(_Luna_components_layouts_default_style__WEBPACK_IMPORTED_MODULE_3__["Main"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 57
+      lineNumber: 61
     },
     __self: this
   }, __jsx(_components_Hero__WEBPACK_IMPORTED_MODULE_5__["Hero"], {
     isHidden: heroIsHidden,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 58
+      lineNumber: 62
     },
     __self: this
   }), __jsx(_components_pages_Home_index_style__WEBPACK_IMPORTED_MODULE_4__["HomeMain"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 59
+      lineNumber: 63
     },
     __self: this
   }, __jsx(_components_Work__WEBPACK_IMPORTED_MODULE_7__["Work"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 60
+      lineNumber: 64
     },
     __self: this
   }), __jsx(_components_About__WEBPACK_IMPORTED_MODULE_8__["About"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 61
+      lineNumber: 65
     },
     __self: this
   }), __jsx(_components_Contact__WEBPACK_IMPORTED_MODULE_9__["Contact"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 62
+      lineNumber: 66
     },
     __self: this
   }))));
