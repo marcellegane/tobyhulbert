@@ -10,7 +10,9 @@ import {
 const ThisContact = () => (
   <HomeSection id="contact">
     <ContactTitle>Contact</ContactTitle>
-    <ContactText>tobyhulbert@gmail.com</ContactText>
+    <ContactText>
+      &#116;&#111;&#098;&#121;&#104;&#117;&#108;&#098;&#101;&#114;&#116;&#064;&#103;&#109;&#097;&#105;&#108;&#046;&#099;&#111;&#109;
+    </ContactText>
     <ContactList>
       <ContactListItem>
         <ContactLink
