@@ -4,7 +4,7 @@ import { pxToRem, Luna, LunaMedia } from '../../Luna'
 const WorkItem = styled.button`
   position: relative;
   width: calc(100% - ${pxToRem('default')});
-  max-width: ${pxToRem(300)};
+  /* max-width: ${pxToRem(300)}; */
   margin: ${pxToRem('default', 0.5)};
   padding: 0;
   overflow: hidden;
