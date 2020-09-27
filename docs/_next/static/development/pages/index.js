@@ -4785,7 +4785,7 @@ var workItems = [{
   artist: 'Keith Urban',
   project: 'Burden',
   role: 'Engineer',
-  imageSrc: 'R-12747002-1544654280-2085.jpeg.jpg'
+  imageSrc: 'keith-urban-burden.jpg'
 }, {
   artist: 'The Highwomen',
   project: 'The Highwomen',
@@ -4803,19 +4803,44 @@ var workItems = [{
   imageSrc: 'chic-time.jpg'
 }, {
   artist: 'Dawes',
-  project: 'Forthcoming Record',
-  role: '',
-  imageSrc: 'default-grey.png'
+  project: 'Good Luck With Whatever',
+  role: 'Engineer, Mixing',
+  imageSrc: 'dawes-good-luck.jpg'
+}, {
+  artist: 'Dawes',
+  project: 'Who Do You Think You’re Talking To (Single)',
+  role: 'Engineer, Mixing',
+  imageSrc: 'dawes-good-luck.jpg'
 }, {
   artist: 'Lori McKenna',
-  project: 'Forthcoming Record',
-  role: '',
-  imageSrc: 'default-grey.png'
+  project: 'The Balladeer',
+  role: 'Engineer, Mixing',
+  imageSrc: 'lori-mckenna-the-balladeer.jpg'
 }, {
-  artist: 'Anderson East',
-  project: 'Forthcoming Record',
-  role: '',
-  imageSrc: 'default-grey.png'
+  artist: 'Amanda Shires',
+  project: 'Deciphering Dreams',
+  role: 'Engineer',
+  imageSrc: 'amanda-shires-decipheringdreams.jpg'
+}, {
+  artist: 'Crown Lands',
+  project: 'Crown Lands',
+  role: 'Assistant & Additional Engineering',
+  imageSrc: 'crown-lands-crown-lands.jpg'
+}, {
+  artist: 'Jason Isbell and the 400 Unit',
+  project: 'Reunions',
+  role: 'Assistant Engineer',
+  imageSrc: 'jason-isbell-and-the-400-unit-reunions.jpg'
+}, {
+  artist: 'Wheeler Walker, Jr.',
+  project: 'Drunk As Fuck (Single)',
+  role: 'Engineer',
+  imageSrc: 'wheeler-walker-jr-drunk-as-fuck-go-big-or-go-home.jpg'
+}, {
+  artist: 'Wheeler Walker, Jr.',
+  project: 'Go Big or Go Home (Single)',
+  role: 'Engineer',
+  imageSrc: 'wheeler-walker-jr-drunk-as-fuck-go-big-or-go-home.jpg'
 }];
 var filmItems = [{
   artist: "A Serial Killer's Guide to Life",
@@ -4918,20 +4943,20 @@ var ThisWork = function ThisWork() {
     ref: forwardedRef,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 206
+      lineNumber: 236
     },
     __self: this
   }, __jsx(react_images_loaded__WEBPACK_IMPORTED_MODULE_2___default.a, {
     done: onImagesLoaded,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 207
+      lineNumber: 237
     },
     __self: this
   }, __jsx(_index_style__WEBPACK_IMPORTED_MODULE_4__["WorkGrid"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 208
+      lineNumber: 238
     },
     __self: this
   }, workItems.map(function (workItem, index) {
@@ -4941,14 +4966,14 @@ var ThisWork = function ThisWork() {
       loaded: workLoaded,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 210
+        lineNumber: 240
       },
       __self: this
     });
   })), __jsx(_index_style__WEBPACK_IMPORTED_MODULE_4__["WorkGrid"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 214
+      lineNumber: 244
     },
     __self: this
   }, filmItems.map(function (workItem, index) {
@@ -4958,7 +4983,7 @@ var ThisWork = function ThisWork() {
       loaded: workLoaded,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 216
+        lineNumber: 246
       },
       __self: this
     });
