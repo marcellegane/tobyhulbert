@@ -7,6 +7,7 @@ const WorkItem = styled.button`
   /* max-width: ${pxToRem(300)}; */
   margin: ${pxToRem('default', 0.5)};
   padding: 0;
+  aspect-ratio: ${(props) => (props.square ? '1 / 1' : '2.7 / 4')};
   overflow: hidden;
   font-family: ${Luna.font.family.brand};
   font-size: 1em;
@@ -42,6 +43,10 @@ const WorkItem = styled.button`
 
 const WorkImg = styled.img`
   display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
   opacity: 0;
 `
 

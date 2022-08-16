@@ -11,7 +11,7 @@ import {
   WorkOverlay,
 } from './index.style'
 
-const ThisWorkItem = ({ content, loaded }) => {
+const ThisWorkItem = ({ content, loaded, square }) => {
   const { imageSrc, artist, project, role } = content
   const backgroundRef = useRef()
   const overlayRef = useRef()
@@ -62,6 +62,7 @@ const ThisWorkItem = ({ content, loaded }) => {
       onMouseEnter={handleEnter}
       onBlur={handleLeave}
       onMouseLeave={handleLeave}
+      square={square}
     >
       <WorkImg src={`images/work/${imageSrc}`} />
       <WorkBackground ref={backgroundRef} data-work-loader />
@@ -77,6 +78,7 @@ const ThisWorkItem = ({ content, loaded }) => {
 ThisWorkItem.propTypes = {
   content: PropTypes.object,
   loaded: PropTypes.bool,
+  square: PropTypes.bool,
 }
 
 export { ThisWorkItem as WorkItem }
