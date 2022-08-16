@@ -107,7 +107,7 @@ const workItems = [
     artist: 'The 1975',
     project: 'A Brief Enquiry Into Online Relationships',
     role: 'Strings Assistant Engineer',
-    imageSrc: 'the-1975.png',
+    imageSrc: 'the-1975.jpg',
   },
   {
     artist: 'Airbourne',
