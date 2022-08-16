@@ -19,7 +19,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _ButtonAccent_style__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./ButtonAccent.style */ "./Luna/components/atoms/Button/ButtonAccent.style.js");
 
 
-var _jsxFileName = "/Users/marcellegane/dev/tobyhulbert/Luna/components/atoms/Button/ButtonAccent.js";
+var _jsxFileName = "/Users/marcel/dev/tobyhulbert/Luna/components/atoms/Button/ButtonAccent.js";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement;
 
 
@@ -116,7 +116,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _ButtonAlternative_style__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./ButtonAlternative.style */ "./Luna/components/atoms/Button/ButtonAlternative.style.js");
 
 
-var _jsxFileName = "/Users/marcellegane/dev/tobyhulbert/Luna/components/atoms/Button/ButtonAlternative.js";
+var _jsxFileName = "/Users/marcel/dev/tobyhulbert/Luna/components/atoms/Button/ButtonAlternative.js";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement;
 
 
@@ -234,7 +234,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _ButtonBrand_style__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./ButtonBrand.style */ "./Luna/components/atoms/Button/ButtonBrand.style.js");
 
 
-var _jsxFileName = "/Users/marcellegane/dev/tobyhulbert/Luna/components/atoms/Button/ButtonBrand.js";
+var _jsxFileName = "/Users/marcel/dev/tobyhulbert/Luna/components/atoms/Button/ButtonBrand.js";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement;
 
 
@@ -331,7 +331,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _ButtonContrast_style__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./ButtonContrast.style */ "./Luna/components/atoms/Button/ButtonContrast.style.js");
 
 
-var _jsxFileName = "/Users/marcellegane/dev/tobyhulbert/Luna/components/atoms/Button/ButtonContrast.js";
+var _jsxFileName = "/Users/marcel/dev/tobyhulbert/Luna/components/atoms/Button/ButtonContrast.js";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement;
 
 
@@ -456,7 +456,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _index_style__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./index.style */ "./Luna/components/atoms/ButtonText/index.style.js");
 
 
-var _jsxFileName = "/Users/marcellegane/dev/tobyhulbert/Luna/components/atoms/ButtonText/index.js";
+var _jsxFileName = "/Users/marcel/dev/tobyhulbert/Luna/components/atoms/ButtonText/index.js";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement;
 
 
@@ -522,7 +522,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
 /* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _Checkbox_style__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Checkbox.style */ "./Luna/components/atoms/Checkbox/Checkbox.style.js");
-var _jsxFileName = "/Users/marcellegane/dev/tobyhulbert/Luna/components/atoms/Checkbox/Checkbox.js";
+var _jsxFileName = "/Users/marcel/dev/tobyhulbert/Luna/components/atoms/Checkbox/Checkbox.js";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 
@@ -619,7 +619,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var _index_style__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./index.style */ "./Luna/components/atoms/FormTitle/index.style.js");
 
-var _jsxFileName = "/Users/marcellegane/dev/tobyhulbert/Luna/components/atoms/FormTitle/index.js";
+var _jsxFileName = "/Users/marcel/dev/tobyhulbert/Luna/components/atoms/FormTitle/index.js";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement;
 
 
@@ -686,7 +686,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _IconWrapper_style__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./IconWrapper.style */ "./Luna/components/atoms/Icon/IconWrapper.style.js");
 
 
-var _jsxFileName = "/Users/marcellegane/dev/tobyhulbert/Luna/components/atoms/Icon/IconWrapper.js";
+var _jsxFileName = "/Users/marcel/dev/tobyhulbert/Luna/components/atoms/Icon/IconWrapper.js";
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement;
 
@@ -777,7 +777,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var _Input_style__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./Input.style */ "./Luna/components/atoms/Input/Input.style.js");
 
-var _jsxFileName = "/Users/marcellegane/dev/tobyhulbert/Luna/components/atoms/Input/Input.js";
+var _jsxFileName = "/Users/marcel/dev/tobyhulbert/Luna/components/atoms/Input/Input.js";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement;
 
 
@@ -896,7 +896,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _Input__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./Input */ "./Luna/components/atoms/Input/Input.js");
 /* harmony import */ var _Label_index_style__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../Label/index.style */ "./Luna/components/atoms/Label/index.style.js");
 
-var _jsxFileName = "/Users/marcellegane/dev/tobyhulbert/Luna/components/atoms/Input/InputWithLabel.js";
+var _jsxFileName = "/Users/marcel/dev/tobyhulbert/Luna/components/atoms/Input/InputWithLabel.js";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement;
 
 
@@ -1004,7 +1004,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _index_style__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./index.style */ "./Luna/components/atoms/Label/index.style.js");
 
 
-var _jsxFileName = "/Users/marcellegane/dev/tobyhulbert/Luna/components/atoms/Label/index.js";
+var _jsxFileName = "/Users/marcel/dev/tobyhulbert/Luna/components/atoms/Label/index.js";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement;
 
 
@@ -1126,7 +1126,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-var _jsxFileName = "/Users/marcellegane/dev/tobyhulbert/Luna/components/atoms/Modal/index.js";
+var _jsxFileName = "/Users/marcel/dev/tobyhulbert/Luna/components/atoms/Modal/index.js";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement;
 
 
@@ -1482,7 +1482,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
 /* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _index_style__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./index.style */ "./Luna/components/atoms/RadioGroup/index.style.js");
-var _jsxFileName = "/Users/marcellegane/dev/tobyhulbert/Luna/components/atoms/RadioGroup/index.js";
+var _jsxFileName = "/Users/marcel/dev/tobyhulbert/Luna/components/atoms/RadioGroup/index.js";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 
@@ -1597,7 +1597,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var _Select_style__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./Select.style */ "./Luna/components/atoms/Select/Select.style.js");
 
-var _jsxFileName = "/Users/marcellegane/dev/tobyhulbert/Luna/components/atoms/Select/Select.js";
+var _jsxFileName = "/Users/marcel/dev/tobyhulbert/Luna/components/atoms/Select/Select.js";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement;
 
 
@@ -1750,7 +1750,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _Select__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./Select */ "./Luna/components/atoms/Select/Select.js");
 /* harmony import */ var _Label_index_style__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../Label/index.style */ "./Luna/components/atoms/Label/index.style.js");
 
-var _jsxFileName = "/Users/marcellegane/dev/tobyhulbert/Luna/components/atoms/Select/SelectWithLabel.js";
+var _jsxFileName = "/Users/marcel/dev/tobyhulbert/Luna/components/atoms/Select/SelectWithLabel.js";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement;
 
 
@@ -1835,7 +1835,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _index_style__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./index.style */ "./Luna/components/atoms/Separator/index.style.js");
 /* harmony import */ var _config__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../config */ "./Luna/config/index.js");
-var _jsxFileName = "/Users/marcellegane/dev/tobyhulbert/Luna/components/atoms/Separator/index.js";
+var _jsxFileName = "/Users/marcel/dev/tobyhulbert/Luna/components/atoms/Separator/index.js";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 
@@ -1903,7 +1903,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
 /* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _index_style__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./index.style */ "./Luna/components/atoms/Stack/index.style.js");
-var _jsxFileName = "/Users/marcellegane/dev/tobyhulbert/Luna/components/atoms/Stack/index.js";
+var _jsxFileName = "/Users/marcel/dev/tobyhulbert/Luna/components/atoms/Stack/index.js";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 
@@ -1972,7 +1972,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
 /* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _index_style__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./index.style */ "./Luna/components/atoms/SuccessMessage/index.style.js");
-var _jsxFileName = "/Users/marcellegane/dev/tobyhulbert/Luna/components/atoms/SuccessMessage/index.js";
+var _jsxFileName = "/Users/marcel/dev/tobyhulbert/Luna/components/atoms/SuccessMessage/index.js";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 
@@ -2042,7 +2042,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var _TextArea_style__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./TextArea.style */ "./Luna/components/atoms/TextArea/TextArea.style.js");
 
-var _jsxFileName = "/Users/marcellegane/dev/tobyhulbert/Luna/components/atoms/TextArea/TextArea.js";
+var _jsxFileName = "/Users/marcel/dev/tobyhulbert/Luna/components/atoms/TextArea/TextArea.js";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement;
 
 
@@ -2136,7 +2136,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _TextArea_style__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./TextArea.style */ "./Luna/components/atoms/TextArea/TextArea.style.js");
 /* harmony import */ var _Label_index_style__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../Label/index.style */ "./Luna/components/atoms/Label/index.style.js");
 
-var _jsxFileName = "/Users/marcellegane/dev/tobyhulbert/Luna/components/atoms/TextArea/TextAreaWithLabel.js";
+var _jsxFileName = "/Users/marcel/dev/tobyhulbert/Luna/components/atoms/TextArea/TextAreaWithLabel.js";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement;
 
 
@@ -2233,7 +2233,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
 /* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _index_style__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./index.style */ "./Luna/components/atoms/ValidationMessage/index.style.js");
-var _jsxFileName = "/Users/marcellegane/dev/tobyhulbert/Luna/components/atoms/ValidationMessage/index.js";
+var _jsxFileName = "/Users/marcel/dev/tobyhulbert/Luna/components/atoms/ValidationMessage/index.js";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 
@@ -2483,7 +2483,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var _index_style__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./index.style */ "./Luna/components/layouts/CenterMe/index.style.js");
 
-var _jsxFileName = "/Users/marcellegane/dev/tobyhulbert/Luna/components/layouts/CenterMe/index.js";
+var _jsxFileName = "/Users/marcel/dev/tobyhulbert/Luna/components/layouts/CenterMe/index.js";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement;
 
 
@@ -2593,7 +2593,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var _Grid_style__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./Grid.style */ "./Luna/components/layouts/Grid/Grid.style.js");
 
-var _jsxFileName = "/Users/marcellegane/dev/tobyhulbert/Luna/components/layouts/Grid/Grid.js";
+var _jsxFileName = "/Users/marcel/dev/tobyhulbert/Luna/components/layouts/Grid/Grid.js";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement;
 
 
@@ -2697,7 +2697,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _GridItem_style__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./GridItem.style */ "./Luna/components/layouts/Grid/GridItem.style.js");
 
 
-var _jsxFileName = "/Users/marcellegane/dev/tobyhulbert/Luna/components/layouts/Grid/GridItem.js";
+var _jsxFileName = "/Users/marcel/dev/tobyhulbert/Luna/components/layouts/Grid/GridItem.js";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement;
 
 
@@ -3408,7 +3408,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
 /* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_1__);
-var _jsxFileName = "/Users/marcellegane/dev/tobyhulbert/Luna/svgs/icons/IconCross/index.js";
+var _jsxFileName = "/Users/marcel/dev/tobyhulbert/Luna/svgs/icons/IconCross/index.js";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 
@@ -3731,7 +3731,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _pages_Home_index_style__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../pages/Home/index.style */ "./components/pages/Home/index.style.js");
 /* harmony import */ var _index_style__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./index.style */ "./components/About/index.style.js");
 /* harmony import */ var _Luna_components_atoms_Stack_index_style__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../Luna/components/atoms/Stack/index.style */ "./Luna/components/atoms/Stack/index.style.js");
-var _jsxFileName = "/Users/marcellegane/dev/tobyhulbert/components/About/index.js";
+var _jsxFileName = "/Users/marcel/dev/tobyhulbert/components/About/index.js";
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
@@ -3764,25 +3764,37 @@ var ThisAbout = function ThisAbout() {
       lineNumber: 10
     },
     __self: this
-  }, "In an era of laptop producers that has led to everyone and their dog calling themselves an engineer, Toby is a rare breed."), __jsx(_index_style__WEBPACK_IMPORTED_MODULE_2__["AboutText"], {
+  }, "Toby is an engineer, mixer and producer currently based at Urchin Studios, London."), __jsx(_index_style__WEBPACK_IMPORTED_MODULE_2__["AboutText"], {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 15
     },
     __self: this
-  }, "After graduating from University of Surrey\u2019s BMus Tonmeister course, Toby made his way up the ranks in-house at Abbey Road where he spent seven years immersing himself in the studio\u2019s rich recording history and working with some of the world\u2019s most imminent producers including Tony Visconti, Nile Rodgers and Malay. One of very few engineers to have the opportunity to learn in such a professional studio environment, his career developed by working on a huge variety of styles and genres. His work includes recordings with artists such as Nick Cave & The Bad Seeds, Oh Wonder, Frank Ocean, Dirty Heads, Kasabian and Dawes, and as part of Abbey Road\u2019s live sessions he\u2019s worked with artists including Alabama Shakes, Mumford & Sons, Izzy Bizu & Jack Garratt. Toby has also worked as a score recordist on titles including the Oscar winning Gravity, The Imitation Game, Suffragette and The Avengers, and as a digital scoring engineer for Ridley Scott's The Martian, as well as engineering solo sessions for Hacksaw Ridge."), __jsx(_index_style__WEBPACK_IMPORTED_MODULE_2__["AboutText"], {
+  }, "After graduating from University of Surrey\u2019s Tonmeister course, Toby made his way up the ranks in-house at Abbey Road where he spent seven years immersing himself in the studio\u2019s rich recording history and working with some of the world\u2019s most imminent producers and engineers. One of very few engineers to have the opportunity to learn in such a professional studio environment, his career developed working on a huge variety of styles and genres - from late night hiphop sessions to live band tracking sessions in the Beatles room to classical and film score recordings in the reverberant Studio 1. Toby\u2019s burgeoning passion for analogue recording developed through work in London and Nashville and has led to a hybrid approach, combining the best of digital software with the character of analogue equipment to best suit the music. A life-long lover of music and experimentation - Toby\u2019s sessions have a relaxed atmosphere so to enable artists to be their most creative."), __jsx(_index_style__WEBPACK_IMPORTED_MODULE_2__["AboutText"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 33
+      lineNumber: 32
     },
     __self: this
-  }, "In 2019 Toby moved to Nashville, TN, to work alongside six-time Grammy winning record producer Dave Cobb at RCA Studio A. He\u2019s now focused on continuing to learn from the Southern American recording styles and enjoys creating natural recordings to tape with musicians playing live together."), __jsx(_index_style__WEBPACK_IMPORTED_MODULE_2__["AboutText"], {
+  }, "In 2019, Toby left Abbey Road and followed the music when he was offered the chance to move to Nashville to work as engineer for multi-Grammy winning record producer Dave Cobb at Historic RCA Studio A. During an inspiring time in Nashville he engineered many memorable sessions with Cobb including work with Barry Gibb, Dawes, The Highwomen, Jason Isbell, Dolly Parton, Brandi Carlile, Chris Stapleton, Dirty Heads, Keith Urban and Anderson East. Much of the time at RCA Studio A was recording bands playing together live, with Dave Cobb often producing from the studio floor, recording to tape - more akin to a 60s and 70s recording style not so often seen these days."), __jsx(_index_style__WEBPACK_IMPORTED_MODULE_2__["AboutText"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 41
+      lineNumber: 45
     },
     __self: this
-  }, "Toby\u2019s study of analogue recording techniques while working in studios in London and Nashville means he uses a hybrid approach, combining the best of digital software with the character of analogue equipment to perfectly suit the music he records. A great enthusiasm for music and experimentation means Toby\u2019s sessions are in a relaxed atmosphere to enable artists to be their most creative.")));
+  }, "His varied music work at Abbey Road included sessions with artists such as Nick Cave & The Bad Seeds, Frank Ocean, Kasabian, and as part of Abbey Road\u2019s live sessions he worked with artists including Alabama Shakes and Mumford & Sons."), __jsx(_index_style__WEBPACK_IMPORTED_MODULE_2__["AboutText"], {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 52
+    },
+    __self: this
+  }, "Toby also has extensive film scoring experience, initially as a score recordist on titles such as the Oscar winning Gravity, The Imitation Game, Suffragette, The Avengers and The Martian and more recently as scoring engineer and score mixer. Recent TV and film work includes engineering on Baz Luhrmann\u2019s Elvis film and mixing for UK based composers Paul Englishby and Carly Paradis."), __jsx(_index_style__WEBPACK_IMPORTED_MODULE_2__["AboutText"], {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 61
+    },
+    __self: this
+  }, "Toby now works out of his own room at Urchin Studios, London as a freelance engineer, mixer and producer on music and film productions. With a window through to the Urchin live space - Toby is setup to record band and overdub sessions directly from his control room.")));
 };
 
 
@@ -3848,7 +3860,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _pages_Home_index_style__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../pages/Home/index.style */ "./components/pages/Home/index.style.js");
 /* harmony import */ var _index_style__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./index.style */ "./components/Contact/index.style.js");
-var _jsxFileName = "/Users/marcellegane/dev/tobyhulbert/components/Contact/index.js";
+var _jsxFileName = "/Users/marcel/dev/tobyhulbert/components/Contact/index.js";
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
@@ -4018,7 +4030,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _index_style__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./index.style */ "./components/Hero/index.style.js");
 /* harmony import */ var _TextMask__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../TextMask */ "./components/TextMask/index.js");
-var _jsxFileName = "/Users/marcellegane/dev/tobyhulbert/components/Hero/index.js";
+var _jsxFileName = "/Users/marcel/dev/tobyhulbert/components/Hero/index.js";
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
@@ -4183,7 +4195,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _NavigationLink__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../NavigationLink */ "./components/NavigationLink/index.js");
 /* harmony import */ var _index_style__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./index.style */ "./components/Navigation/index.style.js");
-var _jsxFileName = "/Users/marcellegane/dev/tobyhulbert/components/Navigation/index.js";
+var _jsxFileName = "/Users/marcel/dev/tobyhulbert/components/Navigation/index.js";
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
@@ -4363,7 +4375,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-var _jsxFileName = "/Users/marcellegane/dev/tobyhulbert/components/NavigationLink/index.js";
+var _jsxFileName = "/Users/marcel/dev/tobyhulbert/components/NavigationLink/index.js";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement;
 
 
@@ -4652,7 +4664,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
 /* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _index_style__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./index.style */ "./components/TextMask/index.style.js");
-var _jsxFileName = "/Users/marcellegane/dev/tobyhulbert/components/TextMask/index.js";
+var _jsxFileName = "/Users/marcel/dev/tobyhulbert/components/TextMask/index.js";
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
@@ -4729,14 +4741,65 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_images_loaded__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react_images_loaded__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var _WorkItem__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../WorkItem */ "./components/WorkItem/index.js");
 /* harmony import */ var _index_style__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./index.style */ "./components/Work/index.style.js");
-var _jsxFileName = "/Users/marcellegane/dev/tobyhulbert/components/Work/index.js";
+var _jsxFileName = "/Users/marcel/dev/tobyhulbert/components/Work/index.js";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 
 
 
+ // Images max-width 430px
 
 var workItems = [{
+  artist: 'Anderson East',
+  project: 'Maybe We Never Die',
+  role: 'Engineer',
+  imageSrc: 'anderson-east_maybe-we-never-die.jpg'
+}, {
+  artist: 'Barry Gibb',
+  project: 'Greenfields The Gibb Brothers’ Songbook',
+  role: 'Assistant Engineer, Handclapping',
+  imageSrc: 'barry-gibb_songbook.jpg'
+}, {
+  artist: 'Certainly So',
+  project: 'Future Self Only Dreams',
+  role: 'Producer, Mixer',
+  imageSrc: 'certainly-so_future-self-only-dreams.jpg'
+}, {
+  artist: 'Dennis Caravello',
+  project: '52 Pickup (Single)',
+  role: 'Producer, Mixer',
+  imageSrc: 'dennis-caravello_52-pickup-single.jpg'
+}, {
+  artist: 'Dennis Caravello',
+  project: 'Susanna (Single)',
+  role: 'Producer, Mixer',
+  imageSrc: 'dennis-caravello_susanna.jpg'
+}, {
+  artist: 'Jade Bird',
+  project: 'Different Kinds of Light',
+  role: 'Additional Engineer',
+  imageSrc: 'jade-bird_different-kinds-of-light.jpg'
+}, {
+  artist: 'Preditah',
+  project: 'Glucose (D Double E Remix)',
+  role: 'Vocal Engineer',
+  imageSrc: 'preditah_glucose.jpg'
+}, {
+  artist: 'Swordbeach',
+  project: 'Overlord',
+  role: 'Mixer',
+  imageSrc: 'swordbeach_overload.jpg'
+}, {
+  artist: 'Eddy Luna',
+  project: 'If I Died',
+  role: 'Mixer',
+  imageSrc: 'eddy-luna_if-i-died.jpg'
+}, {
+  artist: 'Eddy Luna',
+  project: 'What’s The Difference',
+  role: 'Mixer',
+  imageSrc: 'eddy-luna_whats-the-difference.jpg'
+}, {
   artist: 'Nick Cave and the Bad Seeds',
   project: 'Live Concert 5.1 Mix',
   role: 'Mixing',
@@ -4770,7 +4833,7 @@ var workItems = [{
   artist: 'The 1975',
   project: 'A Brief Enquiry Into Online Relationships',
   role: 'Strings Assistant Engineer',
-  imageSrc: 'the-1975.png'
+  imageSrc: 'the-1975.jpg'
 }, {
   artist: 'Airbourne',
   project: 'Boneshaker',
@@ -4807,11 +4870,6 @@ var workItems = [{
   role: 'Engineer, Mixing',
   imageSrc: 'dawes-good-luck.jpg'
 }, {
-  artist: 'Dawes',
-  project: 'Who Do You Think You’re Talking To (Single)',
-  role: 'Engineer, Mixing',
-  imageSrc: 'dawes-good-luck.jpg'
-}, {
   artist: 'Lori McKenna',
   project: 'The Balladeer',
   role: 'Engineer, Mixing',
@@ -4836,13 +4894,28 @@ var workItems = [{
   project: 'Drunk As Fuck (Single)',
   role: 'Engineer',
   imageSrc: 'wheeler-walker-jr-drunk-as-fuck-go-big-or-go-home.jpg'
-}, {
-  artist: 'Wheeler Walker, Jr.',
-  project: 'Go Big or Go Home (Single)',
-  role: 'Engineer',
-  imageSrc: 'wheeler-walker-jr-drunk-as-fuck-go-big-or-go-home.jpg'
 }];
 var filmItems = [{
+  artist: 'The Rising',
+  role: 'Mixing',
+  imageSrc: 'the-rising.jpg'
+}, {
+  artist: 'The Eyes of Tammy Faye',
+  role: 'Songs Engineer',
+  imageSrc: 'the-eyes-of-tammy-faye.jpg'
+}, {
+  artist: 'Together',
+  role: 'Mixer',
+  imageSrc: 'together.jpg'
+}, {
+  artist: 'The Control Room',
+  role: 'Strings Engineer',
+  imageSrc: 'the-control-room.jpg'
+}, {
+  artist: "Trainwreck- Woodstock '99",
+  role: 'Mixer',
+  imageSrc: 'trainwreck-woodstock.jpg'
+}, {
   artist: "A Serial Killer's Guide to Life",
   role: 'Recording Engineer and Mixer',
   imageSrc: 'film-serial.jpg'
@@ -4943,20 +5016,20 @@ var ThisWork = function ThisWork() {
     ref: forwardedRef,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 236
+      lineNumber: 311
     },
     __self: this
   }, __jsx(react_images_loaded__WEBPACK_IMPORTED_MODULE_2___default.a, {
     done: onImagesLoaded,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 237
+      lineNumber: 312
     },
     __self: this
   }, __jsx(_index_style__WEBPACK_IMPORTED_MODULE_4__["WorkGrid"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 238
+      lineNumber: 313
     },
     __self: this
   }, workItems.map(function (workItem, index) {
@@ -4964,16 +5037,17 @@ var ThisWork = function ThisWork() {
       key: index,
       content: workItem,
       loaded: workLoaded,
+      square: true,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 240
+        lineNumber: 315
       },
       __self: this
     });
   })), __jsx(_index_style__WEBPACK_IMPORTED_MODULE_4__["WorkGrid"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 244
+      lineNumber: 324
     },
     __self: this
   }, filmItems.map(function (workItem, index) {
@@ -4983,7 +5057,7 @@ var ThisWork = function ThisWork() {
       loaded: workLoaded,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 246
+        lineNumber: 326
       },
       __self: this
     });
@@ -5061,7 +5135,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var gsap__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! gsap */ "./node_modules/gsap/index.js");
 /* harmony import */ var _index_style__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./index.style */ "./components/WorkItem/index.style.js");
-var _jsxFileName = "/Users/marcellegane/dev/tobyhulbert/components/WorkItem/index.js";
+var _jsxFileName = "/Users/marcel/dev/tobyhulbert/components/WorkItem/index.js";
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
@@ -5071,7 +5145,8 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 var ThisWorkItem = function ThisWorkItem(_ref) {
   var content = _ref.content,
-      loaded = _ref.loaded;
+      loaded = _ref.loaded,
+      square = _ref.square;
   var imageSrc = content.imageSrc,
       artist = content.artist,
       project = content.project,
@@ -5114,6 +5189,7 @@ var ThisWorkItem = function ThisWorkItem(_ref) {
     onMouseEnter: handleEnter,
     onBlur: handleLeave,
     onMouseLeave: handleLeave,
+    square: square,
     __source: {
       fileName: _jsxFileName,
       lineNumber: 60
@@ -5123,7 +5199,7 @@ var ThisWorkItem = function ThisWorkItem(_ref) {
     src: "images/work/".concat(imageSrc),
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 66
+      lineNumber: 67
     },
     __self: this
   }), __jsx(_index_style__WEBPACK_IMPORTED_MODULE_3__["WorkBackground"], {
@@ -5131,7 +5207,7 @@ var ThisWorkItem = function ThisWorkItem(_ref) {
     "data-work-loader": true,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 67
+      lineNumber: 68
     },
     __self: this
   }), __jsx(_index_style__WEBPACK_IMPORTED_MODULE_3__["WorkOverlay"], {
@@ -5139,25 +5215,25 @@ var ThisWorkItem = function ThisWorkItem(_ref) {
     loaded: loaded,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 68
+      lineNumber: 69
     },
     __self: this
   }, __jsx(_index_style__WEBPACK_IMPORTED_MODULE_3__["WorkArtist"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 69
+      lineNumber: 70
     },
     __self: this
   }, artist), project && __jsx(_index_style__WEBPACK_IMPORTED_MODULE_3__["WorkProject"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 70
+      lineNumber: 71
     },
     __self: this
   }, project), __jsx(_index_style__WEBPACK_IMPORTED_MODULE_3__["WorkRole"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 71
+      lineNumber: 72
     },
     __self: this
   }, role)));
@@ -5165,7 +5241,8 @@ var ThisWorkItem = function ThisWorkItem(_ref) {
 
 ThisWorkItem.propTypes = {
   content: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.object,
-  loaded: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.bool
+  loaded: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.bool,
+  square: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.bool
 };
 
 
@@ -5237,11 +5314,13 @@ function _templateObject() {
 var WorkItem = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].button.withConfig({
   displayName: "indexstyle__WorkItem",
   componentId: "p5z371-0"
-})(["position:relative;width:calc(100% - ", ");margin:", ";padding:0;overflow:hidden;font-family:", ";font-size:1em;border:none;background:none;", " ", " ", " ", ":focus{outline:none;}"], Object(_Luna__WEBPACK_IMPORTED_MODULE_2__["pxToRem"])('default'), Object(_Luna__WEBPACK_IMPORTED_MODULE_2__["pxToRem"])('default', 0.5), _Luna__WEBPACK_IMPORTED_MODULE_2__["Luna"].font.family.brand, _Luna__WEBPACK_IMPORTED_MODULE_2__["LunaMedia"].above('xsmall')(_templateObject(), Object(_Luna__WEBPACK_IMPORTED_MODULE_2__["pxToRem"])('default')), _Luna__WEBPACK_IMPORTED_MODULE_2__["LunaMedia"].above('small')(_templateObject2(), Object(_Luna__WEBPACK_IMPORTED_MODULE_2__["pxToRem"])('default')), _Luna__WEBPACK_IMPORTED_MODULE_2__["LunaMedia"].between('small', 'xxlarge')(_templateObject3(), Object(_Luna__WEBPACK_IMPORTED_MODULE_2__["pxToRem"])('default', -2)), _Luna__WEBPACK_IMPORTED_MODULE_2__["LunaMedia"].above('xxlarge')(_templateObject4(), Object(_Luna__WEBPACK_IMPORTED_MODULE_2__["pxToRem"])('default'), Object(_Luna__WEBPACK_IMPORTED_MODULE_2__["pxToRem"])('default', -2)));
+})(["position:relative;width:calc(100% - ", ");margin:", ";padding:0;aspect-ratio:", ";overflow:hidden;font-family:", ";font-size:1em;border:none;background:none;", " ", " ", " ", ":focus{outline:none;}"], Object(_Luna__WEBPACK_IMPORTED_MODULE_2__["pxToRem"])('default'), Object(_Luna__WEBPACK_IMPORTED_MODULE_2__["pxToRem"])('default', 0.5), function (props) {
+  return props.square ? '1 / 1' : '2.7 / 4';
+}, _Luna__WEBPACK_IMPORTED_MODULE_2__["Luna"].font.family.brand, _Luna__WEBPACK_IMPORTED_MODULE_2__["LunaMedia"].above('xsmall')(_templateObject(), Object(_Luna__WEBPACK_IMPORTED_MODULE_2__["pxToRem"])('default')), _Luna__WEBPACK_IMPORTED_MODULE_2__["LunaMedia"].above('small')(_templateObject2(), Object(_Luna__WEBPACK_IMPORTED_MODULE_2__["pxToRem"])('default')), _Luna__WEBPACK_IMPORTED_MODULE_2__["LunaMedia"].between('small', 'xxlarge')(_templateObject3(), Object(_Luna__WEBPACK_IMPORTED_MODULE_2__["pxToRem"])('default', -2)), _Luna__WEBPACK_IMPORTED_MODULE_2__["LunaMedia"].above('xxlarge')(_templateObject4(), Object(_Luna__WEBPACK_IMPORTED_MODULE_2__["pxToRem"])('default'), Object(_Luna__WEBPACK_IMPORTED_MODULE_2__["pxToRem"])('default', -2)));
 var WorkImg = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].img.withConfig({
   displayName: "indexstyle__WorkImg",
   componentId: "p5z371-1"
-})(["display:block;opacity:0;"]);
+})(["display:block;width:100%;height:100%;object-fit:cover;object-position:center;opacity:0;"]);
 var WorkBackground = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].div.withConfig({
   displayName: "indexstyle__WorkBackground",
   componentId: "p5z371-2"
@@ -5345,7 +5424,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
 /* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_1__);
-var _jsxFileName = "/Users/marcellegane/dev/tobyhulbert/components/svgs/SineWave/index.js";
+var _jsxFileName = "/Users/marcel/dev/tobyhulbert/components/svgs/SineWave/index.js";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 
@@ -5398,7 +5477,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
 /* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_1__);
-var _jsxFileName = "/Users/marcellegane/dev/tobyhulbert/components/svgs/SquareWave/index.js";
+var _jsxFileName = "/Users/marcel/dev/tobyhulbert/components/svgs/SquareWave/index.js";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 
@@ -5452,7 +5531,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
 /* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_1__);
-var _jsxFileName = "/Users/marcellegane/dev/tobyhulbert/components/svgs/TriangleWave/index.js";
+var _jsxFileName = "/Users/marcel/dev/tobyhulbert/components/svgs/TriangleWave/index.js";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 
@@ -22713,10 +22792,10 @@ function concatArrays(originVal, newVal) {
 
 /***/ }),
 
-/***/ "./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2F&absolutePagePath=%2FUsers%2Fmarcellegane%2Fdev%2Ftobyhulbert%2Fpages%2Findex.jsx!./":
-/*!****************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2F&absolutePagePath=%2FUsers%2Fmarcellegane%2Fdev%2Ftobyhulbert%2Fpages%2Findex.jsx ***!
-  \****************************************************************************************************************************************************************************/
+/***/ "./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2F&absolutePagePath=%2FUsers%2Fmarcel%2Fdev%2Ftobyhulbert%2Fpages%2Findex.jsx!./":
+/*!**********************************************************************************************************************************************************************!*\
+  !*** ./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2F&absolutePagePath=%2FUsers%2Fmarcel%2Fdev%2Ftobyhulbert%2Fpages%2Findex.jsx ***!
+  \**********************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -23126,12 +23205,12 @@ exports["default"] = function () {
 
 /***/ "./node_modules/object-assign/index.js":
 /*!***************************************************************************************************!*\
-  !*** delegated ./node_modules/object-assign/index.js from dll-reference dll_ea92a4d9664833a26066 ***!
+  !*** delegated ./node_modules/object-assign/index.js from dll-reference dll_e9ad7d891b372a4221cf ***!
   \***************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = (__webpack_require__(/*! dll-reference dll_ea92a4d9664833a26066 */ "dll-reference dll_ea92a4d9664833a26066"))("./node_modules/object-assign/index.js");
+module.exports = (__webpack_require__(/*! dll-reference dll_e9ad7d891b372a4221cf */ "dll-reference dll_e9ad7d891b372a4221cf"))("./node_modules/object-assign/index.js");
 
 /***/ }),
 
@@ -23332,12 +23411,12 @@ process.umask = function() { return 0; };
 
 /***/ "./node_modules/prop-types/checkPropTypes.js":
 /*!*********************************************************************************************************!*\
-  !*** delegated ./node_modules/prop-types/checkPropTypes.js from dll-reference dll_ea92a4d9664833a26066 ***!
+  !*** delegated ./node_modules/prop-types/checkPropTypes.js from dll-reference dll_e9ad7d891b372a4221cf ***!
   \*********************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = (__webpack_require__(/*! dll-reference dll_ea92a4d9664833a26066 */ "dll-reference dll_ea92a4d9664833a26066"))("./node_modules/prop-types/checkPropTypes.js");
+module.exports = (__webpack_require__(/*! dll-reference dll_e9ad7d891b372a4221cf */ "dll-reference dll_e9ad7d891b372a4221cf"))("./node_modules/prop-types/checkPropTypes.js");
 
 /***/ }),
 
@@ -23972,12 +24051,12 @@ if (true) {
 
 /***/ "./node_modules/prop-types/lib/ReactPropTypesSecret.js":
 /*!*******************************************************************************************************************!*\
-  !*** delegated ./node_modules/prop-types/lib/ReactPropTypesSecret.js from dll-reference dll_ea92a4d9664833a26066 ***!
+  !*** delegated ./node_modules/prop-types/lib/ReactPropTypesSecret.js from dll-reference dll_e9ad7d891b372a4221cf ***!
   \*******************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = (__webpack_require__(/*! dll-reference dll_ea92a4d9664833a26066 */ "dll-reference dll_ea92a4d9664833a26066"))("./node_modules/prop-types/lib/ReactPropTypesSecret.js");
+module.exports = (__webpack_require__(/*! dll-reference dll_e9ad7d891b372a4221cf */ "dll-reference dll_e9ad7d891b372a4221cf"))("./node_modules/prop-types/lib/ReactPropTypesSecret.js");
 
 /***/ }),
 
@@ -24365,12 +24444,12 @@ if (false) {} else {
 
 /***/ "./node_modules/react/index.js":
 /*!*******************************************************************************************!*\
-  !*** delegated ./node_modules/react/index.js from dll-reference dll_ea92a4d9664833a26066 ***!
+  !*** delegated ./node_modules/react/index.js from dll-reference dll_e9ad7d891b372a4221cf ***!
   \*******************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = (__webpack_require__(/*! dll-reference dll_ea92a4d9664833a26066 */ "dll-reference dll_ea92a4d9664833a26066"))("./node_modules/react/index.js");
+module.exports = (__webpack_require__(/*! dll-reference dll_e9ad7d891b372a4221cf */ "dll-reference dll_e9ad7d891b372a4221cf"))("./node_modules/react/index.js");
 
 /***/ }),
 
@@ -27038,7 +27117,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_About__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../components/About */ "./components/About/index.js");
 /* harmony import */ var _components_Contact__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../components/Contact */ "./components/Contact/index.js");
 /* harmony import */ var _components_svgs_SineWave__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../components/svgs/SineWave */ "./components/svgs/SineWave/index.js");
-var _jsxFileName = "/Users/marcellegane/dev/tobyhulbert/pages/index.jsx";
+var _jsxFileName = "/Users/marcel/dev/tobyhulbert/pages/index.jsx";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 
@@ -27234,25 +27313,25 @@ var Index = function Index() {
 /***/ }),
 
 /***/ 0:
-/*!********************************************************************************************************************************!*\
-  !*** multi next-client-pages-loader?page=%2F&absolutePagePath=%2FUsers%2Fmarcellegane%2Fdev%2Ftobyhulbert%2Fpages%2Findex.jsx ***!
-  \********************************************************************************************************************************/
+/*!**************************************************************************************************************************!*\
+  !*** multi next-client-pages-loader?page=%2F&absolutePagePath=%2FUsers%2Fmarcel%2Fdev%2Ftobyhulbert%2Fpages%2Findex.jsx ***!
+  \**************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! next-client-pages-loader?page=%2F&absolutePagePath=%2FUsers%2Fmarcellegane%2Fdev%2Ftobyhulbert%2Fpages%2Findex.jsx! */"./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2F&absolutePagePath=%2FUsers%2Fmarcellegane%2Fdev%2Ftobyhulbert%2Fpages%2Findex.jsx!./");
+module.exports = __webpack_require__(/*! next-client-pages-loader?page=%2F&absolutePagePath=%2FUsers%2Fmarcel%2Fdev%2Ftobyhulbert%2Fpages%2Findex.jsx! */"./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2F&absolutePagePath=%2FUsers%2Fmarcel%2Fdev%2Ftobyhulbert%2Fpages%2Findex.jsx!./");
 
 
 /***/ }),
 
-/***/ "dll-reference dll_ea92a4d9664833a26066":
+/***/ "dll-reference dll_e9ad7d891b372a4221cf":
 /*!*******************************************!*\
-  !*** external "dll_ea92a4d9664833a26066" ***!
+  !*** external "dll_e9ad7d891b372a4221cf" ***!
   \*******************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = dll_ea92a4d9664833a26066;
+module.exports = dll_e9ad7d891b372a4221cf;
 
 /***/ })
 
